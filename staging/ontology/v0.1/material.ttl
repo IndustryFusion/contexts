@@ -1,0 +1,198 @@
+@prefix : <https://industryfusion.github.io/contexts/ontology/v0.1/material/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://industryfusion.github.io/contexts/ontology/v0.1/material/> .
+
+<https://industryfusion.github.io/contexts/ontology/v0.1/material/> rdf:type owl:Ontology ;
+                                                                     owl:versionIRI <https://industryfusion.github.io/contexts/staging/ontology/v0.1/material/> .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  https://industryfusion.github.io/contexts/staging/ontology/v0.1/material/#contains
+<https://industryfusion.github.io/contexts/staging/ontology/v0.1/material/#contains> rdf:type owl:ObjectProperty ;
+                                                                                     rdfs:domain <https://industryfusion.github.io/contexts/staging/ontology/v0.1/material/#Material> ;
+                                                                                     rdfs:range <https://industryfusion.github.io/contexts/staging/ontology/v0.1/material/#_ElementOccurance> .
+
+
+###  https://industryfusion.github.io/contexts/staging/ontology/v0.1/material/#isChemicalElement
+<https://industryfusion.github.io/contexts/staging/ontology/v0.1/material/#isChemicalElement> rdf:type owl:ObjectProperty ;
+                                                                                              rdfs:domain <https://industryfusion.github.io/contexts/staging/ontology/v0.1/material/#_ElementOccurance> ;
+                                                                                              rdfs:range <https://industryfusion.github.io/contexts/staging/ontology/v0.1/material/#ChemicalElement> .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  https://industryfusion.github.io/contexts/staging/ontology/v0.1/material/#hasChemicalSymbol
+<https://industryfusion.github.io/contexts/staging/ontology/v0.1/material/#hasChemicalSymbol> rdf:type owl:DatatypeProperty ;
+                                                                                              rdfs:domain <https://industryfusion.github.io/contexts/staging/ontology/v0.1/material/#ChemicalElement> ;
+                                                                                              rdfs:range xsd:string .
+
+
+###  https://industryfusion.github.io/contexts/staging/ontology/v0.1/material/#hasEvaporationTemperature
+<https://industryfusion.github.io/contexts/staging/ontology/v0.1/material/#hasEvaporationTemperature> rdf:type owl:DatatypeProperty ;
+                                                                                                      rdfs:domain <https://industryfusion.github.io/contexts/staging/ontology/v0.1/material/#Material> ;
+                                                                                                      rdfs:range xsd:string .
+
+
+###  https://industryfusion.github.io/contexts/staging/ontology/v0.1/material/#hasMaxPercent
+<https://industryfusion.github.io/contexts/staging/ontology/v0.1/material/#hasMaxPercent> rdf:type owl:DatatypeProperty ;
+                                                                                          rdfs:domain <https://industryfusion.github.io/contexts/staging/ontology/v0.1/material/#_ElementOccurance> ;
+                                                                                          rdfs:range xsd:string .
+
+
+###  https://industryfusion.github.io/contexts/staging/ontology/v0.1/material/#hasMinPercent
+<https://industryfusion.github.io/contexts/staging/ontology/v0.1/material/#hasMinPercent> rdf:type owl:DatatypeProperty ;
+                                                                                          rdfs:domain <https://industryfusion.github.io/contexts/staging/ontology/v0.1/material/#_ElementOccurance> ;
+                                                                                          rdfs:range xsd:string .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  https://industryfusion.github.io/contexts/staging/ontology/v0.1/material/#ChemicalElement
+<https://industryfusion.github.io/contexts/staging/ontology/v0.1/material/#ChemicalElement> rdf:type owl:Class .
+
+
+###  https://industryfusion.github.io/contexts/staging/ontology/v0.1/material/#Material
+<https://industryfusion.github.io/contexts/staging/ontology/v0.1/material/#Material> rdf:type owl:Class .
+
+
+###  https://industryfusion.github.io/contexts/staging/ontology/v0.1/material/#_ElementOccurance
+<https://industryfusion.github.io/contexts/staging/ontology/v0.1/material/#_ElementOccurance> rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  https://industryfusion.github.io/contexts/staging/ontology/v0.1/material/#_1
+<https://industryfusion.github.io/contexts/staging/ontology/v0.1/material/#_1> rdf:type owl:NamedIndividual ,
+                                                                                        <https://industryfusion.github.io/contexts/staging/ontology/v0.1/material/#_ElementOccurance> ;
+                                                                               <https://industryfusion.github.io/contexts/staging/ontology/v0.1/material/#isChemicalElement> <https://industryfusion.github.io/contexts/staging/ontology/v0.1/material/#carbon> ;
+                                                                               <https://industryfusion.github.io/contexts/staging/ontology/v0.1/material/#hasMaxPercent> "0.08" .
+
+
+###  https://industryfusion.github.io/contexts/staging/ontology/v0.1/material/#_2
+<https://industryfusion.github.io/contexts/staging/ontology/v0.1/material/#_2> rdf:type owl:NamedIndividual ,
+                                                                                        <https://industryfusion.github.io/contexts/staging/ontology/v0.1/material/#_ElementOccurance> ;
+                                                                               <https://industryfusion.github.io/contexts/staging/ontology/v0.1/material/#isChemicalElement> <https://industryfusion.github.io/contexts/staging/ontology/v0.1/material/#manganese> ;
+                                                                               <https://industryfusion.github.io/contexts/staging/ontology/v0.1/material/#hasMaxPercent> "2.0" .
+
+
+###  https://industryfusion.github.io/contexts/staging/ontology/v0.1/material/#_3
+<https://industryfusion.github.io/contexts/staging/ontology/v0.1/material/#_3> rdf:type owl:NamedIndividual ,
+                                                                                        <https://industryfusion.github.io/contexts/staging/ontology/v0.1/material/#_ElementOccurance> ;
+                                                                               <https://industryfusion.github.io/contexts/staging/ontology/v0.1/material/#isChemicalElement> <https://industryfusion.github.io/contexts/staging/ontology/v0.1/material/#silicon> ;
+                                                                               <https://industryfusion.github.io/contexts/staging/ontology/v0.1/material/#hasChemicalSymbol> "Cr" ;
+                                                                               <https://industryfusion.github.io/contexts/staging/ontology/v0.1/material/#hasMaxPercent> "1.0" .
+
+
+###  https://industryfusion.github.io/contexts/staging/ontology/v0.1/material/#_4
+<https://industryfusion.github.io/contexts/staging/ontology/v0.1/material/#_4> rdf:type owl:NamedIndividual ,
+                                                                                        <https://industryfusion.github.io/contexts/staging/ontology/v0.1/material/#_ElementOccurance> ;
+                                                                               <https://industryfusion.github.io/contexts/staging/ontology/v0.1/material/#isChemicalElement> <https://industryfusion.github.io/contexts/staging/ontology/v0.1/material/#phosphorus> ;
+                                                                               <https://industryfusion.github.io/contexts/staging/ontology/v0.1/material/#hasMaxPercent> "0.045" .
+
+
+###  https://industryfusion.github.io/contexts/staging/ontology/v0.1/material/#_5
+<https://industryfusion.github.io/contexts/staging/ontology/v0.1/material/#_5> rdf:type owl:NamedIndividual ,
+                                                                                        <https://industryfusion.github.io/contexts/staging/ontology/v0.1/material/#_ElementOccurance> ;
+                                                                               <https://industryfusion.github.io/contexts/staging/ontology/v0.1/material/#isChemicalElement> <https://industryfusion.github.io/contexts/staging/ontology/v0.1/material/#sulfur> ;
+                                                                               <https://industryfusion.github.io/contexts/staging/ontology/v0.1/material/#hasMaxPercent> "0.03" .
+
+
+###  https://industryfusion.github.io/contexts/staging/ontology/v0.1/material/#_6
+<https://industryfusion.github.io/contexts/staging/ontology/v0.1/material/#_6> rdf:type owl:NamedIndividual ,
+                                                                                        <https://industryfusion.github.io/contexts/staging/ontology/v0.1/material/#_ElementOccurance> ;
+                                                                               <https://industryfusion.github.io/contexts/staging/ontology/v0.1/material/#isChemicalElement> <https://industryfusion.github.io/contexts/staging/ontology/v0.1/material/#chromium> ;
+                                                                               <https://industryfusion.github.io/contexts/staging/ontology/v0.1/material/#hasMaxPercent> "19.0" ;
+                                                                               <https://industryfusion.github.io/contexts/staging/ontology/v0.1/material/#hasMinPercent> "17.0" .
+
+
+###  https://industryfusion.github.io/contexts/staging/ontology/v0.1/material/#_7
+<https://industryfusion.github.io/contexts/staging/ontology/v0.1/material/#_7> rdf:type owl:NamedIndividual ,
+                                                                                        <https://industryfusion.github.io/contexts/staging/ontology/v0.1/material/#_ElementOccurance> ;
+                                                                               <https://industryfusion.github.io/contexts/staging/ontology/v0.1/material/#isChemicalElement> <https://industryfusion.github.io/contexts/staging/ontology/v0.1/material/#nickel> ;
+                                                                               <https://industryfusion.github.io/contexts/staging/ontology/v0.1/material/#hasMaxPercent> "12.0" ;
+                                                                               <https://industryfusion.github.io/contexts/staging/ontology/v0.1/material/#hasMinPercent> "12.0" .
+
+
+###  https://industryfusion.github.io/contexts/staging/ontology/v0.1/material/#_8
+<https://industryfusion.github.io/contexts/staging/ontology/v0.1/material/#_8> rdf:type owl:NamedIndividual ,
+                                                                                        <https://industryfusion.github.io/contexts/staging/ontology/v0.1/material/#_ElementOccurance> ;
+                                                                               <https://industryfusion.github.io/contexts/staging/ontology/v0.1/material/#isChemicalElement> <https://industryfusion.github.io/contexts/staging/ontology/v0.1/material/#titan> ;
+                                                                               <https://industryfusion.github.io/contexts/staging/ontology/v0.1/material/#hasMaxPercent> "0.7" ;
+                                                                               <https://industryfusion.github.io/contexts/staging/ontology/v0.1/material/#hasMinPercent> "0.17" .
+
+
+###  https://industryfusion.github.io/contexts/staging/ontology/v0.1/material/#carbon
+<https://industryfusion.github.io/contexts/staging/ontology/v0.1/material/#carbon> rdf:type owl:NamedIndividual ,
+                                                                                            <https://industryfusion.github.io/contexts/staging/ontology/v0.1/material/#ChemicalElement> ;
+                                                                                   <https://industryfusion.github.io/contexts/staging/ontology/v0.1/material/#hasChemicalSymbol> "C" .
+
+
+###  https://industryfusion.github.io/contexts/staging/ontology/v0.1/material/#chromium
+<https://industryfusion.github.io/contexts/staging/ontology/v0.1/material/#chromium> rdf:type owl:NamedIndividual ,
+                                                                                              <https://industryfusion.github.io/contexts/staging/ontology/v0.1/material/#ChemicalElement> ;
+                                                                                     <https://industryfusion.github.io/contexts/staging/ontology/v0.1/material/#hasChemicalSymbol> "Cr" .
+
+
+###  https://industryfusion.github.io/contexts/staging/ontology/v0.1/material/#manganese
+<https://industryfusion.github.io/contexts/staging/ontology/v0.1/material/#manganese> rdf:type owl:NamedIndividual ,
+                                                                                               <https://industryfusion.github.io/contexts/staging/ontology/v0.1/material/#ChemicalElement> ;
+                                                                                      <https://industryfusion.github.io/contexts/staging/ontology/v0.1/material/#hasChemicalSymbol> "Mn" .
+
+
+###  https://industryfusion.github.io/contexts/staging/ontology/v0.1/material/#materialEN1_5301
+<https://industryfusion.github.io/contexts/staging/ontology/v0.1/material/#materialEN1_5301> rdf:type owl:NamedIndividual ,
+                                                                                                      <https://industryfusion.github.io/contexts/staging/ontology/v0.1/material/#Material> ;
+                                                                                             <https://industryfusion.github.io/contexts/staging/ontology/v0.1/material/#contains> <https://industryfusion.github.io/contexts/staging/ontology/v0.1/material/#_1> ,
+                                                                                                                                                                                  <https://industryfusion.github.io/contexts/staging/ontology/v0.1/material/#_2> ,
+                                                                                                                                                                                  <https://industryfusion.github.io/contexts/staging/ontology/v0.1/material/#_3> ,
+                                                                                                                                                                                  <https://industryfusion.github.io/contexts/staging/ontology/v0.1/material/#_4> ,
+                                                                                                                                                                                  <https://industryfusion.github.io/contexts/staging/ontology/v0.1/material/#_5> ,
+                                                                                                                                                                                  <https://industryfusion.github.io/contexts/staging/ontology/v0.1/material/#_6> ,
+                                                                                                                                                                                  <https://industryfusion.github.io/contexts/staging/ontology/v0.1/material/#_7> ,
+                                                                                                                                                                                  <https://industryfusion.github.io/contexts/staging/ontology/v0.1/material/#_8> ;
+                                                                                             <https://industryfusion.github.io/contexts/staging/ontology/v0.1/material/#hasEvaporationTemperature> "1200" .
+
+
+###  https://industryfusion.github.io/contexts/staging/ontology/v0.1/material/#nickel
+<https://industryfusion.github.io/contexts/staging/ontology/v0.1/material/#nickel> rdf:type owl:NamedIndividual ,
+                                                                                            <https://industryfusion.github.io/contexts/staging/ontology/v0.1/material/#ChemicalElement> ;
+                                                                                   <https://industryfusion.github.io/contexts/staging/ontology/v0.1/material/#hasChemicalSymbol> "Ni" .
+
+
+###  https://industryfusion.github.io/contexts/staging/ontology/v0.1/material/#phosphorus
+<https://industryfusion.github.io/contexts/staging/ontology/v0.1/material/#phosphorus> rdf:type owl:NamedIndividual ,
+                                                                                                <https://industryfusion.github.io/contexts/staging/ontology/v0.1/material/#ChemicalElement> ;
+                                                                                       <https://industryfusion.github.io/contexts/staging/ontology/v0.1/material/#hasChemicalSymbol> "P" .
+
+
+###  https://industryfusion.github.io/contexts/staging/ontology/v0.1/material/#silicon
+<https://industryfusion.github.io/contexts/staging/ontology/v0.1/material/#silicon> rdf:type owl:NamedIndividual ,
+                                                                                             <https://industryfusion.github.io/contexts/staging/ontology/v0.1/material/#ChemicalElement> ;
+                                                                                    <https://industryfusion.github.io/contexts/staging/ontology/v0.1/material/#hasChemicalSymbol> "Si" .
+
+
+###  https://industryfusion.github.io/contexts/staging/ontology/v0.1/material/#sulfur
+<https://industryfusion.github.io/contexts/staging/ontology/v0.1/material/#sulfur> rdf:type owl:NamedIndividual ,
+                                                                                            <https://industryfusion.github.io/contexts/staging/ontology/v0.1/material/#ChemicalElement> ;
+                                                                                   <https://industryfusion.github.io/contexts/staging/ontology/v0.1/material/#hasChemicalSymbol> "S" .
+
+
+###  https://industryfusion.github.io/contexts/staging/ontology/v0.1/material/#titan
+<https://industryfusion.github.io/contexts/staging/ontology/v0.1/material/#titan> rdf:type owl:NamedIndividual ,
+                                                                                           <https://industryfusion.github.io/contexts/staging/ontology/v0.1/material/#ChemicalElement> ;
+                                                                                  <https://industryfusion.github.io/contexts/staging/ontology/v0.1/material/#hasChemicalSymbol> "Ti" .
+
+
+###  Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi
