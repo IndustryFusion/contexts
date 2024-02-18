@@ -1,0 +1,198 @@
+@prefix : <https://industryfusion.github.io/contexts/ontology/v0.1/base/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://industryfusion.github.io/contexts/ontology/v0.1/base/> .
+
+<https://industryfusion.github.io/contexts/ontology/v0.1/base/> rdf:type owl:Ontology ;
+                                                                 owl:versionIRI <https://industryfusion.github.io/contexts/staging/ontology/v0.1/base/> .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  https://industryfusion.github.io/contexts/ontology/v0.1/base/higherHazardLevel
+:higherHazardLevel rdf:type owl:ObjectProperty ,
+                            owl:TransitiveProperty ;
+                   rdfs:domain :Wasteclass ;
+                   rdfs:range :Wasteclass .
+
+
+###  https://industryfusion.github.io/contexts/ontology/v0.1/base/stateValidFor
+:stateValidFor rdf:type owl:ObjectProperty ;
+               rdfs:domain :MachineState ;
+               rdfs:range :Machine .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  https://industryfusion.github.io/contexts/ontology/v0.1/base/test
+:test rdf:type owl:DatatypeProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  https://industryfusion.github.io/contexts/ontology/v0.1/base/Cutter
+:Cutter rdf:type owl:Class ;
+        rdfs:subClassOf :Machine .
+
+
+###  https://industryfusion.github.io/contexts/ontology/v0.1/base/Entity
+:Entity rdf:type owl:Class .
+
+
+###  https://industryfusion.github.io/contexts/ontology/v0.1/base/Filter
+:Filter rdf:type owl:Class ;
+        rdfs:subClassOf :Machine .
+
+
+###  https://industryfusion.github.io/contexts/ontology/v0.1/base/FilterCartridge
+:FilterCartridge rdf:type owl:Class ;
+                 rdfs:subClassOf :Entity .
+
+
+###  https://industryfusion.github.io/contexts/ontology/v0.1/base/Lasercutter
+:Lasercutter rdf:type owl:Class ;
+             rdfs:subClassOf :Cutter .
+
+
+###  https://industryfusion.github.io/contexts/ontology/v0.1/base/Machine
+:Machine rdf:type owl:Class .
+
+
+###  https://industryfusion.github.io/contexts/ontology/v0.1/base/MachineState
+:MachineState rdf:type owl:Class .
+
+
+###  https://industryfusion.github.io/contexts/ontology/v0.1/base/Plasmacutter
+:Plasmacutter rdf:type owl:Class ;
+              rdfs:subClassOf :Cutter .
+
+
+###  https://industryfusion.github.io/contexts/ontology/v0.1/base/SeverityClass
+:SeverityClass rdf:type owl:Class .
+
+
+###  https://industryfusion.github.io/contexts/ontology/v0.1/base/Wasteclass
+:Wasteclass rdf:type owl:Class .
+
+
+###  https://industryfusion.github.io/contexts/ontology/v0.1/base/Workpiece
+:Workpiece rdf:type owl:Class ;
+           rdfs:subClassOf :Entity .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  https://industryfusion.github.io/contexts/ontology/v0.1/base/Cutter
+:Cutter rdf:type owl:NamedIndividual .
+
+
+###  https://industryfusion.github.io/contexts/ontology/v0.1/base/Filter
+:Filter rdf:type owl:NamedIndividual .
+
+
+###  https://industryfusion.github.io/contexts/ontology/v0.1/base/Lasercutter
+:Lasercutter rdf:type owl:NamedIndividual .
+
+
+###  https://industryfusion.github.io/contexts/ontology/v0.1/base/Plasmacutter
+:Plasmacutter rdf:type owl:NamedIndividual .
+
+
+###  https://industryfusion.github.io/contexts/ontology/v0.1/base/WC0
+:WC0 rdf:type owl:NamedIndividual ,
+              :Wasteclass .
+
+
+###  https://industryfusion.github.io/contexts/ontology/v0.1/base/WC1
+:WC1 rdf:type owl:NamedIndividual ,
+              :Wasteclass ;
+     :higherHazardLevel :WC0 .
+
+
+###  https://industryfusion.github.io/contexts/ontology/v0.1/base/WC2
+:WC2 rdf:type owl:NamedIndividual ,
+              :Wasteclass ;
+     :higherHazardLevel :WC1 .
+
+
+###  https://industryfusion.github.io/contexts/ontology/v0.1/base/WC3
+:WC3 rdf:type owl:NamedIndividual ,
+              :Wasteclass ;
+     :higherHazardLevel :WC2 .
+
+
+###  https://industryfusion.github.io/contexts/ontology/v0.1/base/severityCritical
+:severityCritical rdf:type owl:NamedIndividual ,
+                           :SeverityClass ;
+                  rdfs:label "critical" .
+
+
+###  https://industryfusion.github.io/contexts/ontology/v0.1/base/severityWarning
+:severityWarning rdf:type owl:NamedIndividual ,
+                          :SeverityClass ;
+                 rdfs:label "warning" .
+
+
+###  https://industryfusion.github.io/contexts/ontology/v0.1/base/state_CLEANING
+:state_CLEANING rdf:type owl:NamedIndividual ,
+                         :MachineState ;
+                :stateValidFor :Filter ;
+                rdfs:label "CLEANING" .
+
+
+###  https://industryfusion.github.io/contexts/ontology/v0.1/base/state_CLEARING
+:state_CLEARING rdf:type owl:NamedIndividual ,
+                         :MachineState ;
+                :stateValidFor :Cutter ;
+                rdfs:label "CLEARING" .
+
+
+###  https://industryfusion.github.io/contexts/ontology/v0.1/base/state_ERROR
+:state_ERROR rdf:type owl:NamedIndividual ,
+                      :MachineState ;
+             :stateValidFor :Cutter ,
+                            :Filter ;
+             rdfs:label "ERROR" .
+
+
+###  https://industryfusion.github.io/contexts/ontology/v0.1/base/state_OFF
+:state_OFF rdf:type owl:NamedIndividual ,
+                    :MachineState ;
+           :stateValidFor :Cutter ,
+                          :Filter ;
+           rdfs:label "OFF" .
+
+
+###  https://industryfusion.github.io/contexts/ontology/v0.1/base/state_ON
+:state_ON rdf:type owl:NamedIndividual ,
+                   :MachineState ;
+          :stateValidFor :Cutter ,
+                         :Filter ;
+          rdfs:label "ON" .
+
+
+###  https://industryfusion.github.io/contexts/ontology/v0.1/base/state_PREPARING
+:state_PREPARING rdf:type owl:NamedIndividual ,
+                          :MachineState ;
+                 :stateValidFor :Cutter ;
+                 rdfs:label "PREPARING" .
+
+
+###  https://industryfusion.github.io/contexts/ontology/v0.1/base/state_PROCESSING
+:state_PROCESSING rdf:type owl:NamedIndividual ,
+                           :MachineState ;
+                  :stateValidFor :Cutter ;
+                  rdfs:label "PROCESSING" .
+
+
+###  Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi
