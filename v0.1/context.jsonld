@@ -36,7 +36,7 @@
                         "@prefix": true
                     },
                     "iffBaseEntities": {
-                        "@id": "https://industryfusion.github.io/contexts/ontology/v0.1/base_entities",
+                        "@id": "https://industryfusion.github.io/contexts/ontology/v0.1/base_entities/",
                         "@prefix": true
                     },
                     "iffBaseKnowledge": {
