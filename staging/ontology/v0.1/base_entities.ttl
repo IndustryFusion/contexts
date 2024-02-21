@@ -13,14 +13,34 @@
 #    Object Properties
 #################################################################
 
+###  https://industryfusion.github.io/contexts/ontology/v0.1/base_entities/hasCartridge
+:hasCartridge rdf:type owl:ObjectProperty ;
+              rdfs:domain :Filter .
+
+
 ###  https://industryfusion.github.io/contexts/ontology/v0.1/base_entities/hasFilter
 :hasFilter rdf:type owl:ObjectProperty ;
            rdfs:domain :Cutter .
 
 
+###  https://industryfusion.github.io/contexts/ontology/v0.1/base_entities/hasHeight
+:hasHeight rdf:type owl:ObjectProperty ;
+           rdfs:domain :Workpiece .
+
+
 ###  https://industryfusion.github.io/contexts/ontology/v0.1/base_entities/hasInWorkpiece
 :hasInWorkpiece rdf:type owl:ObjectProperty ;
                 rdfs:domain :Cutter .
+
+
+###  https://industryfusion.github.io/contexts/ontology/v0.1/base_entities/hasLength
+:hasLength rdf:type owl:ObjectProperty ;
+           rdfs:domain :Workpiece .
+
+
+###  https://industryfusion.github.io/contexts/ontology/v0.1/base_entities/hasMaterial
+:hasMaterial rdf:type owl:ObjectProperty ;
+             rdfs:domain :Workpiece .
 
 
 ###  https://industryfusion.github.io/contexts/ontology/v0.1/base_entities/hasOutWorkpiece
@@ -31,6 +51,31 @@
 ###  https://industryfusion.github.io/contexts/ontology/v0.1/base_entities/hasState
 :hasState rdf:type owl:ObjectProperty ;
           rdfs:domain :Machine .
+
+
+###  https://industryfusion.github.io/contexts/ontology/v0.1/base_entities/hasStrength
+:hasStrength rdf:type owl:ObjectProperty ;
+             rdfs:domain :Filter .
+
+
+###  https://industryfusion.github.io/contexts/ontology/v0.1/base_entities/hasWasteClass
+:hasWasteClass rdf:type owl:ObjectProperty ;
+               rdfs:domain :FilterCartridge .
+
+
+###  https://industryfusion.github.io/contexts/ontology/v0.1/base_entities/hasWidth
+:hasWidth rdf:type owl:ObjectProperty ;
+          rdfs:domain :Workpiece .
+
+
+###  https://industryfusion.github.io/contexts/ontology/v0.1/base_entities/isUsedFrom
+:isUsedFrom rdf:type owl:ObjectProperty ;
+            rdfs:domain :FilterCartridge .
+
+
+###  https://industryfusion.github.io/contexts/ontology/v0.1/base_entities/isUsedUntil
+:isUsedUntil rdf:type owl:ObjectProperty ;
+             rdfs:domain :FilterCartridge .
 
 
 #################################################################
