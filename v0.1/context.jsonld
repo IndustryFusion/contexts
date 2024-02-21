@@ -46,6 +46,10 @@
                     "iffFilterKnowledge": {
                         "@id": "https://industryfusion.github.io/contexts/ontology/v0.1/filter_knowledge/",
                         "@prefix": true
+                    },
+                    "material": {
+                        "@id": "https://industryfusion.github.io/contexts/ontology/v0.1/material/",
+                        "@prefix": true
                     }
                 }
         ]
