@@ -58,11 +58,6 @@
              rdfs:domain :Filter .
 
 
-###  https://industryfusion.github.io/contexts/ontology/v0.1/base_entities/hasWasteClass
-:hasWasteClass rdf:type owl:ObjectProperty ;
-               rdfs:domain :FilterCartridge .
-
-
 ###  https://industryfusion.github.io/contexts/ontology/v0.1/base_entities/hasWidth
 :hasWidth rdf:type owl:ObjectProperty ;
           rdfs:domain :Workpiece .
