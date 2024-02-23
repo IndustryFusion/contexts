@@ -4,87 +4,104 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ngsild: <https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld/> .
 @base <https://industryfusion.github.io/contexts/ontology/v0.1/base_knowledge/> .
 
 <https://industryfusion.github.io/contexts/ontology/v0.1/base_knowledge/> rdf:type owl:Ontology ;
-                                                                           owl:versionIRI <https://industryfusion.github.io/contexts/staging/ontology/v0.1/base_knowledge/> .
+                                                                           owl:versionIRI <https://industryfusion.github.io/contexts/staging/ontology/v0.1/base_knowledge/> ;
+                                                                           owl:imports <https://industryfusion.github.io/contexts/staging/ontology/v0.1/base_entities/> .
 
 #################################################################
 #    Object Properties
 #################################################################
 
-###  https://industryfusion.github.io/contexts/ontology/v0.1/base/stateValidFor
-:stateValidFor rdf:type owl:ObjectProperty ;
-               rdfs:domain :MachineState .
+###  https://industryfusion.github.io/contexts/ontology/v0.1/base_knowledge/isValidFor
+:isValidFor rdf:type owl:ObjectProperty ;
+            rdfs:domain :MachineState .
 
 
 #################################################################
 #    Classes
 #################################################################
 
-###  https://industryfusion.github.io/contexts/ontology/v0.1/base/MachineState
+###  https://industryfusion.github.io/contexts/ontology/v0.1/base_knowledge/MachineState
 :MachineState rdf:type owl:Class .
 
 
-###  https://industryfusion.github.io/contexts/ontology/v0.1/base/SeverityClass
+###  https://industryfusion.github.io/contexts/ontology/v0.1/base_knowledge/SeverityClass
 :SeverityClass rdf:type owl:Class .
+
+
+###  https://uri.etsi.org/ngsi-ld/Property
+<https://uri.etsi.org/ngsi-ld/Property> rdf:type owl:Class .
+
+
+###  https://uri.etsi.org/ngsi-ld/Relationship
+<https://uri.etsi.org/ngsi-ld/Relationship> rdf:type owl:Class .
 
 
 #################################################################
 #    Individuals
 #################################################################
 
-###  https://industryfusion.github.io/contexts/ontology/v0.1/base/severityCritical
+###  https://industryfusion.github.io/contexts/ontology/v0.1/base_knowledge/severityCritical
 :severityCritical rdf:type owl:NamedIndividual ,
                            :SeverityClass ;
                   rdfs:label "critical" .
 
 
-###  https://industryfusion.github.io/contexts/ontology/v0.1/base/severityWarning
+###  https://industryfusion.github.io/contexts/ontology/v0.1/base_knowledge/severityWarning
 :severityWarning rdf:type owl:NamedIndividual ,
                           :SeverityClass ;
                  rdfs:label "warning" .
 
 
-###  https://industryfusion.github.io/contexts/ontology/v0.1/base/state_CLEANING
+###  https://industryfusion.github.io/contexts/ontology/v0.1/base_knowledge/state_CLEANING
 :state_CLEANING rdf:type owl:NamedIndividual ,
                          :MachineState ;
+                :isValidFor <https://industryfusion.github.io/contexts/ontology/v0.1/base_entities/Filter> ;
                 rdfs:label "CLEANING" .
 
 
-###  https://industryfusion.github.io/contexts/ontology/v0.1/base/state_CLEARING
+###  https://industryfusion.github.io/contexts/ontology/v0.1/base_knowledge/state_CLEARING
 :state_CLEARING rdf:type owl:NamedIndividual ,
                          :MachineState ;
+                :isValidFor <https://industryfusion.github.io/contexts/ontology/v0.1/base_entities/Cutter> ;
                 rdfs:label "CLEARING" .
 
 
-###  https://industryfusion.github.io/contexts/ontology/v0.1/base/state_ERROR
+###  https://industryfusion.github.io/contexts/ontology/v0.1/base_knowledge/state_ERROR
 :state_ERROR rdf:type owl:NamedIndividual ,
                       :MachineState ;
+             :isValidFor <https://industryfusion.github.io/contexts/ontology/v0.1/base_entities/Machine> ;
              rdfs:label "ERROR" .
 
 
-###  https://industryfusion.github.io/contexts/ontology/v0.1/base/state_OFF
+###  https://industryfusion.github.io/contexts/ontology/v0.1/base_knowledge/state_OFF
 :state_OFF rdf:type owl:NamedIndividual ,
                     :MachineState ;
+           :isValidFor <https://industryfusion.github.io/contexts/ontology/v0.1/base_entities/Machine> ;
            rdfs:label "OFF" .
 
 
-###  https://industryfusion.github.io/contexts/ontology/v0.1/base/state_ON
+###  https://industryfusion.github.io/contexts/ontology/v0.1/base_knowledge/state_ON
 :state_ON rdf:type owl:NamedIndividual ,
                    :MachineState ;
+          :isValidFor <https://industryfusion.github.io/contexts/ontology/v0.1/base_entities/Machine> ;
           rdfs:label "ON" .
 
 
-###  https://industryfusion.github.io/contexts/ontology/v0.1/base/state_PREPARING
+###  https://industryfusion.github.io/contexts/ontology/v0.1/base_knowledge/state_PREPARING
 :state_PREPARING rdf:type owl:NamedIndividual ,
                           :MachineState ;
+                 :isValidFor <https://industryfusion.github.io/contexts/ontology/v0.1/base_entities/Cutter> ;
                  rdfs:label "PREPARING" .
 
 
-###  https://industryfusion.github.io/contexts/ontology/v0.1/base/state_PROCESSING
+###  https://industryfusion.github.io/contexts/ontology/v0.1/base_knowledge/state_PROCESSING
 :state_PROCESSING rdf:type owl:NamedIndividual ,
                            :MachineState ;
+                  :isValidFor <https://industryfusion.github.io/contexts/ontology/v0.1/base_entities/Cutter> ;
                   rdfs:label "PROCESSING" .
 
 

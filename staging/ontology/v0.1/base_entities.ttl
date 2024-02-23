@@ -131,6 +131,10 @@
 :Lasercutter rdf:type owl:NamedIndividual .
 
 
+###  https://industryfusion.github.io/contexts/ontology/v0.1/base_entities/Machine
+:Machine rdf:type owl:NamedIndividual .
+
+
 ###  https://industryfusion.github.io/contexts/ontology/v0.1/base_entities/Plasmacutter
 :Plasmacutter rdf:type owl:NamedIndividual .
 
