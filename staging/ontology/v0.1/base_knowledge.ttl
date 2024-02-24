@@ -8,8 +8,7 @@
 @base <https://industryfusion.github.io/contexts/ontology/v0.1/base_knowledge/> .
 
 <https://industryfusion.github.io/contexts/ontology/v0.1/base_knowledge/> rdf:type owl:Ontology ;
-                                                                           owl:versionIRI <https://industryfusion.github.io/contexts/staging/ontology/v0.1/base_knowledge/> ;
-                                                                           owl:imports <https://industryfusion.github.io/contexts/staging/ontology/v0.1/base_entities/> .
+                                                                           owl:versionIRI <https://industryfusion.github.io/contexts/staging/ontology/v0.1/base_knowledge/> .
 
 #################################################################
 #    Object Properties
@@ -43,6 +42,18 @@
 #################################################################
 #    Individuals
 #################################################################
+
+###  https://industryfusion.github.io/contexts/ontology/v0.1/base_entities/Cutter
+<https://industryfusion.github.io/contexts/ontology/v0.1/base_entities/Cutter> rdf:type owl:NamedIndividual .
+
+
+###  https://industryfusion.github.io/contexts/ontology/v0.1/base_entities/Filter
+<https://industryfusion.github.io/contexts/ontology/v0.1/base_entities/Filter> rdf:type owl:NamedIndividual .
+
+
+###  https://industryfusion.github.io/contexts/ontology/v0.1/base_entities/Machine
+<https://industryfusion.github.io/contexts/ontology/v0.1/base_entities/Machine> rdf:type owl:NamedIndividual .
+
 
 ###  https://industryfusion.github.io/contexts/ontology/v0.1/base_knowledge/severityCritical
 :severityCritical rdf:type owl:NamedIndividual ,
