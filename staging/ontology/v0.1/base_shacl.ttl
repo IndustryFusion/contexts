@@ -8,7 +8,7 @@
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix ngsild: <https://uri.etsi.org/ngsi-ld/> .
 @prefix iffBaseKnowledge: <https://industryfusion.github.io/contexts/ontology/v0.1/base_knowledge/> .
-@prefix material: <https://industryfusion.github.io/contexts/ontology/v0.1/material/>
+@prefix material: <https://industryfusion.github.io/contexts/ontology/v0.1/material/> .
 
 
 
@@ -163,7 +163,7 @@
     ] ;
     sh:property [
         sh:path iffBaseEntities:hasHeight ;
-        sh:order 10 ;
+        sh:order 20 ;
         sh:nodeKind sh:BlankNode;
         sh:minCount 1 ;
         sh:maxCount 1 ;
@@ -178,7 +178,7 @@
     ] ;
     sh:property [
         sh:path iffBaseEntities:hasLength ;
-        sh:order 10 ;
+        sh:order 30 ;
         sh:nodeKind sh:BlankNode;
         sh:minCount 1 ;
         sh:maxCount 1 ;
@@ -193,16 +193,124 @@
     ] ;
     sh:property [
         sh:path iffBaseEntities:hasMaterial ;
-        sh:order 10 ;
+        sh:order 40 ;
         sh:nodeKind sh:BlankNode;
         sh:minCount 1 ;
         sh:maxCount 1 ;
         sh:property [
             sh:path ngsild:hasValue ;
-            sh:nodeKind sh:Iri;
-            sh:class mat:Material ;
+            sh:nodeKind sh:IRI;
+            sh:class material:Material ;
             sh:minCount 1 ;
             sh:maxCount 1 ;
         ] ;
     ] ;
 .
+
+:FilterStrengthShape
+    a sh:NodeShape ;
+    sh:targetClass iffBaseEntities:Filter ;
+    sh:sparql [
+        a sh:SPARQLConstraints ;
+        sh:message "Check Filter strength as function of workpiece: {?value}" ;
+        sh:select """
+PREFIX iffBaseEntities: <https://industryfusion.github.io/contexts/ontology/v0.1/base_entities/>
+PREFIX iffBaseKnowledge: <https://industryfusion.github.io/contexts/ontology/v0.1/base_knowledge/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX schema: <https://schema.org/>
+PREFIX ngsild: <https://uri.etsi.org/ngsi-ld/>
+
+SELECT ?this ?value
+    where {
+        $this iffBaseEntities:hasStrength [ ngsild:hasValue ?strength ] .
+        ?pc a iffBaseEntities:Cutter .
+        ?pc iffBaseEntities:hasFilter [ ngsild:hasObject $this ] .
+        ?pc iffBaseEntities:hasInWorkpiece [ ngsild:hasObject ?wp ] .
+        ?wp iffBaseEntities:hasHeight [ ngsild:hasValue ?height ] .
+        ?pc iffBaseEntities:hasState [ ngsild:hasValue ?pcstate ] .
+        $this iffBaseEntities:hasState [ ngsild:hasValue ?filterstate ] .
+        BIND(
+            IF(xsd:integer(?height) > 500 && xsd:float(?strength) < 1.0, \"Filter strength too low, should be 1.0\", 
+                IF(xsd:integer(?height) > 250 && xsd:float(?strength) < 0.75, \"Filter strength too low, should be at least 0.75\",
+                    IF(xsd:float(?strength) < 0.5, \"Filter strength too low, should be at least 0.5\", \"ok\")
+                )
+            ) as ?value) .
+        FILTER(?pcstate = iffBaseKnowledge:state_PROCESSING && ?filterstate = iffBaseKnowledge:state_ON && ?value != \"ok\") .
+    }
+        """ ;
+    ] .
+
+
+:StateOnCutterShape
+    a sh:NodeShape ;
+    sh:targetClass iffBaseEntities:Cutter ;
+    sh:sparql [
+        a sh:SPARQLConstraints;
+        sh:severity iffBaseKnowledge:severityCritical ; 
+        sh:message "Cutter running without running filter" ;
+        sh:select """
+PREFIX iffBaseEntities: <https://industryfusion.github.io/contexts/ontology/v0.1/base_entities/>
+PREFIX iffBaseKnowledge: <https://industryfusion.github.io/contexts/ontology/v0.1/base_knowledge/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX ngsild: <https://uri.etsi.org/ngsi-ld/>
+
+SELECT $this ?v1 ?f ?v2
+    where {
+        $this iffBaseEntities:hasState [ ngsild:hasValue ?v1 ] .
+        $this iffBaseEntities:hasFilter [ ngsild:hasObject ?f ] .
+        ?f iffBaseEntities:hasState [ ngsild:hasValue ?v2 ] .
+        FILTER(?v1 = iffBaseKnowledge:state_PROCESSING && ?v2 != iffBaseKnowledge:state_ON)
+    }
+        """ ;
+    ] .
+
+
+# iff:StateOnFilterShape
+#     a sh:NodeShape ;
+#     sh:targetClass iff:filter ;
+#     sh:sparql [
+#         a sh:SPARQLConstraints;
+#         sh:severity iff:severityWarning ;
+#         sh:message "Filter running without running assigned machine" ;
+#         sh:select """
+# PREFIX iff: <https://industry-fusion.com/types/v0.9/>
+# PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+# PREFIX rdf:	<http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+# SELECT $this ?v1 ?pc ?v2
+#     where {
+#         $this  iff:state [ <https://uri.etsi.org/ngsi-ld/hasValue> ?v1 ] .
+#         ?pc rdf:type iff:plasmacutter .
+#         ?pc iff:hasFilter [ <https://uri.etsi.org/ngsi-ld/hasObject> $this ] .
+#         ?pc  iff:state [ <https://uri.etsi.org/ngsi-ld/hasValue> ?v2 ] .
+#         FILTER(?v1 = <https://industry-fusion.com/types/v0.9/state_ON> && ?v2 != <https://industry-fusion.com/types/v0.9/state_PROCESSING>)
+#     }
+#         """ ;
+#     ] .
+
+# iff:StateValueShape
+#     a sh:NodeShape ;
+#     sh:targetClass iff:machine ;
+#     sh:sparql [
+        
+#         sh:message "State value {?value} are not a valid machineState for machine {$this} of type {?type}" ;
+#         sh:select """
+#         PREFIX iff: <https://industry-fusion.com/types/v0.9/>
+#         PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+#         SELECT $this ?value ?type
+#         where {
+#             ?this a iff:machine .
+#             ?this  iff:state [ <https://uri.etsi.org/ngsi-ld/hasValue> ?value ] .
+#             ?this a ?type .
+#             OPTIONAL{?type rdfs:subClassOf ?basetype .}
+#             ?x iff:stateValidFor ?basetype .
+#             FILTER( ?type != <http://www.w3.org/2000/01/rdf-schema#Resource> )
+#             FILTER NOT EXISTS {
+
+#                 ?value iff:stateValidFor ?basetype .
+
+#             }
+#         }
+#         """ ;
+#     ] .
