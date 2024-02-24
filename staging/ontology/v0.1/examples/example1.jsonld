@@ -1,0 +1,41 @@
+[
+  {
+    "@context": "https://industryfusion.github.io/contexts/v0.1/context.jsonld",
+    "id": "urn:cutter:1",
+    "type": "iffBaseEntities:Machine",
+    "iffBaseEntities:hasState": [
+      {
+      "type": "Property",
+      "value": {
+        "@id": "iffBaseKnowledge:state_OFF"
+      }}]
+  },
+  {
+    "@context": "https://industryfusion.github.io/contexts/v0.1/context.jsonld",
+    "id": "urn:plasmacutter:1",
+    "type": "iffBaseEntities:Cutter",
+    "iffBaseEntities:hasState": [
+      {
+      "type": "Property",
+      "value": {
+        "@id": "iffBaseKnowledge:state_PROCESSING"
+      }}],
+      "iffBaseEntities:hasFilter": [
+        {
+          "type": "Relationship",
+          "object": "urn:filter:1"
+        }
+      ]
+  },
+  {
+    "@context": "https://industryfusion.github.io/contexts/v0.1/context.jsonld",
+    "id": "urn:filter:1",
+    "type": "iffBaseEntities:Filter",
+    "iffBaseEntities:hasState": [
+    {
+      "type": "Property",
+      "value": {
+        "@id": "iffBaseKnowledge:state_PROCESSING"
+      }}]
+  }
+]
