@@ -292,13 +292,9 @@ SELECT $this ?v1 ?pc ?v2
         """ ;
     ] .
 
-:StateValueShape
-    a sh:NodeShape ;
-    sh:targetClass iffBaseEntities:Machine ;
-    sh:sparql [
-        
-        sh:message "State value {?value} are not a valid machineState for machine {$this} of type {?type}" ;
-        sh:select """
+:StateValueShape a sh:NodeShape ;
+    sh:sparql [ sh:message "State value {?value} are not a valid machineState for machine {$this} of type {?type}" ;
+            sh:select """
 PREFIX iffBaseEntities: <https://industryfusion.github.io/contexts/ontology/v0.1/base_entities/>
 PREFIX iffBaseKnowledge: <https://industryfusion.github.io/contexts/ontology/v0.1/base_knowledge/>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
@@ -307,14 +303,13 @@ PREFIX ngsild: <https://uri.etsi.org/ngsi-ld/>
 
 SELECT $this ?value ?type
         where {
-            ?this  iffBaseEntities:hasState [ ngsild:hasValue ?value ] .
-            ?this a ?type .
-            OPTIONAL{?type rdfs:subClassOf ?basetype .}
-            ?x iffBaseKnowledge:isValidFor ?basetype .
-            FILTER( ?type != rdfs:Resource )
-            FILTER NOT EXISTS {
-                ?value iffBaseKnowledge:isValidFor ?basetype .
+             ?this a ?type .
+             ?type rdfs:subClassOf* iffBaseEntities:machine .
+             ?this  iffBaseEntities:hasState [ ngsild:hasValue ?value ] .
+           FILTER NOT EXISTS{
+                ?value iffBaseKnowledge:isValidFor ?subtype .
+                ?type rdfs:subClassOf* ?subtype .
             }
         }
-        """ ;
+        """ ] ;
     ] .
