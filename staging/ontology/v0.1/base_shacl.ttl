@@ -293,8 +293,11 @@ SELECT $this ?v1 ?pc ?v2
     ] .
 
 :StateValueShape a sh:NodeShape ;
-    sh:sparql [ sh:message "State value {?value} are not a valid machineState for machine {$this} of type {?type}" ;
-            sh:select """
+ sh:targetClass iffBaseEntities:Machine ;
+    sh:sparql [
+        a sh:SPARQLConstraints; 
+        sh:message "State value {?value} are not a valid machineState for machine {$this} of type {?type}" ;
+        sh:select """
 PREFIX iffBaseEntities: <https://industryfusion.github.io/contexts/ontology/v0.1/base_entities/>
 PREFIX iffBaseKnowledge: <https://industryfusion.github.io/contexts/ontology/v0.1/base_knowledge/>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
@@ -311,5 +314,5 @@ SELECT $this ?value ?type
                 ?type rdfs:subClassOf* ?subtype .
             }
         }
-        """ ] ;
+        """;
     ] .
