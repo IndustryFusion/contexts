@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-find . -type d -print -exec bash -c 'tree "$0" \
+find ./staging/ontology/*/ -type d -print -exec bash -c 'tree "$0" \
     -H "." \
     -L 1 \
     --noreport \
