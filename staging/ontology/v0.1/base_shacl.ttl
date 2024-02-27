@@ -307,7 +307,6 @@ PREFIX ngsild: <https://uri.etsi.org/ngsi-ld/>
 SELECT $this ?value ?type
         where {
              ?this a ?type .
-             ?type rdfs:subClassOf* iffBaseEntities:machine .
              ?this  iffBaseEntities:hasState [ ngsild:hasValue ?value ] .
            FILTER NOT EXISTS{
                 ?value iffBaseKnowledge:isValidFor ?subtype .
