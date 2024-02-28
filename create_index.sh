@@ -25,5 +25,5 @@ find ./staging/ontology/*/ -type d -print -exec bash -c 'tree "$0" \
     --timefmt "%d-%b-%Y %H:%M" \
     -s \
     -D \
-    -P "*.ttl|*.jsonld" \
+    -P "*.ttl|*.jsonld|*.txt" \
     -o "$0/index.html"' {} \;
