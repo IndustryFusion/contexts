@@ -315,3 +315,56 @@ SELECT $this ?value ?type
         }
         """;
     ] .
+
+:TimestampCartridgeFromRulesShape
+	a sh:NodeShape ;
+	sh:targetClass iffBaseEntities:FilterCartridge ;
+	sh:rule [
+		a sh:SPARQLRule ;
+		sh:construct """
+PREFIX iffBaseEntities: <https://industryfusion.github.io/contexts/ontology/v0.1/base_entities/>
+PREFIX iffBaseKnowledge: <https://industryfusion.github.io/contexts/ontology/v0.1/base_knowledge/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf:	<http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX ngsild: <https://uri.etsi.org/ngsi-ld/>
+CONSTRUCT {
+	$this iffBaseEntities:isUsedFrom [ ngsild:hasValue ?ts ] .
+}
+WHERE {
+    ?filter iffBaseEntities:hasCartridge [ ngsild:hasObject $this ] .
+    ?filter iffBaseEntities:hasState [ ngsild:observedAt ?fstateTs ] .
+    ?filter iffBaseEntities:hasState [ ngsild:hasValue ?fstate ] .
+    bind(?fstateTs as ?ts)
+    FILTER NOT EXISTS {
+		$this  iffBaseEntities:isUsedFrom [ ngsild:hasValue ?oldertimestamp ] .
+	}
+    FILTER(?fstate = iffBaseKnowledge:state_ON)
+}
+""" ;
+	] ;
+.
+
+:TimestampCartridgeUntilRulesShape
+	a sh:NodeShape ;
+	sh:targetClass iffBaseEntities:FilterCartridge ;
+	sh:rule [
+		a sh:SPARQLRule ;
+		sh:construct """
+PREFIX iffBaseEntities: <https://industryfusion.github.io/contexts/ontology/v0.1/base_entities/>
+PREFIX iffBaseKnowledge: <https://industryfusion.github.io/contexts/ontology/v0.1/base_knowledge/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf:	<http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX ngsild: <https://uri.etsi.org/ngsi-ld/>
+CONSTRUCT {
+	$this iffBaseEntities:isUsedUntil [ ngsild:hasValue ?ts ] .
+}
+WHERE {
+    ?filter iffBaseEntities:hasCartridge [ ngsild:hasObject $this ] .
+    ?filter iffBaseEntities:hasState [ ngsild:hasValue ?fstate ] .
+    ?filter iffBaseEntities:hasState [ ngsild:observedAt ?fstateTs ] .
+    bind(?fstateTs as ?ts)
+    FILTER(?fstate = iffBaseKnowledge:state_ON)
+}
+""" ;
+	] ;
+.

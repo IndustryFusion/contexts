@@ -30,3 +30,40 @@
         ] ;
     ] ;
 .
+
+
+:ChangeWasteClassRulesShape
+	a sh:NodeShape ;
+	sh:targetClass iffBaseEntities:FilterCartridge ;
+	sh:rule [
+		a sh:SPARQLRule ;
+		sh:construct """
+PREFIX iffBaseEntities: <https://industryfusion.github.io/contexts/ontology/v0.1/base_entities/>
+PREFIX iffBaseKnowledge: <https://industryfusion.github.io/contexts/ontology/v0.1/base_knowledge/>
+PREFIX iffFilterEntities: <https://industryfusion.github.io/contexts/ontology/v0.1/filter_entities/>
+PREFIX iffFilterKnowledge: <https://industryfusion.github.io/contexts/ontology/v0.1/filter_knowledge/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf:	<http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX ngsild: <https://uri.etsi.org/ngsi-ld/>
+PREFIX material: <https://industryfusion.github.io/contexts/ontology/v0.1/material/> 
+CONSTRUCT {
+	$this iffFilterEntities:hasWasteclass [ ngsild:hasValue ?new_wasteclass ] .
+}
+WHERE {
+    ?filter iffBaseEntities:hasCartridge [ ngsild:hasObject $this ] .
+    ?cutter iffBaseEntities:hasFilter [ ngsild:hasObject ?filter ] .
+    ?cutter iffBaseEntities:hasState [ ngsild:hasValue ?cutter_state ] .
+    ?filter iffBaseEntities:hasState [ ngsild:hasValue ?filter_state ] .
+    ?workpiece iffBaseEntities:hasMaterial [ ngsild:hasValue ?material ] .
+    ?cutter iffBaseEntities:hasInWorkpiece [ ngsild:hasObject ?workpiece ] .
+    OPTIONAL{$this iffFilterEntities:hasWasteclass [ ngsild:hasValue ?cur_wasteclass ] .}
+    ?material iffFilterKnowledge:hasWasteclass ?new_wasteclass .
+    #?cur_wasteclass iffFilterKnowledge:higherHazardLevel ?new_wasteclass .
+    BIND(IF(bound(?cur_wasteclass), ?cur_wasteclass, iffFilterKnowledge:WC0) as ?wasteclass)
+    FILTER(?filter_state = iffBaseKnowledge:state_ON && ?cutter_state = iffBaseKnowledge:state_PROCESSING && ?wasteclass != ?new_wasteclass)
+      FILTER NOT EXISTS {
+          ?wasteclass iffFilterKnowledge:higherHazardLevel ?new_wasteclass .
+      }
+}
+""" ;
+	] .
