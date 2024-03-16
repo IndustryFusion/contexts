@@ -8,7 +8,7 @@
 
 <https://industryfusion.github.io/contexts/ontology/v0.1/base_entities/> rdf:type owl:Ontology ;
                                                                           owl:versionIRI <https://industryfusion.github.io/contexts/staging/ontology/v0.1/base_entities/> ;
-                                                                          owl:imports <https://industryfusion.github.io/contexts/staging/ontology/v0.1/ngsild/> .
+                                                                          owl:imports <https://industryfusion.github.io/contexts/staging/ontology/v0.1/ngsild.ttl> .
 
 #################################################################
 #    Object Properties
