@@ -6,7 +6,8 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @base <https://uri.etsi.org/ngsi-ld/> .
 
-<https://uri.etsi.org/ngsi-ld/> rdf:type owl:Ontology .
+<https://uri.etsi.org/ngsi-ld/> rdf:type owl:Ontology ;
+                                 owl:versionIRI <https://industryfusion.github.io/contexts/staging/ontology/v0.1/ngsild/> .
 
 #################################################################
 #    Classes
