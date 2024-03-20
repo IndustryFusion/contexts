@@ -1,0 +1,196 @@
+@prefix : <https://industryfusion.github.io/contexts/ontology/v0.1/bindings/base_test/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://industryfusion.github.io/contexts/ontology/v0.1/bindings/base_test/> .
+
+<https://industryfusion.github.io/contexts/ontology/v0.1/bindings/base_test/> rdf:type owl:Ontology ;
+                                                                               owl:versionIRI <https://industryfusion.github.io/contexts/staging/ontology/v0.1/bindings/base_test/> ;
+                                                                               owl:imports <https://industryfusion.github.io/contexts/staging/ontology/v0.1/base_entities/> ,
+                                                                                           <https://industryfusion.github.io/contexts/staging/ontology/v0.1/base_knowledge/> .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  https://industryfusion.github.io/contexts/ontology/v0.1/base_knowledge/hasEntity
+<https://industryfusion.github.io/contexts/ontology/v0.1/base_knowledge/hasEntity> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  https://industryfusion.github.io/contexts/ontology/v0.1/base_knowledge/bindsMapDataType
+<https://industryfusion.github.io/contexts/ontology/v0.1/base_knowledge/bindsMapDataType> rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  https://industryfusion.github.io/contexts/ontology/v0.1/base_entities/hasHeight
+<https://industryfusion.github.io/contexts/ontology/v0.1/base_entities/hasHeight> <https://industryfusion.github.io/contexts/ontology/v0.1/base_knowledge/boundBy> :heightBinding .
+
+
+###  https://industryfusion.github.io/contexts/ontology/v0.1/base_entities/hasLength
+<https://industryfusion.github.io/contexts/ontology/v0.1/base_entities/hasLength> <https://industryfusion.github.io/contexts/ontology/v0.1/base_knowledge/boundBy> :lengthBinding .
+
+
+###  https://industryfusion.github.io/contexts/ontology/v0.1/base_entities/hasMaterial
+<https://industryfusion.github.io/contexts/ontology/v0.1/base_entities/hasMaterial> <https://industryfusion.github.io/contexts/ontology/v0.1/base_knowledge/boundBy> :materialBinding .
+
+
+###  https://industryfusion.github.io/contexts/ontology/v0.1/base_entities/hasState
+<https://industryfusion.github.io/contexts/ontology/v0.1/base_entities/hasState> <https://industryfusion.github.io/contexts/ontology/v0.1/base_knowledge/boundBy> :stateBindingCutter .
+
+
+###  https://industryfusion.github.io/contexts/ontology/v0.1/base_entities/hasStrength
+<https://industryfusion.github.io/contexts/ontology/v0.1/base_entities/hasStrength> <https://industryfusion.github.io/contexts/ontology/v0.1/base_knowledge/boundBy> :strengthBinding .
+
+
+###  https://industryfusion.github.io/contexts/ontology/v0.1/bindings/base_test/_map1
+:_map1 rdf:type owl:NamedIndividual ,
+                <https://industryfusion.github.io/contexts/ontology/v0.1/base_knowledge/BoundMap> ;
+       <https://industryfusion.github.io/contexts/ontology/v0.1/base_knowledge/bindsConnector> <https://industryfusion.github.io/contexts/ontology/v0.1/base_knowledge/TestConnector> ;
+       <https://industryfusion.github.io/contexts/ontology/v0.1/base_knowledge/bindsMapDataType> xsd:boolean ;
+       <https://industryfusion.github.io/contexts/ontology/v0.1/base_knowledge/bindsConnectorAttribute> "stateattr" ;
+       <https://industryfusion.github.io/contexts/ontology/v0.1/base_knowledge/bindsLogicVar> "var1" .
+
+
+###  https://industryfusion.github.io/contexts/ontology/v0.1/bindings/base_test/_map2
+:_map2 rdf:type owl:NamedIndividual ,
+                <https://industryfusion.github.io/contexts/ontology/v0.1/base_knowledge/BoundMap> ;
+       <https://industryfusion.github.io/contexts/ontology/v0.1/base_knowledge/bindsConnector> <https://industryfusion.github.io/contexts/ontology/v0.1/base_knowledge/TestConnector> ;
+       <https://industryfusion.github.io/contexts/ontology/v0.1/base_knowledge/bindsMapDataType> xsd:integer ;
+       <https://industryfusion.github.io/contexts/ontology/v0.1/base_knowledge/bindsConnectorAttribute> "stateattr2" ;
+       <https://industryfusion.github.io/contexts/ontology/v0.1/base_knowledge/bindsLogicVar> "var2" .
+
+
+###  https://industryfusion.github.io/contexts/ontology/v0.1/bindings/base_test/_map3
+:_map3 rdf:type owl:NamedIndividual ,
+                <https://industryfusion.github.io/contexts/ontology/v0.1/base_knowledge/BoundMap> ;
+       <https://industryfusion.github.io/contexts/ontology/v0.1/base_knowledge/bindsConnector> <https://industryfusion.github.io/contexts/ontology/v0.1/base_knowledge/TestConnector> ;
+       <https://industryfusion.github.io/contexts/ontology/v0.1/base_knowledge/bindsMapDataType> xsd:decimal ;
+       <https://industryfusion.github.io/contexts/ontology/v0.1/base_knowledge/bindsConnectorAttribute> "heightattr" ;
+       <https://industryfusion.github.io/contexts/ontology/v0.1/base_knowledge/bindsLogicVar> "var3" .
+
+
+###  https://industryfusion.github.io/contexts/ontology/v0.1/bindings/base_test/_map4
+:_map4 rdf:type owl:NamedIndividual ,
+                <https://industryfusion.github.io/contexts/ontology/v0.1/base_knowledge/BoundMap> ;
+       <https://industryfusion.github.io/contexts/ontology/v0.1/base_knowledge/bindsMapDataType> xsd:decimal ;
+       <https://industryfusion.github.io/contexts/ontology/v0.1/base_knowledge/bindsConnectorAttribute> "lengthattr" ;
+       <https://industryfusion.github.io/contexts/ontology/v0.1/base_knowledge/bindsLogicVar> "var4" .
+
+
+###  https://industryfusion.github.io/contexts/ontology/v0.1/bindings/base_test/_map5
+:_map5 rdf:type owl:NamedIndividual ,
+                <https://industryfusion.github.io/contexts/ontology/v0.1/base_knowledge/BoundMap> ;
+       <https://industryfusion.github.io/contexts/ontology/v0.1/base_knowledge/bindsConnector> <https://industryfusion.github.io/contexts/ontology/v0.1/base_knowledge/TestConnector> ;
+       <https://industryfusion.github.io/contexts/ontology/v0.1/base_knowledge/bindsMapDataType> xsd:string ;
+       <https://industryfusion.github.io/contexts/ontology/v0.1/base_knowledge/bindsConnectorAttribute> "materialattr" ;
+       <https://industryfusion.github.io/contexts/ontology/v0.1/base_knowledge/bindsLogicVar> "var5" .
+
+
+###  https://industryfusion.github.io/contexts/ontology/v0.1/bindings/base_test/_map6
+:_map6 rdf:type owl:NamedIndividual ,
+                <https://industryfusion.github.io/contexts/ontology/v0.1/base_knowledge/BoundMap> ;
+       <https://industryfusion.github.io/contexts/ontology/v0.1/base_knowledge/bindsConnector> <https://industryfusion.github.io/contexts/ontology/v0.1/base_knowledge/TestConnector> ;
+       <https://industryfusion.github.io/contexts/ontology/v0.1/base_knowledge/bindsMapDataType> xsd:decimal ;
+       <https://industryfusion.github.io/contexts/ontology/v0.1/base_knowledge/bindsConnectorAttribute> "strengthattr" ;
+       <https://industryfusion.github.io/contexts/ontology/v0.1/base_knowledge/bindsLogicVar> "var6" .
+
+
+###  https://industryfusion.github.io/contexts/ontology/v0.1/bindings/base_test/_map7
+:_map7 rdf:type owl:NamedIndividual ,
+                <https://industryfusion.github.io/contexts/ontology/v0.1/base_knowledge/BoundMap> ;
+       <https://industryfusion.github.io/contexts/ontology/v0.1/base_knowledge/bindsConnector> <https://industryfusion.github.io/contexts/ontology/v0.1/base_knowledge/TestConnector> ;
+       <https://industryfusion.github.io/contexts/ontology/v0.1/base_knowledge/bindsMapDataType> xsd:decimal ;
+       <https://industryfusion.github.io/contexts/ontology/v0.1/base_knowledge/bindsConnectorAttribute> "widthattr" ;
+       <https://industryfusion.github.io/contexts/ontology/v0.1/base_knowledge/bindsLogicVar> "var7" .
+
+
+###  https://industryfusion.github.io/contexts/ontology/v0.1/bindings/base_test/_map8
+:_map8 rdf:type owl:NamedIndividual ;
+       <https://industryfusion.github.io/contexts/ontology/v0.1/base_knowledge/bindsConnector> <https://industryfusion.github.io/contexts/ontology/v0.1/base_knowledge/TestConnector> ;
+       <https://industryfusion.github.io/contexts/ontology/v0.1/base_knowledge/bindsMapDataType> xsd:boolean ;
+       <https://industryfusion.github.io/contexts/ontology/v0.1/base_knowledge/bindsConnectorAttribute> "filterstateattr" ;
+       <https://industryfusion.github.io/contexts/ontology/v0.1/base_knowledge/bindsLogicVar> "var8" .
+
+
+###  https://industryfusion.github.io/contexts/ontology/v0.1/bindings/base_test/heightBinding
+:heightBinding rdf:type owl:NamedIndividual ,
+                        <https://industryfusion.github.io/contexts/ontology/v0.1/base_knowledge/Binding> ;
+               <https://industryfusion.github.io/contexts/ontology/v0.1/base_knowledge/bindsEntityType> <https://industryfusion.github.io/contexts/ontology/v0.1/base_entities/Workpiece> ;
+               <https://industryfusion.github.io/contexts/ontology/v0.1/base_knowledge/bindsMap> :_map3 ;
+               <https://industryfusion.github.io/contexts/ontology/v0.1/base_knowledge/bindsFirmware> "Firmware xyz" .
+
+
+###  https://industryfusion.github.io/contexts/ontology/v0.1/bindings/base_test/lengthBinding
+:lengthBinding rdf:type owl:NamedIndividual ,
+                        <https://industryfusion.github.io/contexts/ontology/v0.1/base_knowledge/Binding> ;
+               <https://industryfusion.github.io/contexts/ontology/v0.1/base_knowledge/bindsEntityType> <https://industryfusion.github.io/contexts/ontology/v0.1/base_entities/Workpiece> ;
+               <https://industryfusion.github.io/contexts/ontology/v0.1/base_knowledge/bindsMap> :_map4 ;
+               <https://industryfusion.github.io/contexts/ontology/v0.1/base_knowledge/bindsFirmware> "xyz" .
+
+
+###  https://industryfusion.github.io/contexts/ontology/v0.1/bindings/base_test/materialBinding
+:materialBinding rdf:type owl:NamedIndividual ,
+                          <https://industryfusion.github.io/contexts/ontology/v0.1/base_knowledge/Binding> ;
+                 <https://industryfusion.github.io/contexts/ontology/v0.1/base_knowledge/bindsEntityType> <https://industryfusion.github.io/contexts/ontology/v0.1/base_entities/Workpiece> ;
+                 <https://industryfusion.github.io/contexts/ontology/v0.1/base_knowledge/bindsMap> :_map5 ;
+                 <https://industryfusion.github.io/contexts/ontology/v0.1/base_knowledge/bindsFirmware> "xyz" .
+
+
+###  https://industryfusion.github.io/contexts/ontology/v0.1/bindings/base_test/stateBindingCutter
+:stateBindingCutter rdf:type owl:NamedIndividual ,
+                             <https://industryfusion.github.io/contexts/ontology/v0.1/base_knowledge/Binding> ;
+                    <https://industryfusion.github.io/contexts/ontology/v0.1/base_knowledge/bindsEntityType> <https://industryfusion.github.io/contexts/ontology/v0.1/base_entities/Cutter> ;
+                    <https://industryfusion.github.io/contexts/ontology/v0.1/base_knowledge/bindsMap> :_map1 ,
+                                                                                                      :_map2 ;
+                    <https://industryfusion.github.io/contexts/ontology/v0.1/base_knowledge/bindingVersion> "0.9"^^xsd:string ;
+                    <https://industryfusion.github.io/contexts/ontology/v0.1/base_knowledge/bindsContext> "https://industryfusion.github.io/contexts/v0.1/context.jsonld" ;
+                    <https://industryfusion.github.io/contexts/ontology/v0.1/base_knowledge/bindsFirmware> "xyz" ;
+                    <https://industryfusion.github.io/contexts/ontology/v0.1/base_knowledge/bindsLogic> """WHERE  {
+    BIND(ngsi-ld:Property as ?type)
+    BIND( 
+        IF(?var1 = true, 
+            IF(?var2 = 0, iffBaseKnowledge:state_ON, 
+                IF(?var2 = 1, iffBaseKnowledge:state_PROCESSING, iffBaseKnowledge:state_ERROR )
+            )
+            , iffBaseKnowledge:state_OFF
+        ) as ?value
+    )
+    BIND(IF( ?firmware IN ('abc', 'abd'), 1.0, 0.0) as ?trustLevel)
+}""" .
+
+
+###  https://industryfusion.github.io/contexts/ontology/v0.1/bindings/base_test/stateBindingFilter
+:stateBindingFilter rdf:type owl:NamedIndividual ;
+                    <https://industryfusion.github.io/contexts/ontology/v0.1/base_knowledge/bindsEntityType> <https://industryfusion.github.io/contexts/ontology/v0.1/base_entities/Filter> ;
+                    <https://industryfusion.github.io/contexts/ontology/v0.1/base_knowledge/bindsMap> :_map8 ;
+                    <https://industryfusion.github.io/contexts/ontology/v0.1/base_knowledge/bindingVersion> "0.9"^^xsd:string ;
+                    <https://industryfusion.github.io/contexts/ontology/v0.1/base_knowledge/bindsFirmware> "xyz" ;
+                    <https://industryfusion.github.io/contexts/ontology/v0.1/base_knowledge/hasEntity> <https://industryfusion.github.io/contexts/ontology/v0.1/base_entities/Filter> .
+
+
+###  https://industryfusion.github.io/contexts/ontology/v0.1/bindings/base_test/strengthBinding
+:strengthBinding rdf:type owl:NamedIndividual ,
+                          <https://industryfusion.github.io/contexts/ontology/v0.1/base_knowledge/Binding> ;
+                 <https://industryfusion.github.io/contexts/ontology/v0.1/base_knowledge/bindsEntityType> <https://industryfusion.github.io/contexts/ontology/v0.1/base_entities/Filter> ;
+                 <https://industryfusion.github.io/contexts/ontology/v0.1/base_knowledge/bindsMap> :_map6 ;
+                 <https://industryfusion.github.io/contexts/ontology/v0.1/base_knowledge/bindsFirmware> "xyz" .
+
+
+###  https://industryfusion.github.io/contexts/ontology/v0.1/bindings/base_test/widthBinding
+:widthBinding rdf:type owl:NamedIndividual ,
+                       <https://industryfusion.github.io/contexts/ontology/v0.1/base_knowledge/Binding> ;
+              <https://industryfusion.github.io/contexts/ontology/v0.1/base_knowledge/bindsEntityType> <https://industryfusion.github.io/contexts/ontology/v0.1/base_entities/Workpiece> ;
+              <https://industryfusion.github.io/contexts/ontology/v0.1/base_knowledge/bindsMap> :_map7 ;
+              <https://industryfusion.github.io/contexts/ontology/v0.1/base_knowledge/bindsFirmware> "xyz" .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
