@@ -36,13 +36,13 @@ xsd:string rdf:type rdfs:Datatype .
 
 ###  https://industryfusion.github.io/contexts/ontology/v0.1/base_knowledge/bindsConnector
 :bindsConnector rdf:type owl:ObjectProperty ;
-                rdfs:domain :Binding ;
+                rdfs:domain :BoundMap ;
                 rdfs:range :BoundConnector .
 
 
 ###  https://industryfusion.github.io/contexts/ontology/v0.1/base_knowledge/bindsEntityType
 :bindsEntityType rdf:type owl:ObjectProperty ;
-                 rdfs:domain :BoundMap .
+                 rdfs:domain :Binding .
 
 
 ###  https://industryfusion.github.io/contexts/ontology/v0.1/base_knowledge/bindsMap
@@ -73,14 +73,30 @@ xsd:string rdf:type rdfs:Datatype .
 #    Data properties
 #################################################################
 
+###  https://industryfusion.github.io/contexts/ontology/v0.1/base_knowledge/bindingVersion
+:bindingVersion rdf:type owl:DatatypeProperty ;
+                rdfs:range xsd:string .
+
+
 ###  https://industryfusion.github.io/contexts/ontology/v0.1/base_knowledge/bindsConnectorAttribute
 :bindsConnectorAttribute rdf:type owl:DatatypeProperty .
+
+
+###  https://industryfusion.github.io/contexts/ontology/v0.1/base_knowledge/bindsContext
+:bindsContext rdf:type owl:DatatypeProperty ;
+              rdfs:range xsd:string .
 
 
 ###  https://industryfusion.github.io/contexts/ontology/v0.1/base_knowledge/bindsFirmware
 :bindsFirmware rdf:type owl:DatatypeProperty ;
                rdfs:domain :Binding ;
                rdfs:range xsd:string .
+
+
+###  https://industryfusion.github.io/contexts/ontology/v0.1/base_knowledge/bindsLogic
+:bindsLogic rdf:type owl:DatatypeProperty ;
+            rdfs:domain :BoundMap ;
+            rdfs:range xsd:string .
 
 
 ###  https://industryfusion.github.io/contexts/ontology/v0.1/base_knowledge/bindsLogicVar
