@@ -1,0 +1,69 @@
+@prefix iffBaseEntities: <https://industryfusion.github.io/contexts/example/v0.1/base_entities/> .
+@prefix iffFilterEntities: <https://industryfusion.github.io/contexts/example/v0.1/filter_entities/> .
+@prefix : <https://industryfusion.github.io/contexts/example/v0.1/filter_shacl/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix ngsild: <https://uri.etsi.org/ngsi-ld/> .
+@prefix iffBaseKnowledge: <https://industryfusion.github.io/contexts/example/v0.1/base_knowledge/> .
+@prefix iffFilterKnowledge: <https://industryfusion.github.io/contexts/example/v0.1/filter_knowledge/> .
+@prefix material: <https://industryfusion.github.io/contexts/ontology/v0.1/material/> .
+
+:CartridgeShape
+    a sh:NodeShape ;
+    sh:targetClass iffBaseEntities:FilterCartridge ;
+    sh:property [
+        sh:path iffFilterEntities:hasWasteclass ;
+        sh:order 10 ;
+        sh:nodeKind sh:BlankNode;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:property [
+            sh:path ngsild:hasValue ;
+            sh:class iffFilterKnowledge:Wasteclass;
+            sh:nodeKind sh:IRI;
+            sh:minCount 1 ;
+            sh:maxCount 1 ;
+        ] ;
+    ] ;
+.
+
+
+:ChangeWasteClassRulesShape
+	a sh:NodeShape ;
+	sh:targetClass iffBaseEntities:FilterCartridge ;
+	sh:rule [
+		a sh:SPARQLRule ;
+		sh:construct """
+PREFIX iffBaseEntities: <https://industryfusion.github.io/contexts/example/v0.1/base_entities/>
+PREFIX iffBaseKnowledge: <https://industryfusion.github.io/contexts/example/v0.1/base_knowledge/>
+PREFIX iffFilterEntities: <https://industryfusion.github.io/contexts/example/v0.1/filter_entities/>
+PREFIX iffFilterKnowledge: <https://industryfusion.github.io/contexts/example/v0.1/filter_knowledge/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf:	<http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX ngsild: <https://uri.etsi.org/ngsi-ld/>
+PREFIX material: <https://industryfusion.github.io/contexts/example/v0.1/material/> 
+CONSTRUCT {
+	$this iffFilterEntities:hasWasteclass [ ngsild:hasValue ?new_wasteclass ] .
+}
+WHERE {
+    ?filter iffBaseEntities:hasCartridge [ ngsild:hasObject $this ] .
+    ?cutter iffBaseEntities:hasFilter [ ngsild:hasObject ?filter ] .
+    ?cutter iffBaseEntities:hasState [ ngsild:hasValue ?cutter_state ] .
+    ?filter iffBaseEntities:hasState [ ngsild:hasValue ?filter_state ] .
+    ?workpiece iffBaseEntities:hasMaterial [ ngsild:hasValue ?material ] .
+    ?cutter iffBaseEntities:hasInWorkpiece [ ngsild:hasObject ?workpiece ] .
+    OPTIONAL{$this iffFilterEntities:hasWasteclass [ ngsild:hasValue ?cur_wasteclass ] .}
+    ?material iffFilterKnowledge:hasWasteclass ?new_wasteclass .
+    #?cur_wasteclass iffFilterKnowledge:higherHazardLevel ?new_wasteclass .
+    BIND(IF(bound(?cur_wasteclass), ?cur_wasteclass, iffFilterKnowledge:WC0) as ?wasteclass)
+    FILTER(?filter_state = iffBaseKnowledge:state_ON && ?cutter_state = iffBaseKnowledge:state_PROCESSING && ?wasteclass != ?new_wasteclass)
+      FILTER NOT EXISTS {
+          ?wasteclass iffFilterKnowledge:higherHazardLevel ?new_wasteclass .
+      }
+}
+""" ;
+	] .
