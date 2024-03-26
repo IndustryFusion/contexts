@@ -45,7 +45,7 @@ PREFIX iffFilterKnowledge: <https://industryfusion.github.io/contexts/example/v0
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX rdf:	<http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX ngsild: <https://uri.etsi.org/ngsi-ld/>
-PREFIX material: <https://industryfusion.github.io/contexts/example/v0.1/material/> 
+PREFIX material: <https://industryfusion.github.io/contexts/ontology/v0.1/material/> 
 CONSTRUCT {
 	$this iffFilterEntities:hasWasteclass [ ngsild:hasValue ?new_wasteclass ] .
 }
