@@ -1,0 +1,216 @@
+@prefix : <https://industryfusion.github.io/contexts/example/v0.1/base_entities/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<https://industryfusion.github.io/contexts/example/v0.1/base_entities/> a owl:Ontology ;
+	owl:versionIRI <https://industryfusion.github.io/contexts/staging/example/v0.1/base_entities/> ;
+	owl:imports <https://industryfusion.github.io/contexts/staging/example/v0.1/ngsild.ttl> .
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# https://industryfusion.github.io/contexts/example/v0.1/base_entities/hasCartridge
+
+:hasCartridge a owl:ObjectProperty ;
+	rdfs:domain :Filter ;
+	rdfs:range <https://uri.etsi.org/ngsi-ld/Relationship> .
+# 
+# https://industryfusion.github.io/contexts/example/v0.1/base_entities/hasFilter
+
+:hasFilter a owl:ObjectProperty ;
+	rdfs:domain :Cutter ;
+	rdfs:range <https://uri.etsi.org/ngsi-ld/Relationship> .
+# 
+# https://industryfusion.github.io/contexts/example/v0.1/base_entities/hasHeight
+
+:hasHeight a owl:ObjectProperty ;
+	rdfs:domain :Workpiece ;
+	rdfs:range <https://uri.etsi.org/ngsi-ld/Property> .
+# 
+# https://industryfusion.github.io/contexts/example/v0.1/base_entities/hasInWorkpiece
+
+:hasInWorkpiece a owl:ObjectProperty ;
+	rdfs:domain :Cutter ;
+	rdfs:range <https://uri.etsi.org/ngsi-ld/Relationship> .
+# 
+# https://industryfusion.github.io/contexts/example/v0.1/base_entities/hasLength
+
+:hasLength a owl:ObjectProperty ;
+	rdfs:domain :Workpiece ;
+	rdfs:range <https://uri.etsi.org/ngsi-ld/Property> .
+# 
+# https://industryfusion.github.io/contexts/example/v0.1/base_entities/hasMaterial
+
+:hasMaterial a owl:ObjectProperty ;
+	rdfs:domain :Workpiece ;
+	rdfs:range <https://uri.etsi.org/ngsi-ld/Property> .
+# 
+# https://industryfusion.github.io/contexts/example/v0.1/base_entities/hasOutWorkpiece
+
+:hasOutWorkpiece a owl:ObjectProperty ;
+	rdfs:domain :Cutter ;
+	rdfs:range <https://uri.etsi.org/ngsi-ld/Relationship> .
+# 
+# https://industryfusion.github.io/contexts/example/v0.1/base_entities/hasState
+
+:hasState a owl:ObjectProperty ;
+	rdfs:domain :Machine ;
+	rdfs:range <https://uri.etsi.org/ngsi-ld/Property> .
+# 
+# https://industryfusion.github.io/contexts/example/v0.1/base_entities/hasStrength
+
+:hasStrength a owl:ObjectProperty ;
+	rdfs:domain :Filter ;
+	rdfs:range <https://uri.etsi.org/ngsi-ld/Property> .
+# 
+# https://industryfusion.github.io/contexts/example/v0.1/base_entities/hasWidth
+
+:hasWidth a owl:ObjectProperty ;
+	rdfs:domain :Workpiece ;
+	rdfs:range <https://uri.etsi.org/ngsi-ld/Property> .
+# 
+# https://industryfusion.github.io/contexts/example/v0.1/base_entities/isUsedFrom
+
+:isUsedFrom a owl:ObjectProperty ;
+	rdfs:domain :FilterCartridge ;
+	rdfs:range <https://uri.etsi.org/ngsi-ld/Property> .
+# 
+# https://industryfusion.github.io/contexts/example/v0.1/base_entities/isUsedUntil
+
+:isUsedUntil a owl:ObjectProperty ;
+	rdfs:domain :FilterCartridge ;
+	rdfs:range <https://uri.etsi.org/ngsi-ld/Property> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# https://industryfusion.github.io/contexts/example/v0.1/base_entities/Cutter
+
+:Cutter a owl:Class ;
+	rdfs:subClassOf :Machine .
+# 
+# https://industryfusion.github.io/contexts/example/v0.1/base_entities/Entity
+
+:Entity a owl:Class .
+# 
+# https://industryfusion.github.io/contexts/example/v0.1/base_entities/Filter
+
+:Filter a owl:Class ;
+	rdfs:subClassOf :Machine .
+# 
+# https://industryfusion.github.io/contexts/example/v0.1/base_entities/FilterCartridge
+
+:FilterCartridge a owl:Class ;
+	rdfs:subClassOf :Entity .
+# 
+# https://industryfusion.github.io/contexts/example/v0.1/base_entities/Lasercutter
+
+:Lasercutter a owl:Class ;
+	rdfs:subClassOf :Cutter .
+# 
+# https://industryfusion.github.io/contexts/example/v0.1/base_entities/Machine
+
+:Machine a owl:Class .
+# 
+# https://industryfusion.github.io/contexts/example/v0.1/base_entities/Plasmacutter
+
+:Plasmacutter a owl:Class ;
+	rdfs:subClassOf :Cutter .
+# 
+# https://industryfusion.github.io/contexts/example/v0.1/base_entities/Workpiece
+
+:Workpiece a owl:Class ;
+	rdfs:subClassOf :Entity .
+# 
+# https://uri.etsi.org/ngsi-ld/Property
+
+<https://uri.etsi.org/ngsi-ld/Property> a owl:Class .
+# 
+# https://uri.etsi.org/ngsi-ld/Relationship
+
+<https://uri.etsi.org/ngsi-ld/Relationship> a owl:Class .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# https://industryfusion.github.io/contexts/example/v0.1/base_entities/Cutter
+
+:Cutter a owl:NamedIndividual .
+# 
+# https://industryfusion.github.io/contexts/example/v0.1/base_entities/Filter
+
+:Filter a owl:NamedIndividual .
+# 
+# https://industryfusion.github.io/contexts/example/v0.1/base_entities/FilterCartridge
+
+:FilterCartridge a owl:NamedIndividual .
+# 
+# https://industryfusion.github.io/contexts/example/v0.1/base_entities/Lasercutter
+
+:Lasercutter a owl:NamedIndividual .
+# 
+# https://industryfusion.github.io/contexts/example/v0.1/base_entities/Machine
+
+:Machine a owl:NamedIndividual .
+# 
+# https://industryfusion.github.io/contexts/example/v0.1/base_entities/Plasmacutter
+
+:Plasmacutter a owl:NamedIndividual .
+# 
+# https://industryfusion.github.io/contexts/example/v0.1/base_entities/Workpiece
+
+:Workpiece a owl:NamedIndividual .
+# 
+# https://industryfusion.github.io/contexts/example/v0.1/base_entities/hasHeight
+
+:hasHeight a owl:NamedIndividual .
+# 
+# https://industryfusion.github.io/contexts/example/v0.1/base_entities/hasLength
+
+:hasLength a owl:NamedIndividual .
+# 
+# https://industryfusion.github.io/contexts/example/v0.1/base_entities/hasMaterial
+
+:hasMaterial a owl:NamedIndividual .
+# 
+# https://industryfusion.github.io/contexts/example/v0.1/base_entities/hasState
+
+:hasState a owl:NamedIndividual .
+# 
+# https://industryfusion.github.io/contexts/example/v0.1/base_entities/hasStrength
+
+:hasStrength a owl:NamedIndividual .
+# 
+# https://industryfusion.github.io/contexts/example/v0.1/base_entities/hasWidth
+
+:hasWidth a owl:NamedIndividual .
+# 
+# https://industryfusion.github.io/contexts/example/v0.1/base_entities/isUsedFrom
+
+:isUsedFrom a owl:NamedIndividual .
+# 
+# https://industryfusion.github.io/contexts/example/v0.1/base_entities/isUsedUntil
+
+:isUsedUntil a owl:NamedIndividual .
+# 
+# Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
