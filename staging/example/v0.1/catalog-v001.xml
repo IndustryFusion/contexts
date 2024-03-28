@@ -2,8 +2,8 @@
 <catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
     <uri id="Imports Wizard Entry" name="https://uri.etsi.org/ngsi-ld/" uri="https://industryfusion.github.io/contexts/staging/ontology/v0.1/ngsild.ttl"/>
     <uri id="Imports Wizard Entry" name="https://industryfusion.github.io/contexts/staging/ontology/v0.1/material/" uri="https://industryfusion.github.io/contexts/staging/ontology/v0.1/material.ttl"/>
-    <uri id="Imports Wizard Entry" name="https://industryfusion.github.io/contexts/staging/example/v0.1/base_knowledge/" uri="base_knowledge.ttl"/>
-    <uri id="Imports Wizard Entry" name="https://industryfusion.github.io/contexts/staging/example/v0.1/filter_knowledge/" uri="filter_knowledge.ttl"/>
-    <uri id="Imports Wizard Entry" name="https://industryfusion.github.io/contexts/staging/example/v0.1/base_entities/" uri="base_entities.ttl"/>
+    <uri id="Imports Wizard Entry" name="https://industryfusion.github.io/contexts/staging/example/v0.1/base_knowledge/" uri="https://industryfusion.github.io/contexts/staging/example/v0.1/base_knowledge.ttl"/>
+    <uri id="Imports Wizard Entry" name="https://industryfusion.github.io/contexts/staging/example/v0.1/filter_knowledge/" uri="https://industryfusion.github.io/contexts/staging/example/v0.1/filter_knowledge.ttl"/>
+    <uri id="Imports Wizard Entry" name="https://industryfusion.github.io/contexts/staging/example/v0.1/base_entities/" uri="https://industryfusion.github.io/contexts/staging/example/v0.1/base_entities.ttl"/>
     <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base=""/>
 </catalog>
