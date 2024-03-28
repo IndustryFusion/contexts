@@ -1,6 +1,6 @@
-@prefix iffBaseEntities: <https://industryfusion.github.io/contexts/example/v0.1/base_entities/> .
-@prefix iffFilterEntities: <https://industryfusion.github.io/contexts/example/v0.1/filter_entities/> .
-@prefix : <https://industryfusion.github.io/contexts/example/v0.1/filter_shacl/> .
+@prefix iffBaseEntities: <https://industryfusion.github.io/contexts/example/v0/base_entities/> .
+@prefix iffFilterEntities: <https://industryfusion.github.io/contexts/example/v0/filter_entities/> .
+@prefix : <https://industryfusion.github.io/contexts/example/v0/filter_shacl/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
@@ -8,9 +8,9 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix ngsild: <https://uri.etsi.org/ngsi-ld/> .
-@prefix iffBaseKnowledge: <https://industryfusion.github.io/contexts/example/v0.1/base_knowledge/> .
-@prefix iffFilterKnowledge: <https://industryfusion.github.io/contexts/example/v0.1/filter_knowledge/> .
-@prefix material: <https://industryfusion.github.io/contexts/ontology/v0.1/material/> .
+@prefix iffBaseKnowledge: <https://industryfusion.github.io/contexts/example/v0/base_knowledge/> .
+@prefix iffFilterKnowledge: <https://industryfusion.github.io/contexts/example/v0/filter_knowledge/> .
+@prefix material: <https://industryfusion.github.io/contexts/ontology/v0/material/> .
 
 :CartridgeShape
     a sh:NodeShape ;
@@ -38,14 +38,14 @@
 	sh:rule [
 		a sh:SPARQLRule ;
 		sh:construct """
-PREFIX iffBaseEntities: <https://industryfusion.github.io/contexts/example/v0.1/base_entities/>
-PREFIX iffBaseKnowledge: <https://industryfusion.github.io/contexts/example/v0.1/base_knowledge/>
-PREFIX iffFilterEntities: <https://industryfusion.github.io/contexts/example/v0.1/filter_entities/>
-PREFIX iffFilterKnowledge: <https://industryfusion.github.io/contexts/example/v0.1/filter_knowledge/>
+PREFIX iffBaseEntities: <https://industryfusion.github.io/contexts/example/v0/base_entities/>
+PREFIX iffBaseKnowledge: <https://industryfusion.github.io/contexts/example/v0/base_knowledge/>
+PREFIX iffFilterEntities: <https://industryfusion.github.io/contexts/example/v0/filter_entities/>
+PREFIX iffFilterKnowledge: <https://industryfusion.github.io/contexts/example/v0/filter_knowledge/>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX rdf:	<http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX ngsild: <https://uri.etsi.org/ngsi-ld/>
-PREFIX material: <https://industryfusion.github.io/contexts/ontology/v0.1/material/> 
+PREFIX material: <https://industryfusion.github.io/contexts/ontology/v0/material/> 
 CONSTRUCT {
 	$this iffFilterEntities:hasWasteclass [ ngsild:hasValue ?new_wasteclass ] .
 }

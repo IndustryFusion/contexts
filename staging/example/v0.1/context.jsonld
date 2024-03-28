@@ -2,7 +2,6 @@
         "@context": [
                 "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
                 {
-                    "@vocab": "https://industry-fusion.org/base/v0.1/",
                     "eclass": {
                         "@id": "https://industry-fusion.org/eclass#",
                         "@prefix": true
@@ -32,23 +31,23 @@
                         "@prefix": true
                     },
                     "iffBaseEntities": {
-                        "@id": "https://industryfusion.github.io/contexts/example/v0.1/base_entities/",
+                        "@id": "https://industryfusion.github.io/contexts/example/v0/base_entities/",
                         "@prefix": true
                     },
                     "iffBaseKnowledge": {
-                        "@id": "https://industryfusion.github.io/contexts/example/v0.1/base_knowledge/",
+                        "@id": "https://industryfusion.github.io/contexts/example/v0/base_knowledge/",
                         "@prefix": true
                     },
                     "iffFilterKnowledge": {
-                        "@id": "https://industryfusion.github.io/contexts/example/v0.1/filter_knowledge/",
+                        "@id": "https://industryfusion.github.io/contexts/example/v0/filter_knowledge/",
                         "@prefix": true
                     },
                     "iffFilterEntities": {
-                        "@id": "https://industryfusion.github.io/contexts/example/v0.1/filter_entities/",
+                        "@id": "https://industryfusion.github.io/contexts/example/v0/filter_entities/",
                         "@prefix": true
                     },
                     "material": {
-                        "@id": "https://industryfusion.github.io/contexts/ontology/v0.1/material/",
+                        "@id": "https://industryfusion.github.io/contexts/ontology/v0/material/",
                         "@prefix": true
                     }
                 }

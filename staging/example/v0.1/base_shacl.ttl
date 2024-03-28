@@ -1,5 +1,5 @@
-@prefix iffBaseEntities: <https://industryfusion.github.io/contexts/example/v0.1/base_entities/> .
-@prefix : <https://industryfusion.github.io/contexts/example/v0.1/base_shacl/> .
+@prefix iffBaseEntities: <https://industryfusion.github.io/contexts/example/v0/base_entities/> .
+@prefix : <https://industryfusion.github.io/contexts/example/v0/base_shacl/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
@@ -7,8 +7,8 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix ngsild: <https://uri.etsi.org/ngsi-ld/> .
-@prefix iffBaseKnowledge: <https://industryfusion.github.io/contexts/example/v0.1/base_knowledge/> .
-@prefix material: <https://industryfusion.github.io/contexts/ontology/v0.1/material/> .
+@prefix iffBaseKnowledge: <https://industryfusion.github.io/contexts/example/v0/base_knowledge/> .
+@prefix material: <https://industryfusion.github.io/contexts/ontology/v0/material/> .
 
 
 
@@ -214,8 +214,8 @@
         a sh:SPARQLConstraints ;
         sh:message "Check Filter strength as function of workpiece: {?value}" ;
         sh:select """
-PREFIX iffBaseEntities: <https://industryfusion.github.io/contexts/example/v0.1/base_entities/>
-PREFIX iffBaseKnowledge: <https://industryfusion.github.io/contexts/example/v0.1/base_knowledge/>
+PREFIX iffBaseEntities: <https://industryfusion.github.io/contexts/example/v0/base_entities/>
+PREFIX iffBaseKnowledge: <https://industryfusion.github.io/contexts/example/v0/base_knowledge/>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX schema: <https://schema.org/>
@@ -250,8 +250,8 @@ SELECT ?this ?value
         sh:severity iffBaseKnowledge:severityCritical ; 
         sh:message "Cutter running without running filter" ;
         sh:select """
-PREFIX iffBaseEntities: <https://industryfusion.github.io/contexts/example/v0.1/base_entities/>
-PREFIX iffBaseKnowledge: <https://industryfusion.github.io/contexts/example/v0.1/base_knowledge/>
+PREFIX iffBaseEntities: <https://industryfusion.github.io/contexts/example/v0/base_entities/>
+PREFIX iffBaseKnowledge: <https://industryfusion.github.io/contexts/example/v0/base_knowledge/>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX ngsild: <https://uri.etsi.org/ngsi-ld/>
@@ -275,8 +275,8 @@ SELECT $this ?v1 ?f ?v2
         sh:severity iffBaseKnowledge:severityWarning ;
         sh:message "Filter running without running assigned machine" ;
         sh:select """
-PREFIX iffBaseEntities: <https://industryfusion.github.io/contexts/example/v0.1/base_entities/>
-PREFIX iffBaseKnowledge: <https://industryfusion.github.io/contexts/example/v0.1/base_knowledge/>
+PREFIX iffBaseEntities: <https://industryfusion.github.io/contexts/example/v0/base_entities/>
+PREFIX iffBaseKnowledge: <https://industryfusion.github.io/contexts/example/v0/base_knowledge/>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX ngsild: <https://uri.etsi.org/ngsi-ld/>
@@ -298,8 +298,8 @@ SELECT $this ?v1 ?pc ?v2
         a sh:SPARQLConstraints; 
         sh:message "State value {?value} are not a valid machineState for machine {$this} of type {?type}" ;
         sh:select """
-PREFIX iffBaseEntities: <https://industryfusion.github.io/contexts/example/v0.1/base_entities/>
-PREFIX iffBaseKnowledge: <https://industryfusion.github.io/contexts/example/v0.1/base_knowledge/>
+PREFIX iffBaseEntities: <https://industryfusion.github.io/contexts/example/v0/base_entities/>
+PREFIX iffBaseKnowledge: <https://industryfusion.github.io/contexts/example/v0/base_knowledge/>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX ngsild: <https://uri.etsi.org/ngsi-ld/>
@@ -322,8 +322,8 @@ SELECT $this ?value ?type
 	sh:rule [
 		a sh:SPARQLRule ;
 		sh:construct """
-PREFIX iffBaseEntities: <https://industryfusion.github.io/contexts/example/v0.1/base_entities/>
-PREFIX iffBaseKnowledge: <https://industryfusion.github.io/contexts/example/v0.1/base_knowledge/>
+PREFIX iffBaseEntities: <https://industryfusion.github.io/contexts/example/v0/base_entities/>
+PREFIX iffBaseKnowledge: <https://industryfusion.github.io/contexts/example/v0/base_knowledge/>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX rdf:	<http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX ngsild: <https://uri.etsi.org/ngsi-ld/>
@@ -350,8 +350,8 @@ WHERE {
 	sh:rule [
 		a sh:SPARQLRule ;
 		sh:construct """
-PREFIX iffBaseEntities: <https://industryfusion.github.io/contexts/example/v0.1/base_entities/>
-PREFIX iffBaseKnowledge: <https://industryfusion.github.io/contexts/example/v0.1/base_knowledge/>
+PREFIX iffBaseEntities: <https://industryfusion.github.io/contexts/example/v0/base_entities/>
+PREFIX iffBaseKnowledge: <https://industryfusion.github.io/contexts/example/v0/base_knowledge/>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX rdf:	<http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX ngsild: <https://uri.etsi.org/ngsi-ld/>
