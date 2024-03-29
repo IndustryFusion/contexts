@@ -1,2 +1,0 @@
-complies with base + filter
-Updates hasWasteclass and isUsedUntil fields
