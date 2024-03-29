@@ -160,7 +160,6 @@
                                                                                                         "xyz" ;
                     <https://industryfusion.github.io/contexts/example/v0/base_knowledge/bindsLogic> """WHERE  {
     BIND(ngsi-ld:Property as ?type)
-    BIND('abc' as ?firmware)
     BIND( 
         IF(?var1 = true, 
             IF(FLOOR(?var2/500) = 0, iffBaseKnowledge:state_ON, 

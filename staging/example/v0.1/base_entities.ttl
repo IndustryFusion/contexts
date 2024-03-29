@@ -91,6 +91,11 @@
 #    Classes
 #################################################################
 
+###  https://industryfusion.github.io/contexts/example/v0/base_entities/Consumable
+:Consumable rdf:type owl:Class ;
+            rdfs:subClassOf :Entity .
+
+
 ###  https://industryfusion.github.io/contexts/example/v0/base_entities/Cutter
 :Cutter rdf:type owl:Class ;
         rdfs:subClassOf :Machine .
@@ -107,7 +112,7 @@
 
 ###  https://industryfusion.github.io/contexts/example/v0/base_entities/FilterCartridge
 :FilterCartridge rdf:type owl:Class ;
-                 rdfs:subClassOf :Entity .
+                 rdfs:subClassOf :Consumable .
 
 
 ###  https://industryfusion.github.io/contexts/example/v0/base_entities/Lasercutter
@@ -116,7 +121,8 @@
 
 
 ###  https://industryfusion.github.io/contexts/example/v0/base_entities/Machine
-:Machine rdf:type owl:Class .
+:Machine rdf:type owl:Class ;
+         rdfs:subClassOf :Entity .
 
 
 ###  https://industryfusion.github.io/contexts/example/v0/base_entities/Plasmacutter
@@ -126,23 +132,23 @@
 
 ###  https://industryfusion.github.io/contexts/example/v0/base_entities/Workpiece
 :Workpiece rdf:type owl:Class ;
-           rdfs:subClassOf :Entity .
-
-
-###  https://uri.etsi.org/ngsi-ld/Property
-<https://uri.etsi.org/ngsi-ld/Property> rdf:type owl:Class .
-
-
-###  https://uri.etsi.org/ngsi-ld/Relationship
-<https://uri.etsi.org/ngsi-ld/Relationship> rdf:type owl:Class .
+           rdfs:subClassOf :Consumable .
 
 
 #################################################################
 #    Individuals
 #################################################################
 
+###  https://industryfusion.github.io/contexts/example/v0/base_entities/Consumable
+:Consumable rdf:type owl:NamedIndividual .
+
+
 ###  https://industryfusion.github.io/contexts/example/v0/base_entities/Cutter
 :Cutter rdf:type owl:NamedIndividual .
+
+
+###  https://industryfusion.github.io/contexts/example/v0/base_entities/Entity
+:Entity rdf:type owl:NamedIndividual .
 
 
 ###  https://industryfusion.github.io/contexts/example/v0/base_entities/Filter
@@ -169,8 +175,20 @@
 :Workpiece rdf:type owl:NamedIndividual .
 
 
+###  https://industryfusion.github.io/contexts/example/v0/base_entities/hasCartridge
+:hasCartridge rdf:type owl:NamedIndividual .
+
+
+###  https://industryfusion.github.io/contexts/example/v0/base_entities/hasFilter
+:hasFilter rdf:type owl:NamedIndividual .
+
+
 ###  https://industryfusion.github.io/contexts/example/v0/base_entities/hasHeight
 :hasHeight rdf:type owl:NamedIndividual .
+
+
+###  https://industryfusion.github.io/contexts/example/v0/base_entities/hasInWorkpiece
+:hasInWorkpiece rdf:type owl:NamedIndividual .
 
 
 ###  https://industryfusion.github.io/contexts/example/v0/base_entities/hasLength
@@ -179,6 +197,10 @@
 
 ###  https://industryfusion.github.io/contexts/example/v0/base_entities/hasMaterial
 :hasMaterial rdf:type owl:NamedIndividual .
+
+
+###  https://industryfusion.github.io/contexts/example/v0/base_entities/hasOutWorkpiece
+:hasOutWorkpiece rdf:type owl:NamedIndividual .
 
 
 ###  https://industryfusion.github.io/contexts/example/v0/base_entities/hasState
