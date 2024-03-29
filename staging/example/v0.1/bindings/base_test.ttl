@@ -46,7 +46,7 @@
 
 ###  https://industryfusion.github.io/contexts/example/v0/base_entities/hasState
 <https://industryfusion.github.io/contexts/example/v0/base_entities/hasState> <https://industryfusion.github.io/contexts/example/v0/base_knowledge/boundBy> :stateBindingCutter ,
-                                                                                                                                                                :stateBindingFilter .
+                                                                                                                                                            :stateBindingFilter .
 
 
 ###  https://industryfusion.github.io/contexts/example/v0/base_entities/hasStrength
@@ -130,7 +130,7 @@
                <https://industryfusion.github.io/contexts/example/v0/base_knowledge/bindsMap> :_map3 ;
                <https://industryfusion.github.io/contexts/example/v0/base_knowledge/bindingVersion> "0.9"^^xsd:string ;
                <https://industryfusion.github.io/contexts/example/v0/base_knowledge/bindsFirmware> "123"^^xsd:string ,
-                                                                                                     "Firmware xyz" .
+                                                                                                   "Firmware xyz" .
 
 
 ###  https://industryfusion.github.io/contexts/example/v0/bindings/base_test/lengthBinding
@@ -154,19 +154,17 @@
                              <https://industryfusion.github.io/contexts/example/v0/base_knowledge/Binding> ;
                     <https://industryfusion.github.io/contexts/example/v0/base_knowledge/bindsEntityType> <https://industryfusion.github.io/contexts/example/v0/base_entities/Cutter> ;
                     <https://industryfusion.github.io/contexts/example/v0/base_knowledge/bindsMap> :_map1 ,
-                                                                                                     :_map2 ;
+                                                                                                   :_map2 ;
                     <https://industryfusion.github.io/contexts/example/v0/base_knowledge/bindingVersion> "0.9"^^xsd:string ;
                     <https://industryfusion.github.io/contexts/example/v0/base_knowledge/bindsFirmware> "abc" ,
-                                                                                                          "xyz" ;
+                                                                                                        "xyz" ;
                     <https://industryfusion.github.io/contexts/example/v0/base_knowledge/bindsLogic> """WHERE  {
     BIND(ngsi-ld:Property as ?type)
-    BIND(true as ?var1)
-    BIND(3 as ?var2)
     BIND('abc' as ?firmware)
     BIND( 
         IF(?var1 = true, 
-            IF(?var2 = 0, iffBaseKnowledge:state_ON, 
-                IF(?var2 = 1, iffBaseKnowledge:state_PROCESSING, iffBaseKnowledge:state_ERROR )
+            IF(FLOOR(?var2/500) = 0, iffBaseKnowledge:state_ON, 
+                IF(FLOOR(?var2/500) = 1, iffBaseKnowledge:state_PROCESSING, iffBaseKnowledge:state_ERROR )
             )
             , iffBaseKnowledge:state_OFF
         ) as ?value
@@ -183,8 +181,6 @@
                     <https://industryfusion.github.io/contexts/example/v0/base_knowledge/bindsFirmware> "xyz" ;
                     <https://industryfusion.github.io/contexts/example/v0/base_knowledge/bindsLogic> """WHERE  {
     BIND(ngsi-ld:Property as ?type)
-    BIND(true as ?var8)
-    BIND('abc' as ?firmware)
     BIND( 
         IF(?var8 = true, 
             iffBaseKnowledge:state_ON,
@@ -205,13 +201,11 @@
                  <https://industryfusion.github.io/contexts/example/v0/base_knowledge/bindsFirmware> "xyz" ;
                  <https://industryfusion.github.io/contexts/example/v0/base_knowledge/bindsLogic> """WHERE {
     BIND(ngsi-ld:Property as ?type)
-    BIND(200 as ?var8)
-    BIND('abc' as ?firmware)
     BIND( 
-        ?var8 / \"10.0\"^^xsd:float
+        ?var6 / \"10.0\"^^xsd:float
          as ?value
     )
-    BIND(IF( BOUND(?var8), 1.0, 0.0) as ?trustLevel)
+    BIND(IF( BOUND(?var6), 1.0, 0.0) as ?trustLevel)
 }"""^^xsd:string .
 
 
@@ -223,7 +217,7 @@
              <https://industryfusion.github.io/contexts/example/v0/base_knowledge/bindsMap> :_map1 ;
              <https://industryfusion.github.io/contexts/example/v0/base_knowledge/bindingVersion> "0.9"^^xsd:string ;
              <https://industryfusion.github.io/contexts/example/v0/base_knowledge/bindsFirmware> "123"^^xsd:string ,
-                                                                                                   "xyz"^^xsd:string .
+                                                                                                 "xyz"^^xsd:string .
 
 
 ###  https://industryfusion.github.io/contexts/example/v0/bindings/base_test/widthBinding
