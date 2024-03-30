@@ -161,11 +161,11 @@
                     <https://industryfusion.github.io/contexts/example/v0/base_knowledge/bindsLogic> """WHERE  {
     BIND(ngsi-ld:Property as ?type)
     BIND( 
-        IF(?var1 = true, 
-            IF(FLOOR(?var2/500) = 0, iffBaseKnowledge:state_ON, 
-                IF(FLOOR(?var2/500) = 1, iffBaseKnowledge:state_PROCESSING, iffBaseKnowledge:state_ERROR )
+        IF(?var1 = true,
+            IF(FLOOR(?var2/500) = 0, base:state_ON,
+                IF(FLOOR(?var2/500) = 1, base:state_PROCESSING, base:state_ERROR )
             )
-            , iffBaseKnowledge:state_OFF
+            , base:state_OFF
         ) as ?value
     )
     BIND(IF(BOUND(?var1) && BOUND(?var2), 1.0, 0.0) as ?trustLevel)
@@ -182,8 +182,8 @@
     BIND(ngsi-ld:Property as ?type)
     BIND( 
         IF(?var8 = true, 
-            iffBaseKnowledge:state_ON,
-            iffBaseKnowledge:state_OFF
+            base:state_ON,
+            base:state_OFF
         ) as ?value
     )
     BIND(IF(BOUND(?var8), 1.0, 0.0) as ?trustLevel)
