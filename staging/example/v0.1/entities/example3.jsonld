@@ -7,7 +7,7 @@
       {
       "type": "Property",
       "value": {
-        "@id": "iffBaseKnowledge:state_ON"
+        "@id": "base:state_ON"
       }}]
   },
   {
@@ -18,7 +18,7 @@
       {
       "type": "Property",
       "value": {
-        "@id": "iffBaseKnowledge:state_PROCESSING"
+        "@id": "base:state_PROCESSING"
       }}],
       "iffBaseEntities:hasFilter": [
         {
@@ -41,7 +41,7 @@
     {
       "type": "Property",
       "value": {
-        "@id": "iffBaseKnowledge:state_ON"
+        "@id": "base:state_ON"
       }
     }],
     "iffBaseEntities:hasCartridge": [
