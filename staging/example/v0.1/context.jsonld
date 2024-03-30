@@ -2,6 +2,10 @@
         "@context": [
                 "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
                 {
+                    "base": {
+                        "@id": "https://industryfusion.github.io/contexts/example/v0/base_knowledge/",
+                        "@prefix": true
+                    },
                     "eclass": {
                         "@id": "https://industry-fusion.org/eclass#",
                         "@prefix": true
