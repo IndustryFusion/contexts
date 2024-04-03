@@ -8,7 +8,7 @@
 
 <https://industryfusion.github.io/contexts/example/v0/filter_entities/> rdf:type owl:Ontology ;
                                                                          owl:versionIRI <https://industryfusion.github.io/contexts/staging/example/v0.1/filter_entities.ttl> ;
-                                                                         owl:imports <https://industryfusion.github.io/contexts/staging/example/v0.1/base_entities.ttll> ,
+                                                                         owl:imports <https://industryfusion.github.io/contexts/staging/example/v0.1/base_entities.ttl> ,
                                                                                      <https://industryfusion.github.io/contexts/staging/example/v0.1/filter_knowledge.ttl> ,
                                                                                      <https://uri.etsi.org/ngsi-ld/> ;
                                                                          owl:versionInfo "v0.1"^^xsd:string .

@@ -287,7 +287,7 @@ SELECT $this ?v1 ?pc ?v2
         ?pc rdf:type iffBaseEntities:Plasmacutter .
         ?pc iffBaseEntities:hasFilter [ ngsild:hasObject $this ] .
         ?pc  iffBaseEntities:hasState [ ngsild:hasValue ?v2 ] .
-        FILTER(?v1 = iffBaseKnowledge:state_ON && ?v2 != iffBaseEntities:state_PROCESSING)
+        FILTER(?v1 = iffBaseKnowledge:state_ON && ?v2 != iffBaseKnowledge:state_PROCESSING)
     }
         """ ;
     ] .
