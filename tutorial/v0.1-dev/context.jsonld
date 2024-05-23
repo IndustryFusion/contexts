@@ -28,7 +28,11 @@
                         "@prefix": true
                     },
                     "iffr": {
-                        "@id": "https://industryfusion.github.io/contexts/tutorial/v0.1-dev/ontology/v0.1-dev/realtime/",
+                        "@id": "https://industryfusion.github.io/contexts/tutorial/v0.1-dev/ontology/v0.1-dev/fields/",
+                        "@prefix": true
+                    },
+                    "iffs": {
+                        "@id": "https://industryfusion.github.io/contexts/tutorial/v0.1-dev/ontology/v0.1-dev/schema/",
                         "@prefix": true
                     },
                     "iffBaseEntities": {
