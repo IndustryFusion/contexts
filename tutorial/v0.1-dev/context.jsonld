@@ -4,7 +4,7 @@
                 {
                     "@vocab": "https://industry-fusion.org/base/v0.1/",
                     "eclass": {
-                        "@id": "https://industry-fusion.org/eclass#",
+                        "@id": "https://industryfusion.github.io/contexts/tutorial/v0.1-dev/ontology/v0.1-dev/eclass",
                         "@prefix": true
                     },
                     "xsd": {
@@ -27,6 +27,10 @@
                         "@id": "http://www.w3.org/ns/shacl#",
                         "@prefix": true
                     },
+                    "iffr": {
+                        "@id": "https://industryfusion.github.io/contexts/tutorial/v0.1-dev/ontology/v0.1-dev/realtime/",
+                        "@prefix": true
+                    },
                     "iffBaseEntities": {
                         "@id": "https://industryfusion.github.io/contexts/tutorial/v0.1-dev/ontology/v0.1-dev/base_entities/",
                         "@prefix": true
@@ -36,15 +40,23 @@
                         "@prefix": true
                     },
                     "iffFilterKnowledge": {
-                        "@id": "https://industryfusion.github.io/contexts/ontology/v0.1/filter_knowledge/",
+                        "@id": "https://industryfusion.github.io/contexts/tutorial/v0.1-dev/ontology/v0.1-dev/filter_knowledge/",
                         "@prefix": true
                     },
                     "iffFilterEntities": {
-                        "@id": "https://industryfusion.github.io/contexts/ontology/v0.1/filter_entities/",
+                        "@id": "https://industryfusion.github.io/contexts/tutorial/v0.1-dev/ontology/v0.1-dev/filter_entities/",
+                        "@prefix": true
+                    },
+                    "iffCutterKnowledge": {
+                        "@id": "https://industryfusion.github.io/contexts/tutorial/v0.1-dev/ontology/v0.1-dev/cutter_knowledge/",
+                        "@prefix": true
+                    },
+                    "iffCutterEntities": {
+                        "@id": "https://industryfusion.github.io/contexts/tutorial/v0.1-dev/ontology/v0.1-dev/cutter_entities/",
                         "@prefix": true
                     },
                     "material": {
-                        "@id": "https://industryfusion.github.io/contexts/ontology/v0.1/material/",
+                        "@id": "https://industryfusion.github.io/contexts/tutorial/v0.1-dev/ontology/v0.1-dev/material/",
                         "@prefix": true
                     }
                 }
