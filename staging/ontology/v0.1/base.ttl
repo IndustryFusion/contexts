@@ -5,7 +5,7 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix opcua: <http://opcfoundation.org/UA/> .
-@prefix ngsild: <https://uri.etsi.org/ngsi-ld/> .
+@prefix ngsi-ld: <https://uri.etsi.org/ngsi-ld/> .
 @base <https://industryfusion.github.io/contexts/ontology/v0/base/> .
 
 <https://industryfusion.github.io/contexts/ontology/v0/base/> rdf:type owl:Ontology ;
@@ -23,6 +23,10 @@ xsd:boolean rdf:type rdfs:Datatype .
 
 ###  http://www.w3.org/2001/XMLSchema#decimal
 xsd:decimal rdf:type rdfs:Datatype .
+
+
+###  http://www.w3.org/2001/XMLSchema#double
+xsd:double rdf:type rdfs:Datatype .
 
 
 ###  http://www.w3.org/2001/XMLSchema#float
