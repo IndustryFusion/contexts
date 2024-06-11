@@ -258,6 +258,12 @@ xsd:string rdf:type rdfs:Datatype .
              rdfs:range xsd:boolean .
 
 
+###  https://industryfusion.github.io/contexts/ontology/v0/base/isUpdating
+:isUpdating rdf:type owl:DatatypeProperty ;
+            rdfs:domain opcua:VariableNodeClass ;
+            rdfs:range xsd:boolean .
+
+
 #################################################################
 #    Classes
 #################################################################
