@@ -217,10 +217,6 @@ xsd:string rdf:type rdfs:Datatype .
               rdfs:range xsd:string .
 
 
-###  https://industryfusion.github.io/contexts/ontology/v0/base/hasNamespaceIndex
-:hasNamespaceIndex rdf:type owl:DatatypeProperty .
-
-
 ###  https://industryfusion.github.io/contexts/ontology/v0/base/hasNodeId
 :hasNodeId rdf:type owl:DatatypeProperty ;
            rdfs:domain opcua:BaseNodeClass ;
