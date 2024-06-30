@@ -26,42 +26,6 @@
                     "sh": {
                         "@id": "http://www.w3.org/ns/shacl#",
                         "@prefix": true
-                    },
-                    "iffr": {
-                        "@id": "https://industryfusion.github.io/contexts/tutorial/v0.1-dev/ontology/v0.1-dev/fields/",
-                        "@prefix": true
-                    },
-                    "iffs": {
-                        "@id": "https://industryfusion.github.io/contexts/tutorial/v0.1-dev/ontology/v0.1-dev/schema/",
-                        "@prefix": true
-                    },
-                    "iffBaseEntities": {
-                        "@id": "https://industryfusion.github.io/contexts/tutorial/v0.1-dev/ontology/v0.1-dev/base_entities/",
-                        "@prefix": true
-                    },
-                    "iffBaseKnowledge": {
-                        "@id": "https://industryfusion.github.io/contexts/tutorial/v0.1-dev/ontology/v0.1-dev/base_knowledge/",
-                        "@prefix": true
-                    },
-                    "iffFilterKnowledge": {
-                        "@id": "https://industryfusion.github.io/contexts/tutorial/v0.1-dev/ontology/v0.1-dev/filter_knowledge/",
-                        "@prefix": true
-                    },
-                    "iffFilterEntities": {
-                        "@id": "https://industryfusion.github.io/contexts/tutorial/v0.1-dev/ontology/v0.1-dev/filter_entities/",
-                        "@prefix": true
-                    },
-                    "iffCutterKnowledge": {
-                        "@id": "https://industryfusion.github.io/contexts/tutorial/v0.1-dev/ontology/v0.1-dev/cutter_knowledge/",
-                        "@prefix": true
-                    },
-                    "iffCutterEntities": {
-                        "@id": "https://industryfusion.github.io/contexts/tutorial/v0.1-dev/ontology/v0.1-dev/cutter_entities/",
-                        "@prefix": true
-                    },
-                    "material": {
-                        "@id": "https://industryfusion.github.io/contexts/tutorial/v0.1-dev/ontology/v0.1-dev/material/",
-                        "@prefix": true
                     }
                 }
         ]
