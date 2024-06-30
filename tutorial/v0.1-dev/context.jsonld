@@ -4,7 +4,7 @@
                 {
                     "@vocab": "https://industry-fusion.org/base/v0.1/",
                     "eclass": {
-                        "@id": "https://industryfusion.github.io/contexts/tutorial/v0.1-dev/ontology/v0.1-dev/eclass/",
+                        "@id": "https://industry-fusion.org/eclass#",
                         "@prefix": true
                     },
                     "xsd": {
