@@ -21,7 +21,7 @@
         "@id": "http://www.w3.org/XML/1998/namespace",
         "@prefix": true
       },
-      "entities": {
+      "uaentities": {
         "@id": "http://demo.machine/entities/",
         "@prefix": true
       },
