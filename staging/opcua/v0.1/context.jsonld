@@ -21,8 +21,8 @@
         "@id": "http://www.w3.org/XML/1998/namespace",
         "@prefix": true
       },
-      "uaentities": {
-        "@id": "http://demo.machine/entities/",
+      "uaentity": {
+        "@id": "http://demo.machine/entity/",
         "@prefix": true
       },
       "ngsi-ld": {
