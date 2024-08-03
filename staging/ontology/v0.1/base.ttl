@@ -253,6 +253,10 @@ xsd:string rdf:type rdfs:Datatype .
             rdfs:range xsd:boolean .
 
 
+###  https://industryfusion.github.io/contexts/ontology/v0/base/isMonitored
+:isMonitored rdf:type owl:DatatypeProperty .
+
+
 ###  https://industryfusion.github.io/contexts/ontology/v0/base/isSymmetric
 :isSymmetric rdf:type owl:DatatypeProperty ;
              rdfs:range xsd:boolean .
