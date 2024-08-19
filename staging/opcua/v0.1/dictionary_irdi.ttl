@@ -1,0 +1,620 @@
+@prefix base: <https://industryfusion.github.io/contexts/ontology/v0/base/> .
+@prefix dictionary_irdi: <http://opcfoundation.org/UA/Dictionary/IRDI/> .
+@prefix opcua: <http://opcfoundation.org/UA/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+dictionary_irdi: a owl:Ontology ;
+    owl:imports <https://industryfusion.github.io/contexts/staging/ontology/v0.1/base.ttl>,
+        <https://industryfusion.github.io/contexts/staging/opcua/v0.1/core.ttl> ;
+    owl:versionIRI <http://example.com/v0.1/Dictionary/IRDI> ;
+    owl:versionInfo 1e-01 .
+
+opcua:nodei11715 base:hasComponent dictionary_irdi:nodei1000 .
+
+opcua:nodei17594 base:hasComponent <http://opcfoundation.org/UA/Dictionary/IRDI/nodes0112/2///61987%23ABA038%23003>,
+        <http://opcfoundation.org/UA/Dictionary/IRDI/nodes0112/2///61987%23ABA300%23006>,
+        <http://opcfoundation.org/UA/Dictionary/IRDI/nodes0112/2///61987%23ABA418%23001>,
+        <http://opcfoundation.org/UA/Dictionary/IRDI/nodes0112/2///61987%23ABA565%23007>,
+        <http://opcfoundation.org/UA/Dictionary/IRDI/nodes0112/2///61987%23ABA567%23007>,
+        <http://opcfoundation.org/UA/Dictionary/IRDI/nodes0112/2///61987%23ABA601%23006>,
+        <http://opcfoundation.org/UA/Dictionary/IRDI/nodes0112/2///61987%23ABA635%23002>,
+        <http://opcfoundation.org/UA/Dictionary/IRDI/nodes0112/2///61987%23ABA926%23006>,
+        <http://opcfoundation.org/UA/Dictionary/IRDI/nodes0112/2///61987%23ABA927%23005>,
+        <http://opcfoundation.org/UA/Dictionary/IRDI/nodes0112/2///61987%23ABA946%23004>,
+        <http://opcfoundation.org/UA/Dictionary/IRDI/nodes0112/2///61987%23ABA951%23007>,
+        <http://opcfoundation.org/UA/Dictionary/IRDI/nodes0112/2///61987%23ABA968%23002>,
+        <http://opcfoundation.org/UA/Dictionary/IRDI/nodes0112/2///61987%23ABB088%23002>,
+        <http://opcfoundation.org/UA/Dictionary/IRDI/nodes0112/2///61987%23ABB091%23002>,
+        <http://opcfoundation.org/UA/Dictionary/IRDI/nodes0112/2///61987%23ABB092%23002>,
+        <http://opcfoundation.org/UA/Dictionary/IRDI/nodes0112/2///61987%23ABB093%23002>,
+        <http://opcfoundation.org/UA/Dictionary/IRDI/nodes0112/2///61987%23ABB271%23007>,
+        <http://opcfoundation.org/UA/Dictionary/IRDI/nodes0112/2///61987%23ABB290%23005>,
+        <http://opcfoundation.org/UA/Dictionary/IRDI/nodes0112/2///61987%23ABB291%23005>,
+        <http://opcfoundation.org/UA/Dictionary/IRDI/nodes0112/2///61987%23ABB292%23005>,
+        <http://opcfoundation.org/UA/Dictionary/IRDI/nodes0112/2///61987%23ABD740%23002>,
+        <http://opcfoundation.org/UA/Dictionary/IRDI/nodes0112/2///61987%23ABD742%23002>,
+        <http://opcfoundation.org/UA/Dictionary/IRDI/nodes0112/2///61987%23ABE882%23001>,
+        <http://opcfoundation.org/UA/Dictionary/IRDI/nodes0112/2///61987%23ABH327%23001>,
+        <http://opcfoundation.org/UA/Dictionary/IRDI/nodes0112/2///61987%23ABH328%23001>,
+        <http://opcfoundation.org/UA/Dictionary/IRDI/nodes0112/2///61987%23ABH329%23002>,
+        <http://opcfoundation.org/UA/Dictionary/IRDI/nodes0112/2///61987%23ABH526%23002>,
+        <http://opcfoundation.org/UA/Dictionary/IRDI/nodes0112/2///61987%23ABJ683%23001>,
+        <http://opcfoundation.org/UA/Dictionary/IRDI/nodes0112/2///61987%23ABJ724%23002>,
+        <http://opcfoundation.org/UA/Dictionary/IRDI/nodes0112/2///61987%23ABN590%23001>,
+        <http://opcfoundation.org/UA/Dictionary/IRDI/nodes0112/2///61987%23ABN591%23001>,
+        <http://opcfoundation.org/UA/Dictionary/IRDI/nodes0112/2///61987%23ABN594%23002>,
+        <http://opcfoundation.org/UA/Dictionary/IRDI/nodes0112/2///61987%23ABN597%23001>,
+        <http://opcfoundation.org/UA/Dictionary/IRDI/nodes0112/2///61987%23ABN603%23001>,
+        <http://opcfoundation.org/UA/Dictionary/IRDI/nodes0112/2///61987%23ABN604%23001>,
+        <http://opcfoundation.org/UA/Dictionary/IRDI/nodes0112/2///61987%23ABN607%23001>,
+        <http://opcfoundation.org/UA/Dictionary/IRDI/nodes0112/2///61987%23ABN609%23001>,
+        <http://opcfoundation.org/UA/Dictionary/IRDI/nodes0112/2///61987%23ABN611%23001>,
+        <http://opcfoundation.org/UA/Dictionary/IRDI/nodes0112/2///61987%23ABN613%23001>,
+        <http://opcfoundation.org/UA/Dictionary/IRDI/nodes0112/2///61987%23ABN614%23001>,
+        <http://opcfoundation.org/UA/Dictionary/IRDI/nodes0112/2///61987%23ABN616%23001>,
+        <http://opcfoundation.org/UA/Dictionary/IRDI/nodes0112/2///61987%23ABN632%23001>,
+        <http://opcfoundation.org/UA/Dictionary/IRDI/nodes0112/2///61987%23ABN634%23001>,
+        <http://opcfoundation.org/UA/Dictionary/IRDI/nodes0112/2///61987%23ABN635%23001>,
+        <http://opcfoundation.org/UA/Dictionary/IRDI/nodes0112/2///61987%23ABN636%23001>,
+        <http://opcfoundation.org/UA/Dictionary/IRDI/nodes0112/2///61987%23ABN637%23001>,
+        <http://opcfoundation.org/UA/Dictionary/IRDI/nodes0112/2///61987%23ABN644%23001>,
+        <http://opcfoundation.org/UA/Dictionary/IRDI/nodes0112/2///61987%23ABN645%23001>,
+        <http://opcfoundation.org/UA/Dictionary/IRDI/nodes0112/2///61987%23ABN646%23001>,
+        <http://opcfoundation.org/UA/Dictionary/IRDI/nodes0112/2///61987%23ABN726%23001>,
+        <http://opcfoundation.org/UA/Dictionary/IRDI/nodes0112/2///61987%23ABN972%23001> .
+
+dictionary_irdi:nodei1000 a opcua:NamespaceMetadataType,
+        opcua:ObjectNodeClass ;
+    base:hasBrowseName "http://opcfoundation.org/UA/Dictionary/IRDI" ;
+    base:hasDisplayName "http://opcfoundation.org/UA/Dictionary/IRDI" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace dictionary_irdi:DICTIONARY_IRDINamespace ;
+    base:hasNodeId "1000" ;
+    base:hasProperty dictionary_irdi:nodei1001,
+        dictionary_irdi:nodei1002,
+        dictionary_irdi:nodei1003,
+        dictionary_irdi:nodei1004,
+        dictionary_irdi:nodei1005,
+        dictionary_irdi:nodei1006,
+        dictionary_irdi:nodei1007 ;
+    base:hasSymbolicName "http___opcfoundation_org_UA_Dictionary_IRDI" .
+
+dictionary_irdi:nodei1001 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "IsNamespaceSubset" ;
+    base:hasDatatype opcua:Boolean ;
+    base:hasDescription "If TRUE then the server only supports a subset of the namespace." ;
+    base:hasDisplayName "IsNamespaceSubset" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace dictionary_irdi:DICTIONARY_IRDINamespace ;
+    base:hasNodeId "1001" .
+
+dictionary_irdi:nodei1002 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "NamespacePublicationDate" ;
+    base:hasDatatype opcua:DateTime ;
+    base:hasDescription "The publication date for the namespace." ;
+    base:hasDisplayName "NamespacePublicationDate" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace dictionary_irdi:DICTIONARY_IRDINamespace ;
+    base:hasNodeId "1002" ;
+    base:hasValue "2020-02-04T00:00:00Z" .
+
+dictionary_irdi:nodei1003 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "NamespaceUri" ;
+    base:hasDatatype opcua:String ;
+    base:hasDescription "The URI of the namespace." ;
+    base:hasDisplayName "NamespaceUri" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace dictionary_irdi:DICTIONARY_IRDINamespace ;
+    base:hasNodeId "1003" ;
+    base:hasValue "http://opcfoundation.org/UA/Dictionary/IRDI" .
+
+dictionary_irdi:nodei1004 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "NamespaceVersion" ;
+    base:hasDatatype opcua:String ;
+    base:hasDescription "The human readable string representing version of the namespace." ;
+    base:hasDisplayName "NamespaceVersion" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace dictionary_irdi:DICTIONARY_IRDINamespace ;
+    base:hasNodeId "1004" ;
+    base:hasValue "1.00" .
+
+dictionary_irdi:nodei1005 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "StaticNodeIdTypes" ;
+    base:hasDatatype opcua:IdType ;
+    base:hasDescription "A list of IdTypes for nodes which are the same in every server that exposes them." ;
+    base:hasDisplayName "StaticNodeIdTypes" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace dictionary_irdi:DICTIONARY_IRDINamespace ;
+    base:hasNodeId "1005" ;
+    base:hasValueRank "1" .
+
+dictionary_irdi:nodei1006 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "StaticNumericNodeIdRange" ;
+    base:hasDatatype opcua:NumericRange ;
+    base:hasDescription "A list of ranges for numeric node ids which are the same in every server that exposes them." ;
+    base:hasDisplayName "StaticNumericNodeIdRange" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace dictionary_irdi:DICTIONARY_IRDINamespace ;
+    base:hasNodeId "1006" ;
+    base:hasValueRank "1" .
+
+dictionary_irdi:nodei1007 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "StaticStringNodeIdPattern" ;
+    base:hasDatatype opcua:String ;
+    base:hasDescription "A regular expression which matches string node ids are the same in every server that exposes them." ;
+    base:hasDisplayName "StaticStringNodeIdPattern" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace dictionary_irdi:DICTIONARY_IRDINamespace ;
+    base:hasNodeId "1007" .
+
+<http://opcfoundation.org/UA/Dictionary/IRDI/nodes0112/2///61987%23ABA038%23003> a opcua:IrdiDictionaryEntryType,
+        opcua:ObjectNodeClass ;
+    base:hasBrowseName "0112/2///61987#ABA038#003" ;
+    base:hasDisplayName "Asset ID" ;
+    base:hasIdentifierType base:stringID ;
+    base:hasNamespace dictionary_irdi:DICTIONARY_IRDINamespace ;
+    base:hasNodeId "0112/2///61987#ABA038#003" ;
+    base:hasSymbolicName "S0112_2___61987_ABA038_003" .
+
+<http://opcfoundation.org/UA/Dictionary/IRDI/nodes0112/2///61987%23ABA300%23006> a opcua:IrdiDictionaryEntryType,
+        opcua:ObjectNodeClass ;
+    base:hasBrowseName "0112/2///61987#ABA300#006" ;
+    base:hasDisplayName "Product code" ;
+    base:hasIdentifierType base:stringID ;
+    base:hasNamespace dictionary_irdi:DICTIONARY_IRDINamespace ;
+    base:hasNodeId "0112/2///61987#ABA300#006" ;
+    base:hasSymbolicName "S0112_2___61987_ABA300_006" .
+
+<http://opcfoundation.org/UA/Dictionary/IRDI/nodes0112/2///61987%23ABA418%23001> a opcua:IrdiDictionaryEntryType,
+        opcua:ObjectNodeClass ;
+    base:hasBrowseName "0112/2///61987#ABA418#001" ;
+    base:hasDisplayName "Pulse value" ;
+    base:hasIdentifierType base:stringID ;
+    base:hasNamespace dictionary_irdi:DICTIONARY_IRDINamespace ;
+    base:hasNodeId "0112/2///61987#ABA418#001" ;
+    base:hasSymbolicName "S0112_2___61987_ABA418_001" .
+
+<http://opcfoundation.org/UA/Dictionary/IRDI/nodes0112/2///61987%23ABA565%23007> a opcua:IrdiDictionaryEntryType,
+        opcua:ObjectNodeClass ;
+    base:hasBrowseName "0112/2///61987#ABA565#007" ;
+    base:hasDisplayName "Manufacturer" ;
+    base:hasIdentifierType base:stringID ;
+    base:hasNamespace dictionary_irdi:DICTIONARY_IRDINamespace ;
+    base:hasNodeId "0112/2///61987#ABA565#007" ;
+    base:hasSymbolicName "S0112_2___61987_ABA565_007" .
+
+<http://opcfoundation.org/UA/Dictionary/IRDI/nodes0112/2///61987%23ABA567%23007> a opcua:IrdiDictionaryEntryType,
+        opcua:ObjectNodeClass ;
+    base:hasBrowseName "0112/2///61987#ABA567#007" ;
+    base:hasDisplayName "Model" ;
+    base:hasIdentifierType base:stringID ;
+    base:hasNamespace dictionary_irdi:DICTIONARY_IRDINamespace ;
+    base:hasNodeId "0112/2///61987#ABA567#007" ;
+    base:hasSymbolicName "S0112_2___61987_ABA567_007" .
+
+<http://opcfoundation.org/UA/Dictionary/IRDI/nodes0112/2///61987%23ABA601%23006> a opcua:IrdiDictionaryEntryType,
+        opcua:ObjectNodeClass ;
+    base:hasBrowseName "0112/2///61987#ABA601#006" ;
+    base:hasDisplayName "Software revision" ;
+    base:hasIdentifierType base:stringID ;
+    base:hasNamespace dictionary_irdi:DICTIONARY_IRDINamespace ;
+    base:hasNodeId "0112/2///61987#ABA601#006" ;
+    base:hasSymbolicName "S0112_2___61987_ABA601_006" .
+
+<http://opcfoundation.org/UA/Dictionary/IRDI/nodes0112/2///61987%23ABA635%23002> a opcua:IrdiDictionaryEntryType,
+        opcua:ObjectNodeClass ;
+    base:hasBrowseName "0112/2///61987#ABA635#002" ;
+    base:hasDisplayName "Pulse width" ;
+    base:hasIdentifierType base:stringID ;
+    base:hasNamespace dictionary_irdi:DICTIONARY_IRDINamespace ;
+    base:hasNodeId "0112/2///61987#ABA635#002" ;
+    base:hasSymbolicName "S0112_2___61987_ABA635_002" .
+
+<http://opcfoundation.org/UA/Dictionary/IRDI/nodes0112/2///61987%23ABA926%23006> a opcua:IrdiDictionaryEntryType,
+        opcua:ObjectNodeClass ;
+    base:hasBrowseName "0112/2///61987#ABA926#006" ;
+    base:hasDisplayName "Hardware revision" ;
+    base:hasIdentifierType base:stringID ;
+    base:hasNamespace dictionary_irdi:DICTIONARY_IRDINamespace ;
+    base:hasNodeId "0112/2///61987#ABA926#006" ;
+    base:hasSymbolicName "S0112_2___61987_ABA926_006" .
+
+<http://opcfoundation.org/UA/Dictionary/IRDI/nodes0112/2///61987%23ABA927%23005> a opcua:IrdiDictionaryEntryType,
+        opcua:ObjectNodeClass ;
+    base:hasBrowseName "0112/2///61987#ABA927#005" ;
+    base:hasDisplayName "Temperature" ;
+    base:hasIdentifierType base:stringID ;
+    base:hasNamespace dictionary_irdi:DICTIONARY_IRDINamespace ;
+    base:hasNodeId "0112/2///61987#ABA927#005" ;
+    base:hasSymbolicName "S0112_2___61987_ABA927_005" .
+
+<http://opcfoundation.org/UA/Dictionary/IRDI/nodes0112/2///61987%23ABA946%23004> a opcua:IrdiDictionaryEntryType,
+        opcua:ObjectNodeClass ;
+    base:hasBrowseName "0112/2///61987#ABA946#004" ;
+    base:hasDisplayName "Density" ;
+    base:hasIdentifierType base:stringID ;
+    base:hasNamespace dictionary_irdi:DICTIONARY_IRDINamespace ;
+    base:hasNodeId "0112/2///61987#ABA946#004" ;
+    base:hasSymbolicName "S0112_2___61987_ABA946_004" .
+
+<http://opcfoundation.org/UA/Dictionary/IRDI/nodes0112/2///61987%23ABA951%23007> a opcua:IrdiDictionaryEntryType,
+        opcua:ObjectNodeClass ;
+    base:hasBrowseName "0112/2///61987#ABA951#007" ;
+    base:hasDisplayName "Serial number" ;
+    base:hasIdentifierType base:stringID ;
+    base:hasNamespace dictionary_irdi:DICTIONARY_IRDINamespace ;
+    base:hasNodeId "0112/2///61987#ABA951#007" ;
+    base:hasSymbolicName "S0112_2___61987_ABA951_007" .
+
+<http://opcfoundation.org/UA/Dictionary/IRDI/nodes0112/2///61987%23ABA968%23002> a opcua:IrdiDictionaryEntryType,
+        opcua:ObjectNodeClass ;
+    base:hasBrowseName "0112/2///61987#ABA968#002" ;
+    base:hasDisplayName "UnitOfMeasure" ;
+    base:hasIdentifierType base:stringID ;
+    base:hasNamespace dictionary_irdi:DICTIONARY_IRDINamespace ;
+    base:hasNodeId "0112/2///61987#ABA968#002" ;
+    base:hasSymbolicName "S0112_2___61987_ABA968_002" .
+
+<http://opcfoundation.org/UA/Dictionary/IRDI/nodes0112/2///61987%23ABB088%23002> a opcua:IrdiDictionaryEntryType,
+        opcua:ObjectNodeClass ;
+    base:hasBrowseName "0112/2///61987#ABB088#002" ;
+    base:hasDisplayName "Sensor type" ;
+    base:hasIdentifierType base:stringID ;
+    base:hasNamespace dictionary_irdi:DICTIONARY_IRDINamespace ;
+    base:hasNodeId "0112/2///61987#ABB088#002" ;
+    base:hasSymbolicName "S0112_2___61987_ABB088_002" .
+
+<http://opcfoundation.org/UA/Dictionary/IRDI/nodes0112/2///61987%23ABB091%23002> a opcua:IrdiDictionaryEntryType,
+        opcua:ObjectNodeClass ;
+    base:hasBrowseName "0112/2///61987#ABB091#002" ;
+    base:hasDisplayName "RTD-Sensor connection" ;
+    base:hasIdentifierType base:stringID ;
+    base:hasNamespace dictionary_irdi:DICTIONARY_IRDINamespace ;
+    base:hasNodeId "0112/2///61987#ABB091#002" ;
+    base:hasSymbolicName "S0112_2___61987_ABB091_002" .
+
+<http://opcfoundation.org/UA/Dictionary/IRDI/nodes0112/2///61987%23ABB092%23002> a opcua:IrdiDictionaryEntryType,
+        opcua:ObjectNodeClass ;
+    base:hasBrowseName "0112/2///61987#ABB092#002" ;
+    base:hasDisplayName "Sensor type" ;
+    base:hasIdentifierType base:stringID ;
+    base:hasNamespace dictionary_irdi:DICTIONARY_IRDINamespace ;
+    base:hasNodeId "0112/2///61987#ABB092#002" ;
+    base:hasSymbolicName "S0112_2___61987_ABB092_002" .
+
+<http://opcfoundation.org/UA/Dictionary/IRDI/nodes0112/2///61987%23ABB093%23002> a opcua:IrdiDictionaryEntryType,
+        opcua:ObjectNodeClass ;
+    base:hasBrowseName "0112/2///61987#ABB093#002" ;
+    base:hasDisplayName "TC-Sensor reference" ;
+    base:hasIdentifierType base:stringID ;
+    base:hasNamespace dictionary_irdi:DICTIONARY_IRDINamespace ;
+    base:hasNodeId "0112/2///61987#ABB093#002" ;
+    base:hasSymbolicName "S0112_2___61987_ABB093_002" .
+
+<http://opcfoundation.org/UA/Dictionary/IRDI/nodes0112/2///61987%23ABB271%23007> a opcua:IrdiDictionaryEntryType,
+        opcua:ObjectNodeClass ;
+    base:hasBrowseName "0112/2///61987#ABB271#007" ;
+    base:hasDisplayName "Tag" ;
+    base:hasIdentifierType base:stringID ;
+    base:hasNamespace dictionary_irdi:DICTIONARY_IRDINamespace ;
+    base:hasNodeId "0112/2///61987#ABB271#007" ;
+    base:hasSymbolicName "S0112_2___61987_ABB271_007" .
+
+<http://opcfoundation.org/UA/Dictionary/IRDI/nodes0112/2///61987%23ABB290%23005> a opcua:IrdiDictionaryEntryType,
+        opcua:ObjectNodeClass ;
+    base:hasBrowseName "0112/2///61987#ABB290#005" ;
+    base:hasDisplayName "Mass flow rate" ;
+    base:hasIdentifierType base:stringID ;
+    base:hasNamespace dictionary_irdi:DICTIONARY_IRDINamespace ;
+    base:hasNodeId "0112/2///61987#ABB290#005" ;
+    base:hasSymbolicName "S0112_2___61987_ABB290_005" .
+
+<http://opcfoundation.org/UA/Dictionary/IRDI/nodes0112/2///61987%23ABB291%23005> a opcua:IrdiDictionaryEntryType,
+        opcua:ObjectNodeClass ;
+    base:hasBrowseName "0112/2///61987#ABB291#005" ;
+    base:hasDisplayName "Volume flow rate" ;
+    base:hasIdentifierType base:stringID ;
+    base:hasNamespace dictionary_irdi:DICTIONARY_IRDINamespace ;
+    base:hasNodeId "0112/2///61987#ABB291#005" ;
+    base:hasSymbolicName "S0112_2___61987_ABB291_005" .
+
+<http://opcfoundation.org/UA/Dictionary/IRDI/nodes0112/2///61987%23ABB292%23005> a opcua:IrdiDictionaryEntryType,
+        opcua:ObjectNodeClass ;
+    base:hasBrowseName "0112/2///61987#ABB292#005" ;
+    base:hasDisplayName "Normalized volume flow rate" ;
+    base:hasIdentifierType base:stringID ;
+    base:hasNamespace dictionary_irdi:DICTIONARY_IRDINamespace ;
+    base:hasNodeId "0112/2///61987#ABB292#005" ;
+    base:hasSymbolicName "S0112_2___61987_ABB292_005" .
+
+<http://opcfoundation.org/UA/Dictionary/IRDI/nodes0112/2///61987%23ABD740%23002> a opcua:IrdiDictionaryEntryType,
+        opcua:ObjectNodeClass ;
+    base:hasBrowseName "0112/2///61987#ABD740#002" ;
+    base:hasDisplayName "Operating direction" ;
+    base:hasIdentifierType base:stringID ;
+    base:hasNamespace dictionary_irdi:DICTIONARY_IRDINamespace ;
+    base:hasNodeId "0112/2///61987#ABD740#002" ;
+    base:hasSymbolicName "S0112_2___61987_ABD740_002" .
+
+<http://opcfoundation.org/UA/Dictionary/IRDI/nodes0112/2///61987%23ABD742%23002> a opcua:IrdiDictionaryEntryType,
+        opcua:ObjectNodeClass ;
+    base:hasBrowseName "0112/2///61987#ABD742#002" ;
+    base:hasDisplayName "Actuator type" ;
+    base:hasIdentifierType base:stringID ;
+    base:hasNamespace dictionary_irdi:DICTIONARY_IRDINamespace ;
+    base:hasNodeId "0112/2///61987#ABD742#002" ;
+    base:hasSymbolicName "S0112_2___61987_ABD742_002" .
+
+<http://opcfoundation.org/UA/Dictionary/IRDI/nodes0112/2///61987%23ABE882%23001> a opcua:IrdiDictionaryEntryType,
+        opcua:ObjectNodeClass ;
+    base:hasBrowseName "0112/2///61987#ABE882#001" ;
+    base:hasDisplayName "Pulse value" ;
+    base:hasIdentifierType base:stringID ;
+    base:hasNamespace dictionary_irdi:DICTIONARY_IRDINamespace ;
+    base:hasNodeId "0112/2///61987#ABE882#001" ;
+    base:hasSymbolicName "S0112_2___61987_ABE882_001" .
+
+<http://opcfoundation.org/UA/Dictionary/IRDI/nodes0112/2///61987%23ABH327%23001> a opcua:IrdiDictionaryEntryType,
+        opcua:ObjectNodeClass ;
+    base:hasBrowseName "0112/2///61987#ABH327#001" ;
+    base:hasDisplayName "Mass" ;
+    base:hasIdentifierType base:stringID ;
+    base:hasNamespace dictionary_irdi:DICTIONARY_IRDINamespace ;
+    base:hasNodeId "0112/2///61987#ABH327#001" ;
+    base:hasSymbolicName "S0112_2___61987_ABH327_001" .
+
+<http://opcfoundation.org/UA/Dictionary/IRDI/nodes0112/2///61987%23ABH328%23001> a opcua:IrdiDictionaryEntryType,
+        opcua:ObjectNodeClass ;
+    base:hasBrowseName "0112/2///61987#ABH328#001" ;
+    base:hasDisplayName "Volume" ;
+    base:hasIdentifierType base:stringID ;
+    base:hasNamespace dictionary_irdi:DICTIONARY_IRDINamespace ;
+    base:hasNodeId "0112/2///61987#ABH328#001" ;
+    base:hasSymbolicName "S0112_2___61987_ABH328_001" .
+
+<http://opcfoundation.org/UA/Dictionary/IRDI/nodes0112/2///61987%23ABH329%23002> a opcua:IrdiDictionaryEntryType,
+        opcua:ObjectNodeClass ;
+    base:hasBrowseName "0112/2///61987#ABH329#002" ;
+    base:hasDisplayName "Level" ;
+    base:hasIdentifierType base:stringID ;
+    base:hasNamespace dictionary_irdi:DICTIONARY_IRDINamespace ;
+    base:hasNodeId "0112/2///61987#ABH329#002" ;
+    base:hasSymbolicName "S0112_2___61987_ABH329_002" .
+
+<http://opcfoundation.org/UA/Dictionary/IRDI/nodes0112/2///61987%23ABH526%23002> a opcua:IrdiDictionaryEntryType,
+        opcua:ObjectNodeClass ;
+    base:hasBrowseName "0112/2///61987#ABH526#002" ;
+    base:hasDisplayName "Damping" ;
+    base:hasIdentifierType base:stringID ;
+    base:hasNamespace dictionary_irdi:DICTIONARY_IRDINamespace ;
+    base:hasNodeId "0112/2///61987#ABH526#002" ;
+    base:hasSymbolicName "S0112_2___61987_ABH526_002" .
+
+<http://opcfoundation.org/UA/Dictionary/IRDI/nodes0112/2///61987%23ABJ683%23001> a opcua:IrdiDictionaryEntryType,
+        opcua:ObjectNodeClass ;
+    base:hasBrowseName "0112/2///61987#ABJ683#001" ;
+    base:hasDisplayName "ControlReadback" ;
+    base:hasIdentifierType base:stringID ;
+    base:hasNamespace dictionary_irdi:DICTIONARY_IRDINamespace ;
+    base:hasNodeId "0112/2///61987#ABJ683#001" ;
+    base:hasSymbolicName "S0112_2___61987_ABJ683_001" .
+
+<http://opcfoundation.org/UA/Dictionary/IRDI/nodes0112/2///61987%23ABJ724%23002> a opcua:IrdiDictionaryEntryType,
+        opcua:ObjectNodeClass ;
+    base:hasBrowseName "0112/2///61987#ABJ724#002" ;
+    base:hasDisplayName "Low flow cut off" ;
+    base:hasIdentifierType base:stringID ;
+    base:hasNamespace dictionary_irdi:DICTIONARY_IRDINamespace ;
+    base:hasNodeId "0112/2///61987#ABJ724#002" ;
+    base:hasSymbolicName "S0112_2___61987_ABJ724_002" .
+
+<http://opcfoundation.org/UA/Dictionary/IRDI/nodes0112/2///61987%23ABN590%23001> a opcua:IrdiDictionaryEntryType,
+        opcua:ObjectNodeClass ;
+    base:hasBrowseName "0112/2///61987#ABN590#001" ;
+    base:hasDisplayName "URI of Product instance" ;
+    base:hasIdentifierType base:stringID ;
+    base:hasNamespace dictionary_irdi:DICTIONARY_IRDINamespace ;
+    base:hasNodeId "0112/2///61987#ABN590#001" ;
+    base:hasSymbolicName "S0112_2___61987_ABN590_001" .
+
+<http://opcfoundation.org/UA/Dictionary/IRDI/nodes0112/2///61987%23ABN591%23001> a opcua:IrdiDictionaryEntryType,
+        opcua:ObjectNodeClass ;
+    base:hasBrowseName "0112/2///61987#ABN591#001" ;
+    base:hasDisplayName "URI of Manufacturer" ;
+    base:hasIdentifierType base:stringID ;
+    base:hasNamespace dictionary_irdi:DICTIONARY_IRDINamespace ;
+    base:hasNodeId "0112/2///61987#ABN591#001" ;
+    base:hasSymbolicName "S0112_2___61987_ABN591_001" .
+
+<http://opcfoundation.org/UA/Dictionary/IRDI/nodes0112/2///61987%23ABN594%23002> a opcua:IrdiDictionaryEntryType,
+        opcua:ObjectNodeClass ;
+    base:hasBrowseName "0112/2///61987#ABN594#002" ;
+    base:hasDisplayName "Flow direction" ;
+    base:hasIdentifierType base:stringID ;
+    base:hasNamespace dictionary_irdi:DICTIONARY_IRDINamespace ;
+    base:hasNodeId "0112/2///61987#ABN594#002" ;
+    base:hasSymbolicName "S0112_2___61987_ABN594_002" .
+
+<http://opcfoundation.org/UA/Dictionary/IRDI/nodes0112/2///61987%23ABN597%23001> a opcua:IrdiDictionaryEntryType,
+        opcua:ObjectNodeClass ;
+    base:hasBrowseName "0112/2///61987#ABN597#001" ;
+    base:hasDisplayName "Display language" ;
+    base:hasIdentifierType base:stringID ;
+    base:hasNamespace dictionary_irdi:DICTIONARY_IRDINamespace ;
+    base:hasNodeId "0112/2///61987#ABN597#001" ;
+    base:hasSymbolicName "S0112_2___61987_ABN597_001" .
+
+<http://opcfoundation.org/UA/Dictionary/IRDI/nodes0112/2///61987%23ABN603%23001> a opcua:IrdiDictionaryEntryType,
+        opcua:ObjectNodeClass ;
+    base:hasBrowseName "0112/2///61987#ABN603#001" ;
+    base:hasDisplayName "Revision counter" ;
+    base:hasIdentifierType base:stringID ;
+    base:hasNamespace dictionary_irdi:DICTIONARY_IRDINamespace ;
+    base:hasNodeId "0112/2///61987#ABN603#001" ;
+    base:hasSymbolicName "S0112_2___61987_ABN603_001" .
+
+<http://opcfoundation.org/UA/Dictionary/IRDI/nodes0112/2///61987%23ABN604%23001> a opcua:IrdiDictionaryEntryType,
+        opcua:ObjectNodeClass ;
+    base:hasBrowseName "0112/2///61987#ABN604#001" ;
+    base:hasDisplayName "Date of last change" ;
+    base:hasIdentifierType base:stringID ;
+    base:hasNamespace dictionary_irdi:DICTIONARY_IRDINamespace ;
+    base:hasNodeId "0112/2///61987#ABN604#001" ;
+    base:hasSymbolicName "S0112_2___61987_ABN604_001" .
+
+<http://opcfoundation.org/UA/Dictionary/IRDI/nodes0112/2///61987%23ABN607%23001> a opcua:IrdiDictionaryEntryType,
+        opcua:ObjectNodeClass ;
+    base:hasBrowseName "0112/2///61987#ABN607#001" ;
+    base:hasDisplayName "Setpoint" ;
+    base:hasIdentifierType base:stringID ;
+    base:hasNamespace dictionary_irdi:DICTIONARY_IRDINamespace ;
+    base:hasNodeId "0112/2///61987#ABN607#001" ;
+    base:hasSymbolicName "S0112_2___61987_ABN607_001" .
+
+<http://opcfoundation.org/UA/Dictionary/IRDI/nodes0112/2///61987%23ABN609%23001> a opcua:IrdiDictionaryEntryType,
+        opcua:ObjectNodeClass ;
+    base:hasBrowseName "0112/2///61987#ABN609#001" ;
+    base:hasDisplayName "Factory reset" ;
+    base:hasIdentifierType base:stringID ;
+    base:hasNamespace dictionary_irdi:DICTIONARY_IRDINamespace ;
+    base:hasNodeId "0112/2///61987#ABN609#001" ;
+    base:hasSymbolicName "S0112_2___61987_ABN609_001" .
+
+<http://opcfoundation.org/UA/Dictionary/IRDI/nodes0112/2///61987%23ABN611%23001> a opcua:IrdiDictionaryEntryType,
+        opcua:ObjectNodeClass ;
+    base:hasBrowseName "0112/2///61987#ABN611#001" ;
+    base:hasDisplayName "Simulation state" ;
+    base:hasIdentifierType base:stringID ;
+    base:hasNamespace dictionary_irdi:DICTIONARY_IRDINamespace ;
+    base:hasNodeId "0112/2///61987#ABN611#001" ;
+    base:hasSymbolicName "S0112_2___61987_ABN611_001" .
+
+<http://opcfoundation.org/UA/Dictionary/IRDI/nodes0112/2///61987%23ABN613%23001> a opcua:IrdiDictionaryEntryType,
+        opcua:ObjectNodeClass ;
+    base:hasBrowseName "0112/2///61987#ABN613#001" ;
+    base:hasDisplayName "Simulation value" ;
+    base:hasIdentifierType base:stringID ;
+    base:hasNamespace dictionary_irdi:DICTIONARY_IRDINamespace ;
+    base:hasNodeId "0112/2///61987#ABN613#001" ;
+    base:hasSymbolicName "S0112_2___61987_ABN613_001" .
+
+<http://opcfoundation.org/UA/Dictionary/IRDI/nodes0112/2///61987%23ABN614%23001> a opcua:IrdiDictionaryEntryType,
+        opcua:ObjectNodeClass ;
+    base:hasBrowseName "0112/2///61987#ABN614#001" ;
+    base:hasDisplayName "Zero point adjustment" ;
+    base:hasIdentifierType base:stringID ;
+    base:hasNamespace dictionary_irdi:DICTIONARY_IRDINamespace ;
+    base:hasNodeId "0112/2///61987#ABN614#001" ;
+    base:hasSymbolicName "S0112_2___61987_ABN614_001" .
+
+<http://opcfoundation.org/UA/Dictionary/IRDI/nodes0112/2///61987%23ABN616%23001> a opcua:IrdiDictionaryEntryType,
+        opcua:ObjectNodeClass ;
+    base:hasBrowseName "0112/2///61987#ABN616#001" ;
+    base:hasDisplayName "Pressure" ;
+    base:hasIdentifierType base:stringID ;
+    base:hasNamespace dictionary_irdi:DICTIONARY_IRDINamespace ;
+    base:hasNodeId "0112/2///61987#ABN616#001" ;
+    base:hasSymbolicName "S0112_2___61987_ABN616_001" .
+
+<http://opcfoundation.org/UA/Dictionary/IRDI/nodes0112/2///61987%23ABN632%23001> a opcua:IrdiDictionaryEntryType,
+        opcua:ObjectNodeClass ;
+    base:hasBrowseName "0112/2///61987#ABN632#001" ;
+    base:hasDisplayName "TwoStateSimulationValue" ;
+    base:hasIdentifierType base:stringID ;
+    base:hasNamespace dictionary_irdi:DICTIONARY_IRDINamespace ;
+    base:hasNodeId "0112/2///61987#ABN632#001" ;
+    base:hasSymbolicName "S0112_2___61987_xzx665_001" .
+
+<http://opcfoundation.org/UA/Dictionary/IRDI/nodes0112/2///61987%23ABN634%23001> a opcua:IrdiDictionaryEntryType,
+        opcua:ObjectNodeClass ;
+    base:hasBrowseName "0112/2///61987#ABN634#001" ;
+    base:hasDisplayName "Value" ;
+    base:hasIdentifierType base:stringID ;
+    base:hasNamespace dictionary_irdi:DICTIONARY_IRDINamespace ;
+    base:hasNodeId "0112/2///61987#ABN634#001" ;
+    base:hasSymbolicName "S0112_2___61987_ABN634_001" .
+
+<http://opcfoundation.org/UA/Dictionary/IRDI/nodes0112/2///61987%23ABN635%23001> a opcua:IrdiDictionaryEntryType,
+        opcua:ObjectNodeClass ;
+    base:hasBrowseName "0112/2///61987#ABN635#001" ;
+    base:hasDisplayName "TwoStateValue" ;
+    base:hasIdentifierType base:stringID ;
+    base:hasNamespace dictionary_irdi:DICTIONARY_IRDINamespace ;
+    base:hasNodeId "0112/2///61987#ABN635#001" ;
+    base:hasSymbolicName "S0112_2___61987_ABN635_001" .
+
+<http://opcfoundation.org/UA/Dictionary/IRDI/nodes0112/2///61987%23ABN636%23001> a opcua:IrdiDictionaryEntryType,
+        opcua:ObjectNodeClass ;
+    base:hasBrowseName "0112/2///61987#ABN636#001" ;
+    base:hasDisplayName "MultiStateValue" ;
+    base:hasIdentifierType base:stringID ;
+    base:hasNamespace dictionary_irdi:DICTIONARY_IRDINamespace ;
+    base:hasNodeId "0112/2///61987#ABN636#001" ;
+    base:hasSymbolicName "S0112_2___61987_ABN636_001" .
+
+<http://opcfoundation.org/UA/Dictionary/IRDI/nodes0112/2///61987%23ABN637%23001> a opcua:IrdiDictionaryEntryType,
+        opcua:ObjectNodeClass ;
+    base:hasBrowseName "0112/2///61987#ABN637#001" ;
+    base:hasDisplayName "MultiStateSimulationValue" ;
+    base:hasIdentifierType base:stringID ;
+    base:hasNamespace dictionary_irdi:DICTIONARY_IRDINamespace ;
+    base:hasNodeId "0112/2///61987#ABN637#001" ;
+    base:hasSymbolicName "S0112_2___61987_ABN637_001" .
+
+<http://opcfoundation.org/UA/Dictionary/IRDI/nodes0112/2///61987%23ABN644%23001> a opcua:IrdiDictionaryEntryType,
+        opcua:ObjectNodeClass ;
+    base:hasBrowseName "0112/2///61987#ABN644#001" ;
+    base:hasDisplayName "Actual value" ;
+    base:hasIdentifierType base:stringID ;
+    base:hasNamespace dictionary_irdi:DICTIONARY_IRDINamespace ;
+    base:hasNodeId "0112/2///61987#ABN644#001" ;
+    base:hasSymbolicName "S0112_2___61987_ABN644_001" .
+
+<http://opcfoundation.org/UA/Dictionary/IRDI/nodes0112/2///61987%23ABN645%23001> a opcua:IrdiDictionaryEntryType,
+        opcua:ObjectNodeClass ;
+    base:hasBrowseName "0112/2///61987#ABN645#001" ;
+    base:hasDisplayName "TwoStateActualValue" ;
+    base:hasIdentifierType base:stringID ;
+    base:hasNamespace dictionary_irdi:DICTIONARY_IRDINamespace ;
+    base:hasNodeId "0112/2///61987#ABN645#001" ;
+    base:hasSymbolicName "S0112_2___61987_ABN____001" .
+
+<http://opcfoundation.org/UA/Dictionary/IRDI/nodes0112/2///61987%23ABN646%23001> a opcua:IrdiDictionaryEntryType,
+        opcua:ObjectNodeClass ;
+    base:hasBrowseName "0112/2///61987#ABN646#001" ;
+    base:hasDisplayName "MultiStateActualValue" ;
+    base:hasIdentifierType base:stringID ;
+    base:hasNamespace dictionary_irdi:DICTIONARY_IRDINamespace ;
+    base:hasNodeId "0112/2///61987#ABN646#001" ;
+    base:hasSymbolicName "S0112_2___61987_ABN646_001" .
+
+<http://opcfoundation.org/UA/Dictionary/IRDI/nodes0112/2///61987%23ABN726%23001> a opcua:IrdiDictionaryEntryType,
+        opcua:ObjectNodeClass ;
+    base:hasBrowseName "0112/2///61987#ABN726#001" ;
+    base:hasDisplayName "Autoadjust" ;
+    base:hasIdentifierType base:stringID ;
+    base:hasNamespace dictionary_irdi:DICTIONARY_IRDINamespace ;
+    base:hasNodeId "0112/2///61987#ABN726#001" ;
+    base:hasSymbolicName "S0112_2___61987_ABN726_001" .
+
+<http://opcfoundation.org/UA/Dictionary/IRDI/nodes0112/2///61987%23ABN972%23001> a opcua:IrdiDictionaryEntryType,
+        opcua:ObjectNodeClass ;
+    base:hasBrowseName "0112/2///61987#ABN972#001" ;
+    base:hasDisplayName "Device diagnostic status" ;
+    base:hasIdentifierType base:stringID ;
+    base:hasNamespace dictionary_irdi:DICTIONARY_IRDINamespace ;
+    base:hasNodeId "0112/2///61987#ABN972#001" ;
+    base:hasSymbolicName "S0112_2___61987_ABN972_001" .
+
+dictionary_irdi:DICTIONARY_IRDINamespace a base:Namespace ;
+    base:hasPrefix "dictionary_irdi" ;
+    base:hasUri "http://opcfoundation.org/UA/Dictionary/IRDI/" .
+
