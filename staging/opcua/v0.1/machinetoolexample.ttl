@@ -1,0 +1,1262 @@
+@prefix base: <https://industryfusion.github.io/contexts/ontology/v0/base/> .
+@prefix ia: <http://opcfoundation.org/UA/IA/> .
+@prefix machinery: <http://opcfoundation.org/UA/Machinery/> .
+@prefix machinetool: <http://opcfoundation.org/UA/MachineTool/> .
+@prefix machinetoolexample: <http://yourorganisation.org/MachineTool-Example/> .
+@prefix opcua: <http://opcfoundation.org/UA/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+machinery:nodei1001 base:organizes machinetoolexample:nodei5002,
+        machinetoolexample:nodei5015 .
+
+opcua:nodei11715 base:hasComponent machinetoolexample:nodei5010 .
+
+machinetoolexample: a owl:Ontology ;
+    owl:imports <https://industryfusion.github.io/contexts/staging/ontology/v0.1/base.ttl>,
+        <https://industryfusion.github.io/contexts/staging/opcua/v0.1/core.ttl>,
+        <https://industryfusion.github.io/contexts/staging/opcua/v0.1/devices.ttl>,
+        <https://industryfusion.github.io/contexts/staging/opcua/v0.1/ia.ttl>,
+        <https://industryfusion.github.io/contexts/staging/opcua/v0.1/machinery.ttl>,
+        <https://industryfusion.github.io/contexts/staging/opcua/v0.1/machinetool.ttl> ;
+    owl:versionIRI <http://example.com/MachineToolExample/v0.1/pumpexample/> ;
+    owl:versionInfo 1e-01 .
+
+machinetoolexample:nodei5001 a machinetool:EquipmentType,
+        opcua:ObjectNodeClass ;
+    base:hasBrowseName "Equipment" ;
+    base:hasComponent machinetoolexample:nodei5014 ;
+    base:hasDisplayName "Equipment" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace machinetoolexample:MACHINETOOLEXAMPLENamespace ;
+    base:hasNodeId "5001" .
+
+machinetoolexample:nodei5002 a machinetool:MachineToolType,
+        opcua:ObjectNodeClass ;
+    base:hasAddIn machinetoolexample:nodei5003 ;
+    base:hasBrowseName "SampleMachineTool" ;
+    base:hasComponent machinetoolexample:nodei5001,
+        machinetoolexample:nodei5004,
+        machinetoolexample:nodei5006,
+        machinetoolexample:nodei5007 ;
+    base:hasDisplayName "SampleMachineTool" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace machinetoolexample:MACHINETOOLEXAMPLENamespace ;
+    base:hasNodeId "5002" .
+
+machinetoolexample:nodei5003 a machinetool:MachineToolIdentificationType,
+        opcua:ObjectNodeClass ;
+    base:hasBrowseName "Identification" ;
+    base:hasDisplayName "Identification" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace machinetoolexample:MACHINETOOLEXAMPLENamespace ;
+    base:hasNodeId "5003" ;
+    base:hasProperty machinetoolexample:nodei6001,
+        machinetoolexample:nodei6002,
+        machinetoolexample:nodei6003,
+        machinetoolexample:nodei6073,
+        machinetoolexample:nodei6074,
+        machinetoolexample:nodei6075,
+        machinetoolexample:nodei6076,
+        machinetoolexample:nodei6077,
+        machinetoolexample:nodei6078 .
+
+machinetoolexample:nodei5004 a machinetool:MonitoringType,
+        opcua:ObjectNodeClass ;
+    base:hasBrowseName "Monitoring" ;
+    base:hasComponent machinetoolexample:nodei5005,
+        machinetoolexample:nodei5011,
+        machinetoolexample:nodei5013,
+        machinetoolexample:nodei5031 ;
+    base:hasDisplayName "Monitoring" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace machinetoolexample:MACHINETOOLEXAMPLENamespace ;
+    base:hasNodeId "5004" .
+
+machinetoolexample:nodei5005 a machinetool:MachineOperationMonitoringType,
+        opcua:ObjectNodeClass ;
+    base:hasBrowseName "MachineTool" ;
+    base:hasComponent machinetoolexample:nodei6004,
+        machinetoolexample:nodei6017,
+        machinetoolexample:nodei6020,
+        machinetoolexample:nodei6060 ;
+    base:hasDisplayName "MachineTool" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace machinetoolexample:MACHINETOOLEXAMPLENamespace ;
+    base:hasNodeId "5005" .
+
+machinetoolexample:nodei5006 a machinetool:NotificationType,
+        opcua:ObjectNodeClass ;
+    base:hasBrowseName "Notification" ;
+    base:hasDisplayName "Notification" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace machinetoolexample:MACHINETOOLEXAMPLENamespace ;
+    base:hasNodeId "5006" .
+
+machinetoolexample:nodei5007 a machinetool:ProductionType,
+        opcua:ObjectNodeClass ;
+    base:hasBrowseName "Production" ;
+    base:hasComponent machinetoolexample:nodei5008 ;
+    base:hasDisplayName "Production" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace machinetoolexample:MACHINETOOLEXAMPLENamespace ;
+    base:hasNodeId "5007" .
+
+machinetoolexample:nodei5008 a machinetool:ProductionActiveProgramType,
+        opcua:ObjectNodeClass ;
+    base:hasBrowseName "ActiveProgram" ;
+    base:hasComponent machinetoolexample:nodei5009 ;
+    base:hasDisplayName "ActiveProgram" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace machinetoolexample:MACHINETOOLEXAMPLENamespace ;
+    base:hasNodeId "5008" ;
+    base:hasProperty machinetoolexample:nodei6005,
+        machinetoolexample:nodei6006 .
+
+machinetoolexample:nodei5009 a machinetool:ProductionProgramStateMachineType,
+        opcua:ObjectNodeClass ;
+    base:hasBrowseName "State" ;
+    base:hasComponent machinetoolexample:nodei6007 ;
+    base:hasDisplayName "State" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace machinetoolexample:MACHINETOOLEXAMPLENamespace ;
+    base:hasNodeId "5009" .
+
+machinetoolexample:nodei5010 a opcua:NamespaceMetadataType,
+        opcua:ObjectNodeClass ;
+    base:hasBrowseName "http://vdw.de/MachineTool-Example/" ;
+    base:hasDisplayName "http://vdw.de/MachineTool-Example/" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace machinetoolexample:MACHINETOOLEXAMPLENamespace ;
+    base:hasNodeId "5010" ;
+    base:hasProperty machinetoolexample:nodei6010,
+        machinetoolexample:nodei6011,
+        machinetoolexample:nodei6012,
+        machinetoolexample:nodei6013,
+        machinetoolexample:nodei6014,
+        machinetoolexample:nodei6015,
+        machinetoolexample:nodei6016 ;
+    base:hasSymbolicName "http___vdw_de_MachineTool_Example_" .
+
+machinetoolexample:nodei5011 a machinetool:ChannelMonitoringType,
+        opcua:ObjectNodeClass ;
+    base:hasBrowseName "Channel1" ;
+    base:hasComponent machinetoolexample:nodei6061,
+        machinetoolexample:nodei6062,
+        machinetoolexample:nodei6063 ;
+    base:hasDisplayName "Channel1" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace machinetoolexample:MACHINETOOLEXAMPLENamespace ;
+    base:hasNodeId "5011" ;
+    base:hasProperty machinetoolexample:nodei6066 .
+
+machinetoolexample:nodei5012 a machinetool:EquipmentType,
+        opcua:ObjectNodeClass ;
+    base:hasBrowseName "Equipment" ;
+    base:hasComponent machinetoolexample:nodei5025 ;
+    base:hasDisplayName "Equipment" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace machinetoolexample:MACHINETOOLEXAMPLENamespace ;
+    base:hasNodeId "5012" .
+
+machinetoolexample:nodei5013 a machinetool:SpindleMonitoringType,
+        opcua:ObjectNodeClass ;
+    base:hasBrowseName "Spindel1" ;
+    base:hasComponent machinetoolexample:nodei6067,
+        machinetoolexample:nodei6069,
+        machinetoolexample:nodei6070 ;
+    base:hasDisplayName "Spindel1" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace machinetoolexample:MACHINETOOLEXAMPLENamespace ;
+    base:hasNodeId "5013" ;
+    base:hasProperty machinetoolexample:nodei6068 .
+
+machinetoolexample:nodei5014 a machinetool:ToolListType,
+        opcua:ObjectNodeClass ;
+    base:hasBrowseName "Tools" ;
+    base:hasComponent machinetoolexample:nodei5027 ;
+    base:hasDisplayName "Tools" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace machinetoolexample:MACHINETOOLEXAMPLENamespace ;
+    base:hasNodeId "5014" ;
+    base:hasProperty machinetoolexample:nodei6021 .
+
+machinetoolexample:nodei5015 a machinetool:MachineToolType,
+        opcua:ObjectNodeClass ;
+    base:hasAddIn machinetoolexample:nodei5016,
+        machinetoolexample:nodei5023 ;
+    base:hasBrowseName "SampleMachineTool_v101" ;
+    base:hasComponent machinetoolexample:nodei5012,
+        machinetoolexample:nodei5017,
+        machinetoolexample:nodei5019,
+        machinetoolexample:nodei5020,
+        machinetoolexample:nodei5024 ;
+    base:hasDisplayName "SampleMachineTool_v101" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace machinetoolexample:MACHINETOOLEXAMPLENamespace ;
+    base:hasNodeId "5015" ;
+    base:hasSymbolicName "Sample_KPI_MachineTool" .
+
+machinetoolexample:nodei5017 a machinetool:MonitoringType,
+        opcua:ObjectNodeClass ;
+    base:hasBrowseName "Monitoring" ;
+    base:hasComponent machinetoolexample:nodei5018 ;
+    base:hasDisplayName "Monitoring" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace machinetoolexample:MACHINETOOLEXAMPLENamespace ;
+    base:hasNodeId "5017" .
+
+machinetoolexample:nodei5018 a machinetool:MachineOperationMonitoringType,
+        opcua:ObjectNodeClass ;
+    base:hasAddIn machinetoolexample:nodei5026,
+        machinetoolexample:nodei5036 ;
+    base:hasBrowseName "MachineTool" ;
+    base:hasComponent machinetoolexample:nodei6025 ;
+    base:hasDisplayName "MachineTool" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace machinetoolexample:MACHINETOOLEXAMPLENamespace ;
+    base:hasNodeId "5018" .
+
+machinetoolexample:nodei5019 a machinetool:NotificationType,
+        opcua:ObjectNodeClass ;
+    base:hasBrowseName "Notification" ;
+    base:hasComponent machinetoolexample:nodei5028,
+        machinetoolexample:nodei5029 ;
+    base:hasDisplayName "Notification" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace machinetoolexample:MACHINETOOLEXAMPLENamespace ;
+    base:hasNodeId "5019" .
+
+machinetoolexample:nodei5020 a machinetool:ProductionType,
+        opcua:ObjectNodeClass ;
+    base:hasBrowseName "Production" ;
+    base:hasComponent machinetoolexample:nodei5021 ;
+    base:hasDisplayName "Production" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace machinetoolexample:MACHINETOOLEXAMPLENamespace ;
+    base:hasNodeId "5020" .
+
+machinetoolexample:nodei5021 a machinetool:ProductionActiveProgramType,
+        opcua:ObjectNodeClass ;
+    base:hasBrowseName "ActiveProgram" ;
+    base:hasComponent machinetoolexample:nodei5022 ;
+    base:hasDisplayName "ActiveProgram" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace machinetoolexample:MACHINETOOLEXAMPLENamespace ;
+    base:hasNodeId "5021" ;
+    base:hasProperty machinetoolexample:nodei6026,
+        machinetoolexample:nodei6027 .
+
+machinetoolexample:nodei5022 a machinetool:ProductionProgramStateMachineType,
+        opcua:ObjectNodeClass ;
+    base:hasBrowseName "State" ;
+    base:hasComponent machinetoolexample:nodei6028 ;
+    base:hasDisplayName "State" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace machinetoolexample:MACHINETOOLEXAMPLENamespace ;
+    base:hasNodeId "5022" .
+
+machinetoolexample:nodei5024 a opcua:FolderType,
+        opcua:ObjectNodeClass ;
+    base:hasAddIn machinetoolexample:nodei5016,
+        machinetoolexample:nodei5023,
+        machinetoolexample:nodei5026,
+        machinetoolexample:nodei5036 ;
+    base:hasBrowseName "MachineryBuildingBlocks" ;
+    base:hasDisplayName "MachineryBuildingBlocks" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace machinetoolexample:MACHINETOOLEXAMPLENamespace ;
+    base:hasNodeId "5024" .
+
+machinetoolexample:nodei5025 a machinetool:ToolListType,
+        opcua:ObjectNodeClass ;
+    base:hasBrowseName "Tools" ;
+    base:hasComponent machinetoolexample:nodei5030 ;
+    base:hasDisplayName "Tools" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace machinetoolexample:MACHINETOOLEXAMPLENamespace ;
+    base:hasNodeId "5025" ;
+    base:hasProperty machinetoolexample:nodei6035 .
+
+machinetoolexample:nodei5027 a machinetool:ToolType,
+        opcua:ObjectNodeClass ;
+    base:hasBrowseName "Tool1" ;
+    base:hasComponent machinetoolexample:nodei6031,
+        machinetoolexample:nodei6034,
+        machinetoolexample:nodei6036 ;
+    base:hasDisplayName "Tool1" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace machinetoolexample:MACHINETOOLEXAMPLENamespace ;
+    base:hasNodeId "5027" ;
+    base:hasProperty machinetoolexample:nodei6042 .
+
+machinetoolexample:nodei5028 a machinetool:MessagesType,
+        opcua:ObjectNodeClass ;
+    opcua:GeneratesEvent machinetool:nodei35,
+        machinetool:nodei39 ;
+    base:hasBrowseName "Messages" ;
+    base:hasDisplayName "Messages" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace machinetoolexample:MACHINETOOLEXAMPLENamespace ;
+    base:hasNodeId "5028" .
+
+machinetoolexample:nodei5029 a machinetool:PrognosisListType,
+        opcua:ObjectNodeClass ;
+    base:hasBrowseName "Prognoses" ;
+    base:hasDisplayName "Prognoses" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace machinetoolexample:MACHINETOOLEXAMPLENamespace ;
+    base:hasNodeId "5029" .
+
+machinetoolexample:nodei5030 a machinetool:ToolType,
+        opcua:ObjectNodeClass ;
+    base:hasBrowseName "Tool1" ;
+    base:hasComponent machinetoolexample:nodei6037,
+        machinetoolexample:nodei6038,
+        machinetoolexample:nodei6039 ;
+    base:hasDisplayName "Tool1" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace machinetoolexample:MACHINETOOLEXAMPLENamespace ;
+    base:hasNodeId "5030" .
+
+machinetoolexample:nodei5031 a ia:BasicStacklightType,
+        opcua:ObjectNodeClass ;
+    opcua:HasOrderedComponent machinetoolexample:nodei5032,
+        machinetoolexample:nodei5033,
+        machinetoolexample:nodei5034,
+        machinetoolexample:nodei5035 ;
+    base:hasBrowseName "Stacklight" ;
+    base:hasDisplayName "Stacklight" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace machinetoolexample:MACHINETOOLEXAMPLENamespace ;
+    base:hasNodeId "5031" ;
+    base:hasProperty machinetoolexample:nodei6047 .
+
+machinetoolexample:nodei5032 a ia:StackElementLightType,
+        opcua:ObjectNodeClass ;
+    base:hasBrowseName "Light1" ;
+    base:hasComponent machinetoolexample:nodei6044,
+        machinetoolexample:nodei6045 ;
+    base:hasDisplayName "Light1" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace machinetoolexample:MACHINETOOLEXAMPLENamespace ;
+    base:hasNodeId "5032" ;
+    base:hasProperty machinetoolexample:nodei6043,
+        machinetoolexample:nodei6046 .
+
+machinetoolexample:nodei5033 a ia:StackElementLightType,
+        opcua:ObjectNodeClass ;
+    base:hasBrowseName "Light2" ;
+    base:hasComponent machinetoolexample:nodei6051,
+        machinetoolexample:nodei6052 ;
+    base:hasDescription "Represents a lamp element in a stacklight." ;
+    base:hasDisplayName "Light2" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace machinetoolexample:MACHINETOOLEXAMPLENamespace ;
+    base:hasNodeId "5033" ;
+    base:hasProperty machinetoolexample:nodei6048,
+        machinetoolexample:nodei6053 .
+
+machinetoolexample:nodei5034 a ia:StackElementLightType,
+        opcua:ObjectNodeClass ;
+    base:hasBrowseName "Light3" ;
+    base:hasComponent machinetoolexample:nodei6054,
+        machinetoolexample:nodei6055 ;
+    base:hasDescription "Represents a lamp element in a stacklight." ;
+    base:hasDisplayName "Light3" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace machinetoolexample:MACHINETOOLEXAMPLENamespace ;
+    base:hasNodeId "5034" ;
+    base:hasProperty machinetoolexample:nodei6049,
+        machinetoolexample:nodei6056 .
+
+machinetoolexample:nodei5035 a ia:StackElementLightType,
+        opcua:ObjectNodeClass ;
+    base:hasBrowseName "Light4" ;
+    base:hasComponent machinetoolexample:nodei6057,
+        machinetoolexample:nodei6058 ;
+    base:hasDescription "Represents a lamp element in a stacklight." ;
+    base:hasDisplayName "Light4" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace machinetoolexample:MACHINETOOLEXAMPLENamespace ;
+    base:hasNodeId "5035" ;
+    base:hasProperty machinetoolexample:nodei6050,
+        machinetoolexample:nodei6059 .
+
+machinetoolexample:nodei5037 a machinetool:MaintenanceModeStateMachineType,
+        opcua:ObjectNodeClass ;
+    base:hasBrowseName "MaintenanceMode" ;
+    base:hasComponent machinetoolexample:nodei6081 ;
+    base:hasDisplayName "MaintenanceMode" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace machinetoolexample:MACHINETOOLEXAMPLENamespace ;
+    base:hasNodeId "5037" .
+
+machinetoolexample:nodei6001 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "Manufacturer" ;
+    base:hasDatatype opcua:LocalizedText ;
+    base:hasDisplayName "Manufacturer" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace machinetoolexample:MACHINETOOLEXAMPLENamespace ;
+    base:hasNodeId "6001" .
+
+machinetoolexample:nodei6002 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "ProductInstanceUri" ;
+    base:hasDatatype opcua:String ;
+    base:hasDisplayName "ProductInstanceUri" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace machinetoolexample:MACHINETOOLEXAMPLENamespace ;
+    base:hasNodeId "6002" ;
+    base:hasValue "http://vdw.de/SampleMachineTool#123456" .
+
+machinetoolexample:nodei6003 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "SerialNumber" ;
+    base:hasDatatype opcua:String ;
+    base:hasDisplayName "SerialNumber" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace machinetoolexample:MACHINETOOLEXAMPLENamespace ;
+    base:hasNodeId "6003" ;
+    base:hasValue "123456" .
+
+machinetoolexample:nodei6004 a opcua:BaseDataVariableType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "OperationMode" ;
+    base:hasDatatype machinetool:MachineOperationMode ;
+    base:hasDisplayName "OperationMode" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace machinetoolexample:MACHINETOOLEXAMPLENamespace ;
+    base:hasNodeId "6004" ;
+    base:hasValue 1 .
+
+machinetoolexample:nodei6005 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "Name" ;
+    base:hasDatatype opcua:String ;
+    base:hasDisplayName "Name" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace machinetoolexample:MACHINETOOLEXAMPLENamespace ;
+    base:hasNodeId "6005" ;
+    base:hasValue "Sample.nc" .
+
+machinetoolexample:nodei6006 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "NumberInList" ;
+    base:hasDatatype opcua:UInt16 ;
+    base:hasDisplayName "NumberInList" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace machinetoolexample:MACHINETOOLEXAMPLENamespace ;
+    base:hasNodeId "6006" ;
+    base:hasValue 0 .
+
+machinetoolexample:nodei6007 a opcua:FiniteStateVariableType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "CurrentState" ;
+    base:hasDatatype opcua:LocalizedText ;
+    base:hasDisplayName "CurrentState" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace machinetoolexample:MACHINETOOLEXAMPLENamespace ;
+    base:hasNodeId "6007" ;
+    base:hasProperty machinetoolexample:nodei6008,
+        machinetoolexample:nodei6009 .
+
+machinetoolexample:nodei6008 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "Id" ;
+    base:hasDatatype opcua:NodeId ;
+    base:hasDisplayName "Id" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace machinetoolexample:MACHINETOOLEXAMPLENamespace ;
+    base:hasNodeId "6008" .
+
+machinetoolexample:nodei6009 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "Number" ;
+    base:hasDatatype opcua:UInt32 ;
+    base:hasDisplayName "Number" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace machinetoolexample:MACHINETOOLEXAMPLENamespace ;
+    base:hasNodeId "6009" ;
+    base:hasValue 1 .
+
+machinetoolexample:nodei6010 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "IsNamespaceSubset" ;
+    base:hasDatatype opcua:Boolean ;
+    base:hasDisplayName "IsNamespaceSubset" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace machinetoolexample:MACHINETOOLEXAMPLENamespace ;
+    base:hasNodeId "6010" ;
+    base:hasValue false .
+
+machinetoolexample:nodei6011 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "NamespacePublicationDate" ;
+    base:hasDatatype opcua:DateTime ;
+    base:hasDisplayName "NamespacePublicationDate" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace machinetoolexample:MACHINETOOLEXAMPLENamespace ;
+    base:hasNodeId "6011" ;
+    base:hasValue "2022-07-04T12:00:00Z" .
+
+machinetoolexample:nodei6012 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "NamespaceUri" ;
+    base:hasDatatype opcua:String ;
+    base:hasDisplayName "NamespaceUri" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace machinetoolexample:MACHINETOOLEXAMPLENamespace ;
+    base:hasNodeId "6012" ;
+    base:hasValue "http://yourorganisation.org/MachineTool-Example/" .
+
+machinetoolexample:nodei6013 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "NamespaceVersion" ;
+    base:hasDatatype opcua:String ;
+    base:hasDisplayName "NamespaceVersion" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace machinetoolexample:MACHINETOOLEXAMPLENamespace ;
+    base:hasNodeId "6013" ;
+    base:hasValue "1.01.1" .
+
+machinetoolexample:nodei6014 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "StaticNodeIdTypes" ;
+    base:hasDatatype opcua:IdType ;
+    base:hasDisplayName "StaticNodeIdTypes" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace machinetoolexample:MACHINETOOLEXAMPLENamespace ;
+    base:hasNodeId "6014" ;
+    base:hasValueRank "1" .
+
+machinetoolexample:nodei6015 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "StaticNumericNodeIdRange" ;
+    base:hasDatatype opcua:NumericRange ;
+    base:hasDisplayName "StaticNumericNodeIdRange" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace machinetoolexample:MACHINETOOLEXAMPLENamespace ;
+    base:hasNodeId "6015" ;
+    base:hasValueRank "1" .
+
+machinetoolexample:nodei6016 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "StaticStringNodeIdPattern" ;
+    base:hasDatatype opcua:String ;
+    base:hasDisplayName "StaticStringNodeIdPattern" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace machinetoolexample:MACHINETOOLEXAMPLENamespace ;
+    base:hasNodeId "6016" .
+
+machinetoolexample:nodei6017 a opcua:AnalogUnitRangeType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "FeedOverride" ;
+    base:hasDatatype opcua:Double ;
+    base:hasDisplayName "FeedOverride" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace machinetoolexample:MACHINETOOLEXAMPLENamespace ;
+    base:hasNodeId "6017" ;
+    base:hasProperty machinetoolexample:nodei6018,
+        machinetoolexample:nodei6019 ;
+    base:hasValue 1e+02 .
+
+machinetoolexample:nodei6018 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "EngineeringUnits" ;
+    base:hasDatatype opcua:EUInformation ;
+    base:hasDisplayName "EngineeringUnits" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace machinetoolexample:MACHINETOOLEXAMPLENamespace ;
+    base:hasNodeId "6018" .
+
+machinetoolexample:nodei6019 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "EURange" ;
+    base:hasDatatype opcua:Range ;
+    base:hasDisplayName "EURange" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace machinetoolexample:MACHINETOOLEXAMPLENamespace ;
+    base:hasNodeId "6019" .
+
+machinetoolexample:nodei6020 a opcua:BaseDataVariableType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "IsWarmUp" ;
+    base:hasDatatype opcua:Boolean ;
+    base:hasDisplayName "IsWarmUp" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace machinetoolexample:MACHINETOOLEXAMPLENamespace ;
+    base:hasNodeId "6020" ;
+    base:hasValue false .
+
+machinetoolexample:nodei6021 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "NodeVersion" ;
+    base:hasDatatype opcua:String ;
+    base:hasDisplayName "NodeVersion" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace machinetoolexample:MACHINETOOLEXAMPLENamespace ;
+    base:hasNodeId "6021" .
+
+machinetoolexample:nodei6022 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "Manufacturer" ;
+    base:hasDatatype opcua:LocalizedText ;
+    base:hasDisplayName "Manufacturer" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace machinetoolexample:MACHINETOOLEXAMPLENamespace ;
+    base:hasNodeId "6022" .
+
+machinetoolexample:nodei6023 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "ProductInstanceUri" ;
+    base:hasDatatype opcua:String ;
+    base:hasDisplayName "ProductInstanceUri" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace machinetoolexample:MACHINETOOLEXAMPLENamespace ;
+    base:hasNodeId "6023" .
+
+machinetoolexample:nodei6024 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "SerialNumber" ;
+    base:hasDatatype opcua:String ;
+    base:hasDisplayName "SerialNumber" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace machinetoolexample:MACHINETOOLEXAMPLENamespace ;
+    base:hasNodeId "6024" .
+
+machinetoolexample:nodei6025 a opcua:BaseDataVariableType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "OperationMode" ;
+    base:hasDatatype machinetool:MachineOperationMode ;
+    base:hasDisplayName "OperationMode" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace machinetoolexample:MACHINETOOLEXAMPLENamespace ;
+    base:hasNodeId "6025" .
+
+machinetoolexample:nodei6026 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "Name" ;
+    base:hasDatatype opcua:String ;
+    base:hasDisplayName "Name" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace machinetoolexample:MACHINETOOLEXAMPLENamespace ;
+    base:hasNodeId "6026" .
+
+machinetoolexample:nodei6027 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "NumberInList" ;
+    base:hasDatatype opcua:UInt16 ;
+    base:hasDisplayName "NumberInList" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace machinetoolexample:MACHINETOOLEXAMPLENamespace ;
+    base:hasNodeId "6027" .
+
+machinetoolexample:nodei6028 a opcua:FiniteStateVariableType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "CurrentState" ;
+    base:hasDatatype opcua:LocalizedText ;
+    base:hasDisplayName "CurrentState" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace machinetoolexample:MACHINETOOLEXAMPLENamespace ;
+    base:hasNodeId "6028" ;
+    base:hasProperty machinetoolexample:nodei6029,
+        machinetoolexample:nodei6030 .
+
+machinetoolexample:nodei6029 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "Id" ;
+    base:hasDatatype opcua:NodeId ;
+    base:hasDisplayName "Id" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace machinetoolexample:MACHINETOOLEXAMPLENamespace ;
+    base:hasNodeId "6029" .
+
+machinetoolexample:nodei6030 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "Number" ;
+    base:hasDatatype opcua:UInt32 ;
+    base:hasDisplayName "Number" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace machinetoolexample:MACHINETOOLEXAMPLENamespace ;
+    base:hasNodeId "6030" .
+
+machinetoolexample:nodei6031 a opcua:BaseDataVariableType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "ControlIdentifier1" ;
+    base:hasDatatype opcua:UInt32 ;
+    base:hasDisplayName "ControlIdentifier1" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace machinetoolexample:MACHINETOOLEXAMPLENamespace ;
+    base:hasNodeId "6031" ;
+    base:hasValue 12 .
+
+machinetoolexample:nodei6032 a opcua:FiniteStateVariableType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "CurrentState" ;
+    base:hasDatatype opcua:LocalizedText ;
+    base:hasDisplayName "CurrentState" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace machinetoolexample:MACHINETOOLEXAMPLENamespace ;
+    base:hasNodeId "6032" ;
+    base:hasProperty machinetoolexample:nodei6033 .
+
+machinetoolexample:nodei6033 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "Id" ;
+    base:hasDatatype opcua:NodeId ;
+    base:hasDisplayName "Id" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace machinetoolexample:MACHINETOOLEXAMPLENamespace ;
+    base:hasNodeId "6033" .
+
+machinetoolexample:nodei6034 a opcua:BaseDataVariableType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "ControlIdentifierInterpretation" ;
+    base:hasDatatype machinetool:ToolManagement ;
+    base:hasDisplayName "ControlIdentifierInterpretation" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace machinetoolexample:MACHINETOOLEXAMPLENamespace ;
+    base:hasNodeId "6034" ;
+    base:hasValue 0 .
+
+machinetoolexample:nodei6035 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "NodeVersion" ;
+    base:hasDatatype opcua:String ;
+    base:hasDisplayName "NodeVersion" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace machinetoolexample:MACHINETOOLEXAMPLENamespace ;
+    base:hasNodeId "6035" .
+
+machinetoolexample:nodei6036 a opcua:BaseDataVariableType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "Locked" ;
+    base:hasDatatype opcua:Boolean ;
+    base:hasDisplayName "Locked" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace machinetoolexample:MACHINETOOLEXAMPLENamespace ;
+    base:hasNodeId "6036" ;
+    base:hasProperty machinetoolexample:nodei6041 ;
+    base:hasValue false .
+
+machinetoolexample:nodei6037 a opcua:BaseDataVariableType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "ControlIdentifier1" ;
+    base:hasDatatype opcua:UInt32 ;
+    base:hasDisplayName "ControlIdentifier1" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace machinetoolexample:MACHINETOOLEXAMPLENamespace ;
+    base:hasNodeId "6037" .
+
+machinetoolexample:nodei6038 a opcua:BaseDataVariableType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "ControlIdentifierInterpretation" ;
+    base:hasDatatype machinetool:ToolManagement ;
+    base:hasDisplayName "ControlIdentifierInterpretation" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace machinetoolexample:MACHINETOOLEXAMPLENamespace ;
+    base:hasNodeId "6038" .
+
+machinetoolexample:nodei6039 a opcua:BaseDataVariableType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "Locked" ;
+    base:hasDatatype opcua:Boolean ;
+    base:hasDisplayName "Locked" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace machinetoolexample:MACHINETOOLEXAMPLENamespace ;
+    base:hasNodeId "6039" ;
+    base:hasProperty machinetoolexample:nodei6040 ;
+    base:hasValue false .
+
+machinetoolexample:nodei6040 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "ReasonForLocking" ;
+    base:hasDatatype machinetool:ToolLocked ;
+    base:hasDisplayName "ReasonForLocking" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace machinetoolexample:MACHINETOOLEXAMPLENamespace ;
+    base:hasNodeId "6040" .
+
+machinetoolexample:nodei6041 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "ReasonForLocking" ;
+    base:hasDatatype machinetool:ToolLocked ;
+    base:hasDisplayName "ReasonForLocking" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace machinetoolexample:MACHINETOOLEXAMPLENamespace ;
+    base:hasNodeId "6041" .
+
+machinetoolexample:nodei6042 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "Name" ;
+    base:hasDatatype opcua:String ;
+    base:hasDisplayName "Name" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace machinetoolexample:MACHINETOOLEXAMPLENamespace ;
+    base:hasNodeId "6042" ;
+    base:hasValue "Tool1" .
+
+machinetoolexample:nodei6043 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "NumberInList" ;
+    base:hasDatatype opcua:UInt16 ;
+    base:hasDescription "Enumerate the stacklight elements counting upwards beginning from the base of the stacklight." ;
+    base:hasDisplayName "NumberInList" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace machinetoolexample:MACHINETOOLEXAMPLENamespace ;
+    base:hasNodeId "6043" ;
+    base:hasValue 0 .
+
+machinetoolexample:nodei6044 a opcua:BaseDataVariableType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "SignalColor" ;
+    base:hasDatatype ia:SignalColor ;
+    base:hasDescription "Indicates the colour the lamp element has when switched on." ;
+    base:hasDisplayName "SignalColor" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace machinetoolexample:MACHINETOOLEXAMPLENamespace ;
+    base:hasNodeId "6044" ;
+    base:hasValue 7 .
+
+machinetoolexample:nodei6045 a opcua:BaseDataVariableType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "SignalMode" ;
+    base:hasDatatype ia:SignalModeLight ;
+    base:hasDescription "Shows in what way the lamp is used (continuous light, flashing, blinking) when switched on." ;
+    base:hasDisplayName "SignalMode" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace machinetoolexample:MACHINETOOLEXAMPLENamespace ;
+    base:hasNodeId "6045" ;
+    base:hasValue 0 .
+
+machinetoolexample:nodei6046 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "SignalOn" ;
+    base:hasDatatype opcua:Boolean ;
+    base:hasDescription "Indicates if the signal emitted by the stack element is currently switched on or not." ;
+    base:hasDisplayName "SignalOn" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace machinetoolexample:MACHINETOOLEXAMPLENamespace ;
+    base:hasNodeId "6046" ;
+    base:hasValue false .
+
+machinetoolexample:nodei6047 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "StacklightMode" ;
+    base:hasDatatype ia:StacklightOperationMode ;
+    base:hasDescription "Shows in what way (stack of individual lights, level meter, running light) the stacklight unit is used." ;
+    base:hasDisplayName "StacklightMode" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace machinetoolexample:MACHINETOOLEXAMPLENamespace ;
+    base:hasNodeId "6047" ;
+    base:hasValue 0 .
+
+machinetoolexample:nodei6048 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "NumberInList" ;
+    base:hasDatatype opcua:UInt16 ;
+    base:hasDescription "Enumerate the stacklight elements counting upwards beginning from the base of the stacklight." ;
+    base:hasDisplayName "NumberInList" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace machinetoolexample:MACHINETOOLEXAMPLENamespace ;
+    base:hasNodeId "6048" ;
+    base:hasValue 1 .
+
+machinetoolexample:nodei6049 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "NumberInList" ;
+    base:hasDatatype opcua:UInt16 ;
+    base:hasDescription "Enumerate the stacklight elements counting upwards beginning from the base of the stacklight." ;
+    base:hasDisplayName "NumberInList" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace machinetoolexample:MACHINETOOLEXAMPLENamespace ;
+    base:hasNodeId "6049" ;
+    base:hasValue 2 .
+
+machinetoolexample:nodei6050 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "NumberInList" ;
+    base:hasDatatype opcua:UInt16 ;
+    base:hasDescription "Enumerate the stacklight elements counting upwards beginning from the base of the stacklight." ;
+    base:hasDisplayName "NumberInList" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace machinetoolexample:MACHINETOOLEXAMPLENamespace ;
+    base:hasNodeId "6050" ;
+    base:hasValue 3 .
+
+machinetoolexample:nodei6051 a opcua:BaseDataVariableType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "SignalColor" ;
+    base:hasDatatype ia:SignalColor ;
+    base:hasDescription "Indicates the colour the lamp element has when switched on." ;
+    base:hasDisplayName "SignalColor" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace machinetoolexample:MACHINETOOLEXAMPLENamespace ;
+    base:hasNodeId "6051" ;
+    base:hasValue 2 .
+
+machinetoolexample:nodei6052 a opcua:BaseDataVariableType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "SignalMode" ;
+    base:hasDatatype ia:SignalModeLight ;
+    base:hasDescription "Shows in what way the lamp is used (continuous light, flashing, blinking) when switched on." ;
+    base:hasDisplayName "SignalMode" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace machinetoolexample:MACHINETOOLEXAMPLENamespace ;
+    base:hasNodeId "6052" ;
+    base:hasValue 0 .
+
+machinetoolexample:nodei6053 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "SignalOn" ;
+    base:hasDatatype opcua:Boolean ;
+    base:hasDescription "Indicates if the signal emitted by the stack element is currently switched on or not." ;
+    base:hasDisplayName "SignalOn" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace machinetoolexample:MACHINETOOLEXAMPLENamespace ;
+    base:hasNodeId "6053" ;
+    base:hasValue true .
+
+machinetoolexample:nodei6054 a opcua:BaseDataVariableType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "SignalColor" ;
+    base:hasDatatype ia:SignalColor ;
+    base:hasDescription "Indicates the colour the lamp element has when switched on." ;
+    base:hasDisplayName "SignalColor" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace machinetoolexample:MACHINETOOLEXAMPLENamespace ;
+    base:hasNodeId "6054" ;
+    base:hasValue 4 .
+
+machinetoolexample:nodei6055 a opcua:BaseDataVariableType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "SignalMode" ;
+    base:hasDatatype ia:SignalModeLight ;
+    base:hasDescription "Shows in what way the lamp is used (continuous light, flashing, blinking) when switched on." ;
+    base:hasDisplayName "SignalMode" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace machinetoolexample:MACHINETOOLEXAMPLENamespace ;
+    base:hasNodeId "6055" ;
+    base:hasValue 0 .
+
+machinetoolexample:nodei6056 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "SignalOn" ;
+    base:hasDatatype opcua:Boolean ;
+    base:hasDescription "Indicates if the signal emitted by the stack element is currently switched on or not." ;
+    base:hasDisplayName "SignalOn" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace machinetoolexample:MACHINETOOLEXAMPLENamespace ;
+    base:hasNodeId "6056" ;
+    base:hasValue false .
+
+machinetoolexample:nodei6057 a opcua:BaseDataVariableType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "SignalColor" ;
+    base:hasDatatype ia:SignalColor ;
+    base:hasDescription "Indicates the colour the lamp element has when switched on." ;
+    base:hasDisplayName "SignalColor" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace machinetoolexample:MACHINETOOLEXAMPLENamespace ;
+    base:hasNodeId "6057" ;
+    base:hasValue 1 .
+
+machinetoolexample:nodei6058 a opcua:BaseDataVariableType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "SignalMode" ;
+    base:hasDatatype ia:SignalModeLight ;
+    base:hasDescription "Shows in what way the lamp is used (continuous light, flashing, blinking) when switched on." ;
+    base:hasDisplayName "SignalMode" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace machinetoolexample:MACHINETOOLEXAMPLENamespace ;
+    base:hasNodeId "6058" ;
+    base:hasValue 0 .
+
+machinetoolexample:nodei6059 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "SignalOn" ;
+    base:hasDatatype opcua:Boolean ;
+    base:hasDescription "Indicates if the signal emitted by the stack element is currently switched on or not." ;
+    base:hasDisplayName "SignalOn" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace machinetoolexample:MACHINETOOLEXAMPLENamespace ;
+    base:hasNodeId "6059" ;
+    base:hasValue false .
+
+machinetoolexample:nodei6060 a opcua:BaseDataVariableType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "PowerOnDuration" ;
+    base:hasDatatype opcua:UInt32 ;
+    base:hasDisplayName "PowerOnDuration" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace machinetoolexample:MACHINETOOLEXAMPLENamespace ;
+    base:hasNodeId "6060" ;
+    base:hasValue 12345 .
+
+machinetoolexample:nodei6061 a opcua:BaseDataVariableType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "ChannelMode" ;
+    base:hasDatatype machinetool:ChannelMode ;
+    base:hasDisplayName "ChannelMode" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace machinetoolexample:MACHINETOOLEXAMPLENamespace ;
+    base:hasNodeId "6061" ;
+    base:hasValue 0 .
+
+machinetoolexample:nodei6062 a opcua:BaseDataVariableType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "ChannelState" ;
+    base:hasDatatype machinetool:ChannelState ;
+    base:hasDisplayName "ChannelState" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace machinetoolexample:MACHINETOOLEXAMPLENamespace ;
+    base:hasNodeId "6062" ;
+    base:hasValue 0 .
+
+machinetoolexample:nodei6063 a opcua:AnalogUnitRangeType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "FeedOverride" ;
+    base:hasDatatype opcua:Double ;
+    base:hasDisplayName "FeedOverride" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace machinetoolexample:MACHINETOOLEXAMPLENamespace ;
+    base:hasNodeId "6063" ;
+    base:hasProperty machinetoolexample:nodei6064,
+        machinetoolexample:nodei6065 ;
+    base:hasValue 8.5e+01 .
+
+machinetoolexample:nodei6064 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "EngineeringUnits" ;
+    base:hasDatatype opcua:EUInformation ;
+    base:hasDisplayName "EngineeringUnits" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace machinetoolexample:MACHINETOOLEXAMPLENamespace ;
+    base:hasNodeId "6064" .
+
+machinetoolexample:nodei6065 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "EURange" ;
+    base:hasDatatype opcua:Range ;
+    base:hasDisplayName "EURange" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace machinetoolexample:MACHINETOOLEXAMPLENamespace ;
+    base:hasNodeId "6065" .
+
+machinetoolexample:nodei6066 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "Name" ;
+    base:hasDatatype opcua:String ;
+    base:hasDisplayName "Name" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace machinetoolexample:MACHINETOOLEXAMPLENamespace ;
+    base:hasNodeId "6066" ;
+    base:hasValue "Channel1" .
+
+machinetoolexample:nodei6067 a opcua:BaseDataVariableType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "IsRotating" ;
+    base:hasDatatype opcua:Boolean ;
+    base:hasDisplayName "IsRotating" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace machinetoolexample:MACHINETOOLEXAMPLENamespace ;
+    base:hasNodeId "6067" ;
+    base:hasValue true .
+
+machinetoolexample:nodei6068 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "Name" ;
+    base:hasDatatype opcua:String ;
+    base:hasDisplayName "Name" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace machinetoolexample:MACHINETOOLEXAMPLENamespace ;
+    base:hasNodeId "6068" ;
+    base:hasValue "Spindle1" .
+
+machinetoolexample:nodei6069 a opcua:BaseDataVariableType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "IsUsedAsAxis" ;
+    base:hasDatatype opcua:Boolean ;
+    base:hasDisplayName "IsUsedAsAxis" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace machinetoolexample:MACHINETOOLEXAMPLENamespace ;
+    base:hasNodeId "6069" ;
+    base:hasValue false .
+
+machinetoolexample:nodei6070 a opcua:AnalogUnitRangeType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "Override" ;
+    base:hasDatatype opcua:Double ;
+    base:hasDisplayName "Override" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace machinetoolexample:MACHINETOOLEXAMPLENamespace ;
+    base:hasNodeId "6070" ;
+    base:hasProperty machinetoolexample:nodei6071,
+        machinetoolexample:nodei6072 ;
+    base:hasValue 9.5e+01 .
+
+machinetoolexample:nodei6071 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "EngineeringUnits" ;
+    base:hasDatatype opcua:EUInformation ;
+    base:hasDisplayName "EngineeringUnits" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace machinetoolexample:MACHINETOOLEXAMPLENamespace ;
+    base:hasNodeId "6071" .
+
+machinetoolexample:nodei6072 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "EURange" ;
+    base:hasDatatype opcua:Range ;
+    base:hasDisplayName "EURange" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace machinetoolexample:MACHINETOOLEXAMPLENamespace ;
+    base:hasNodeId "6072" .
+
+machinetoolexample:nodei6073 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "DeviceClass" ;
+    base:hasDatatype opcua:String ;
+    base:hasDescription "Indicates in which domain or for what purpose the MachineryItem is used." ;
+    base:hasDisplayName "DeviceClass" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace machinetoolexample:MACHINETOOLEXAMPLENamespace ;
+    base:hasNodeId "6073" ;
+    base:hasValue "Machining centre (other)" .
+
+machinetoolexample:nodei6074 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "Location" ;
+    base:hasDatatype opcua:String ;
+    base:hasDescription "To be used by end users to store the location of the machine in a scheme specific to the end user. Servers shall support at least 60 Unicode characters for the clients writing this value, this means clients can expect to be able to write strings with a length of 60 Unicode characters into that field." ;
+    base:hasDisplayName "Location" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace machinetoolexample:MACHINETOOLEXAMPLENamespace ;
+    base:hasNodeId "6074" ;
+    base:hasValue "N 50.082694 E 8.626230" .
+
+machinetoolexample:nodei6075 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "Model" ;
+    base:hasDatatype opcua:LocalizedText ;
+    base:hasDescription "A human-readable, localized name of the model of the MachineryItem." ;
+    base:hasDisplayName "Model" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace machinetoolexample:MACHINETOOLEXAMPLENamespace ;
+    base:hasNodeId "6075" .
+
+machinetoolexample:nodei6076 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "ProductCode" ;
+    base:hasDatatype opcua:String ;
+    base:hasDescription "A machine-readable string of the model of the MachineryItem, that might include options like the hardware configuration of the model. This information might be provided by the ERP system of the vendor. For example, it can be used as order information." ;
+    base:hasDisplayName "ProductCode" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace machinetoolexample:MACHINETOOLEXAMPLENamespace ;
+    base:hasNodeId "6076" ;
+    base:hasValue "Machine Tool" .
+
+machinetoolexample:nodei6077 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "SoftwareRevision" ;
+    base:hasDatatype opcua:String ;
+    base:hasDescription "A string representation of the revision level of a MachineryItem. In most cases, MachineryItems consist of several software components. In that case, information about the software components might be provided as additional information in the address space, including individual revision information. In that case, this property is either not provided or provides an overall software revision level. The value might change during the life-cycle of a MachineryItem." ;
+    base:hasDisplayName "SoftwareRevision" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace machinetoolexample:MACHINETOOLEXAMPLENamespace ;
+    base:hasNodeId "6077" ;
+    base:hasValue "1.01.1" .
+
+machinetoolexample:nodei6078 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "YearOfConstruction" ;
+    base:hasDatatype opcua:UInt16 ;
+    base:hasDescription "The year (Gregorian calendar) in which the manufacturing process of the MachineryItem has been completed. It shall be a four-digit number and never change during the life-cycle of a MachineryItem." ;
+    base:hasDisplayName "YearOfConstruction" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace machinetoolexample:MACHINETOOLEXAMPLENamespace ;
+    base:hasNodeId "6078" ;
+    base:hasValue 2022 .
+
+machinetoolexample:nodei6079 a opcua:FiniteStateVariableType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "CurrentState" ;
+    base:hasDatatype opcua:LocalizedText ;
+    base:hasDisplayName "CurrentState" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace machinetoolexample:MACHINETOOLEXAMPLENamespace ;
+    base:hasNodeId "6079" ;
+    base:hasProperty machinetoolexample:nodei6080 .
+
+machinetoolexample:nodei6080 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "Id" ;
+    base:hasDatatype opcua:NodeId ;
+    base:hasDisplayName "Id" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace machinetoolexample:MACHINETOOLEXAMPLENamespace ;
+    base:hasNodeId "6080" .
+
+machinetoolexample:nodei6081 a opcua:FiniteStateVariableType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "CurrentState" ;
+    base:hasDatatype opcua:LocalizedText ;
+    base:hasDisplayName "CurrentState" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace machinetoolexample:MACHINETOOLEXAMPLENamespace ;
+    base:hasNodeId "6081" ;
+    base:hasProperty machinetoolexample:nodei6082 .
+
+machinetoolexample:nodei6082 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "Id" ;
+    base:hasDatatype opcua:NodeId ;
+    base:hasDisplayName "Id" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace machinetoolexample:MACHINETOOLEXAMPLENamespace ;
+    base:hasNodeId "6082" .
+
+machinetoolexample:nodei5016 a machinetool:MachineToolIdentificationType,
+        opcua:ObjectNodeClass ;
+    base:hasBrowseName "Identification" ;
+    base:hasDisplayName "Identification" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace machinetoolexample:MACHINETOOLEXAMPLENamespace ;
+    base:hasNodeId "5016" ;
+    base:hasProperty machinetoolexample:nodei6022,
+        machinetoolexample:nodei6023,
+        machinetoolexample:nodei6024 .
+
+machinetoolexample:nodei5023 a machinery:MachineComponentsType,
+        opcua:ObjectNodeClass ;
+    base:hasBrowseName "Components" ;
+    base:hasDisplayName "Components" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace machinetoolexample:MACHINETOOLEXAMPLENamespace ;
+    base:hasNodeId "5023" .
+
+machinetoolexample:nodei5026 a machinery:MachineryItemState_StateMachineType,
+        opcua:ObjectNodeClass ;
+    base:hasBrowseName "MachineryItemState" ;
+    base:hasComponent machinetoolexample:nodei6032 ;
+    base:hasDisplayName "MachineryItemState" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace machinetoolexample:MACHINETOOLEXAMPLENamespace ;
+    base:hasNodeId "5026" .
+
+machinetoolexample:nodei5036 a machinetool:MachineOperationModeStateMachineType,
+        opcua:ObjectNodeClass ;
+    base:hasBrowseName "MachineryOperationMode" ;
+    base:hasComponent machinetoolexample:nodei5037,
+        machinetoolexample:nodei6079 ;
+    base:hasDisplayName "MachineryOperationMode" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace machinetoolexample:MACHINETOOLEXAMPLENamespace ;
+    base:hasNodeId "5036" .
+
+machinetoolexample:MACHINETOOLEXAMPLENamespace a base:Namespace ;
+    base:hasPrefix "machinetoolexample" ;
+    base:hasUri "http://yourorganisation.org/MachineTool-Example/" .
+
