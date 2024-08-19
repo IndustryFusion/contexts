@@ -1,0 +1,1998 @@
+@prefix base: <https://industryfusion.github.io/contexts/ontology/v0/base/> .
+@prefix machinery: <http://opcfoundation.org/UA/Machinery/> .
+@prefix opcua: <http://opcfoundation.org/UA/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pumpexample: <http://yourorganisation.org/InstanceExample/> .
+@prefix pumps: <http://opcfoundation.org/UA/Pumps/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+machinery:nodei1001 base:organizes pumpexample:nodei5002 .
+
+opcua:nodei85 base:organizes pumpexample:nodei5002 .
+
+pumpexample: a owl:Ontology ;
+    owl:imports <https://industryfusion.github.io/contexts/staging/ontology/v0.1/base.ttl>,
+        <https://industryfusion.github.io/contexts/staging/opcua/v0.1/core.ttl>,
+        <https://industryfusion.github.io/contexts/staging/opcua/v0.1/devices.ttl>,
+        <https://industryfusion.github.io/contexts/staging/opcua/v0.1/machinery.ttl>,
+        <https://industryfusion.github.io/contexts/staging/opcua/v0.1/pumps.ttl> ;
+    owl:versionIRI <http://example.com/v0.1/pumpexample/> ;
+    owl:versionInfo 1e-01 .
+
+pumpexample:nodei5001 a opcua:ObjectNodeClass,
+        pumps:PumpIdentificationType ;
+    base:hasBrowseName "Identification" ;
+    base:hasDescription "Identification information of a pump." ;
+    base:hasDisplayName "Identification" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "5001" ;
+    base:hasProperty pumpexample:nodei6001,
+        pumpexample:nodei6002,
+        pumpexample:nodei6003,
+        pumpexample:nodei6154,
+        pumpexample:nodei6155,
+        pumpexample:nodei6156,
+        pumpexample:nodei6157,
+        pumpexample:nodei6158,
+        pumpexample:nodei6159,
+        pumpexample:nodei6160,
+        pumpexample:nodei6161,
+        pumpexample:nodei6162,
+        pumpexample:nodei6164 .
+
+pumpexample:nodei5003 a opcua:ObjectNodeClass,
+        pumps:PortsGroupType ;
+    base:hasBrowseName "Ports" ;
+    base:hasComponent pumpexample:nodei5004 ;
+    base:hasDescription "Connection points of the pump." ;
+    base:hasDisplayName "Ports" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "5003" .
+
+pumpexample:nodei5004 a opcua:ObjectNodeClass,
+        pumps:DrivePortType ;
+    base:hasBrowseName "<Drive>" ;
+    base:hasComponent pumpexample:nodei5006 ;
+    base:hasDescription "Port for the connection of the drive." ;
+    base:hasDisplayName "<Drive>" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "5004" ;
+    base:hasSymbolicName "Drive" .
+
+pumpexample:nodei5005 a opcua:ObjectNodeClass,
+        pumps:DocumentationType ;
+    base:hasBrowseName "Documentation" ;
+    base:hasComponent pumpexample:nodei5007,
+        pumpexample:nodei6023 ;
+    base:hasDescription "Static documentation files of a pump." ;
+    base:hasDisplayName "Documentation" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "5005" .
+
+pumpexample:nodei5006 a opcua:ObjectNodeClass,
+        pumps:DriveMeasurementsType ;
+    base:hasBrowseName "Measurements" ;
+    base:hasComponent pumpexample:nodei6016,
+        pumpexample:nodei6017,
+        pumpexample:nodei6018,
+        pumpexample:nodei6019,
+        pumpexample:nodei6020,
+        pumpexample:nodei6021 ;
+    base:hasDescription "All operation measurements that describe the drive." ;
+    base:hasDisplayName "Measurements" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "5006" .
+
+pumpexample:nodei5007 a opcua:FileType,
+        opcua:ObjectNodeClass ;
+    base:hasBrowseName "TechnicalData" ;
+    base:hasComponent pumpexample:nodei7001,
+        pumpexample:nodei7002,
+        pumpexample:nodei7003,
+        pumpexample:nodei7004,
+        pumpexample:nodei7005,
+        pumpexample:nodei7006 ;
+    base:hasDescription "Manufacturer`s specification of the item." ;
+    base:hasDisplayName "TechnicalData" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "5007" ;
+    base:hasProperty pumpexample:nodei6009,
+        pumpexample:nodei6013,
+        pumpexample:nodei6014,
+        pumpexample:nodei6015,
+        pumpexample:nodei6024 .
+
+pumpexample:nodei5008 a opcua:ObjectNodeClass,
+        pumps:SupervisionType ;
+    base:hasBrowseName "Events" ;
+    base:hasComponent pumpexample:nodei5009,
+        pumpexample:nodei5010,
+        pumpexample:nodei5011 ;
+    base:hasDescription "States, alarms, and conditions of a pump." ;
+    base:hasDisplayName "Events" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "5008" .
+
+pumpexample:nodei5009 a opcua:ObjectNodeClass,
+        pumps:SupervisionMechanicsType ;
+    base:hasBrowseName "SupervisionMechanics" ;
+    base:hasComponent pumpexample:nodei6026,
+        pumpexample:nodei6029,
+        pumpexample:nodei6032 ;
+    base:hasDescription "Supervision mechanics specifies supervising information related to device mechanics." ;
+    base:hasDisplayName "SupervisionMechanics" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "5009" .
+
+pumpexample:nodei5010 a opcua:ObjectNodeClass,
+        pumps:SupervisionProcessFluidType ;
+    base:hasBrowseName "SupervisionProcessFluid" ;
+    base:hasComponent pumpexample:nodei6035,
+        pumpexample:nodei6038 ;
+    base:hasDescription "Supervision process fluid specifies information for monitoring the fluid of a pump." ;
+    base:hasDisplayName "SupervisionProcessFluid" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "5010" .
+
+pumpexample:nodei5011 a opcua:ObjectNodeClass,
+        pumps:SupervisionPumpOperationType ;
+    base:hasBrowseName "SupervisionPumpOperation" ;
+    base:hasComponent pumpexample:nodei6041,
+        pumpexample:nodei6044 ;
+    base:hasDescription "Supervision pump operation specifies information for monitoring the pump operation." ;
+    base:hasDisplayName "SupervisionPumpOperation" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "5011" .
+
+pumpexample:nodei5012 a opcua:ObjectNodeClass,
+        pumps:MaintenanceGroupType ;
+    base:hasBrowseName "Maintenance" ;
+    base:hasComponent pumpexample:nodei5013,
+        pumpexample:nodei5014,
+        pumpexample:nodei5015 ;
+    base:hasDescription "Maintenance data of a pump." ;
+    base:hasDisplayName "Maintenance" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "5012" .
+
+pumpexample:nodei5013 a opcua:ObjectNodeClass,
+        pumps:BreakdownMaintenanceType ;
+    base:hasBrowseName "BreakdownMaintenance" ;
+    base:hasComponent pumpexample:nodei6078,
+        pumpexample:nodei6081 ;
+    base:hasDescription "Properties for breakdown maintenance." ;
+    base:hasDisplayName "BreakdownMaintenance" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "5013" .
+
+pumpexample:nodei5014 a opcua:ObjectNodeClass,
+        pumps:GeneralMaintenanceType ;
+    base:hasBrowseName "GeneralMaintenance" ;
+    base:hasComponent pumpexample:nodei6085,
+        pumpexample:nodei6088 ;
+    base:hasDescription "General maintenance properties." ;
+    base:hasDisplayName "GeneralMaintenance" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "5014" .
+
+pumpexample:nodei5015 a opcua:ObjectNodeClass,
+        pumps:PreventiveMaintenanceType ;
+    base:hasBrowseName "PreventiveMaintenance" ;
+    base:hasComponent pumpexample:nodei6101,
+        pumpexample:nodei6102,
+        pumpexample:nodei6103,
+        pumpexample:nodei6104,
+        pumpexample:nodei6105 ;
+    base:hasDescription "Properties for preventive maintenance." ;
+    base:hasDisplayName "PreventiveMaintenance" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "5015" .
+
+pumpexample:nodei5016 a opcua:ObjectNodeClass,
+        pumps:OperationalGroupType ;
+    base:hasBrowseName "Operational" ;
+    base:hasComponent pumpexample:nodei5017,
+        pumpexample:nodei5018 ;
+    base:hasDescription "Process data for control, actuation, signals, and measurements of the pump." ;
+    base:hasDisplayName "Operational" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "5016" .
+
+pumpexample:nodei5017 a opcua:ObjectNodeClass,
+        pumps:PumpActuationType ;
+    base:hasBrowseName "PumpActuation" ;
+    base:hasComponent pumpexample:nodei6111,
+        pumpexample:nodei6112 ;
+    base:hasDescription "Actuation parameters for a pump." ;
+    base:hasDisplayName "PumpActuation" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "5017" .
+
+pumpexample:nodei5018 a opcua:ObjectNodeClass,
+        pumps:MeasurementsType ;
+    base:hasBrowseName "Measurements" ;
+    base:hasComponent pumpexample:nodei5019,
+        pumpexample:nodei6117,
+        pumpexample:nodei6118,
+        pumpexample:nodei6119,
+        pumpexample:nodei6120,
+        pumpexample:nodei6121 ;
+    base:hasDescription "Measurements at a pump." ;
+    base:hasDisplayName "Measurements" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "5018" .
+
+pumpexample:nodei5019 a opcua:ObjectNodeClass,
+        pumps:VibrationMeasurementType ;
+    base:hasBrowseName "Sensor1" ;
+    base:hasComponent pumpexample:nodei6142,
+        pumpexample:nodei6143,
+        pumpexample:nodei6144 ;
+    base:hasDisplayName "Sensor1" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "5019" .
+
+pumpexample:nodei5020 a opcua:ObjectNodeClass,
+        pumps:ConfigurationGroupType ;
+    base:hasBrowseName "Configuration" ;
+    base:hasComponent pumpexample:nodei5021,
+        pumpexample:nodei5022 ;
+    base:hasDescription "Static design, system requirements, and implementation data of the pump." ;
+    base:hasDisplayName "Configuration" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "5020" .
+
+pumpexample:nodei5021 a opcua:ObjectNodeClass,
+        pumps:DesignType ;
+    base:hasBrowseName "Design" ;
+    base:hasComponent pumpexample:nodei6025,
+        pumpexample:nodei6049,
+        pumpexample:nodei6052,
+        pumpexample:nodei6053,
+        pumpexample:nodei6086,
+        pumpexample:nodei6087,
+        pumpexample:nodei6092,
+        pumpexample:nodei6093,
+        pumpexample:nodei6094,
+        pumpexample:nodei6095,
+        pumpexample:nodei6096,
+        pumpexample:nodei6097 ;
+    base:hasDescription "Static design properties for a pump." ;
+    base:hasDisplayName "Design" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "5021" .
+
+pumpexample:nodei5022 a opcua:ObjectNodeClass,
+        pumps:SystemRequirementsType ;
+    base:hasBrowseName "SystemRequirements" ;
+    base:hasComponent pumpexample:nodei6168 ;
+    base:hasDescription "Static system requirement properties for a pump." ;
+    base:hasDisplayName "SystemRequirements" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "5022" .
+
+pumpexample:nodei6001 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "Manufacturer" ;
+    base:hasDatatype opcua:LocalizedText ;
+    base:hasDescription "A human-readable, localized name of the manufacturer of the MachineryItem." ;
+    base:hasDisplayName "Manufacturer" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "6001" .
+
+pumpexample:nodei6002 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "ProductInstanceUri" ;
+    base:hasDatatype opcua:String ;
+    base:hasDescription "A globally unique resource identifier provided by the manufacturer of the machine" ;
+    base:hasDisplayName "ProductInstanceUri" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "6002" ;
+    base:hasValue "www.exampleManufacturer.com/Pump123xyz" .
+
+pumpexample:nodei6003 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "SerialNumber" ;
+    base:hasDatatype opcua:String ;
+    base:hasDescription "A string containing a unique production number of the manufacturer of the MachineryItem. The global uniqueness of the serial number is only given in the context of the manufacturer, and potentially the model. The value shall not change during the life-cycle of the MachineryItem." ;
+    base:hasDisplayName "SerialNumber" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "6003" ;
+    base:hasValue "1234567890" .
+
+pumpexample:nodei6004 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "InputArguments" ;
+    base:hasDatatype opcua:Argument ;
+    base:hasDisplayName "InputArguments" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "6004" ;
+    base:hasValueRank "1" .
+
+pumpexample:nodei6005 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "InputArguments" ;
+    base:hasDatatype opcua:Argument ;
+    base:hasDisplayName "InputArguments" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "6005" ;
+    base:hasValueRank "1" .
+
+pumpexample:nodei6006 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "OutputArguments" ;
+    base:hasDatatype opcua:Argument ;
+    base:hasDisplayName "OutputArguments" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "6006" ;
+    base:hasValueRank "1" .
+
+pumpexample:nodei6007 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "InputArguments" ;
+    base:hasDatatype opcua:Argument ;
+    base:hasDisplayName "InputArguments" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "6007" ;
+    base:hasValueRank "1" .
+
+pumpexample:nodei6008 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "OutputArguments" ;
+    base:hasDatatype opcua:Argument ;
+    base:hasDisplayName "OutputArguments" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "6008" ;
+    base:hasValueRank "1" .
+
+pumpexample:nodei6009 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "OpenCount" ;
+    base:hasDatatype opcua:UInt16 ;
+    base:hasDisplayName "OpenCount" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "6009" .
+
+pumpexample:nodei6010 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "InputArguments" ;
+    base:hasDatatype opcua:Argument ;
+    base:hasDisplayName "InputArguments" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "6010" ;
+    base:hasValueRank "1" .
+
+pumpexample:nodei6011 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "OutputArguments" ;
+    base:hasDatatype opcua:Argument ;
+    base:hasDisplayName "OutputArguments" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "6011" ;
+    base:hasValueRank "1" .
+
+pumpexample:nodei6012 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "InputArguments" ;
+    base:hasDatatype opcua:Argument ;
+    base:hasDisplayName "InputArguments" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "6012" ;
+    base:hasValueRank "1" .
+
+pumpexample:nodei6013 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "Size" ;
+    base:hasDatatype opcua:UInt64 ;
+    base:hasDisplayName "Size" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "6013" .
+
+pumpexample:nodei6014 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "UserWritable" ;
+    base:hasDatatype opcua:Boolean ;
+    base:hasDisplayName "UserWritable" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "6014" .
+
+pumpexample:nodei6015 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "Writable" ;
+    base:hasDatatype opcua:Boolean ;
+    base:hasDisplayName "Writable" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "6015" .
+
+pumpexample:nodei6016 a opcua:BaseAnalogType,
+        opcua:VariableNodeClass ;
+    opcua:GeneratesEvent opcua:nodei2955 ;
+    base:hasBrowseName "DriverPowerInput" ;
+    base:hasDatatype opcua:Double ;
+    base:hasDescription "Measured power absorbed by the motor." ;
+    base:hasDisplayName "DriverPowerInput" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "6016" ;
+    base:hasProperty pumpexample:nodei6054,
+        pumpexample:nodei6055,
+        pumpexample:nodei6056,
+        pumpexample:nodei6057 ;
+    base:hasValue 0e+00 .
+
+pumpexample:nodei6017 a opcua:BaseAnalogType,
+        opcua:VariableNodeClass ;
+    opcua:GeneratesEvent opcua:nodei2955 ;
+    base:hasBrowseName "EnergyConsumption" ;
+    base:hasDatatype opcua:Double ;
+    base:hasDescription "Measured energy consumption of the unit of the motor." ;
+    base:hasDisplayName "EnergyConsumption" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "6017" ;
+    base:hasProperty pumpexample:nodei6058,
+        pumpexample:nodei6059,
+        pumpexample:nodei6060,
+        pumpexample:nodei6061 ;
+    base:hasValue 0e+00 .
+
+pumpexample:nodei6018 a opcua:BaseAnalogType,
+        opcua:VariableNodeClass ;
+    opcua:GeneratesEvent opcua:nodei2955 ;
+    base:hasBrowseName "Frequency" ;
+    base:hasDatatype opcua:Double ;
+    base:hasDescription "Measured output frequency of the frequency converter." ;
+    base:hasDisplayName "Frequency" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "6018" ;
+    base:hasProperty pumpexample:nodei6062,
+        pumpexample:nodei6063,
+        pumpexample:nodei6064,
+        pumpexample:nodei6065 ;
+    base:hasValue 0e+00 .
+
+pumpexample:nodei6019 a opcua:BaseAnalogType,
+        opcua:VariableNodeClass ;
+    opcua:GeneratesEvent opcua:nodei2955 ;
+    base:hasBrowseName "MotorCurrent" ;
+    base:hasDatatype opcua:Double ;
+    base:hasDescription "Measured actual motor current." ;
+    base:hasDisplayName "MotorCurrent" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "6019" ;
+    base:hasProperty pumpexample:nodei6066,
+        pumpexample:nodei6067,
+        pumpexample:nodei6068,
+        pumpexample:nodei6069 ;
+    base:hasValue 0e+00 .
+
+pumpexample:nodei6020 a opcua:BaseAnalogType,
+        opcua:VariableNodeClass ;
+    opcua:GeneratesEvent opcua:nodei2955 ;
+    base:hasBrowseName "MotorTemperature" ;
+    base:hasDatatype opcua:Double ;
+    base:hasDescription "Measured temperature of the motor." ;
+    base:hasDisplayName "MotorTemperature" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "6020" ;
+    base:hasProperty pumpexample:nodei6070,
+        pumpexample:nodei6071,
+        pumpexample:nodei6072,
+        pumpexample:nodei6073 ;
+    base:hasValue 0e+00 .
+
+pumpexample:nodei6021 a opcua:BaseAnalogType,
+        opcua:VariableNodeClass ;
+    opcua:GeneratesEvent opcua:nodei2955 ;
+    base:hasBrowseName "MotorVoltage" ;
+    base:hasDatatype opcua:Double ;
+    base:hasDescription "Measured actual motor voltage." ;
+    base:hasDisplayName "MotorVoltage" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "6021" ;
+    base:hasProperty pumpexample:nodei6074,
+        pumpexample:nodei6075,
+        pumpexample:nodei6076,
+        pumpexample:nodei6077 ;
+    base:hasValue 0e+00 .
+
+pumpexample:nodei6022 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "InputArguments" ;
+    base:hasDatatype opcua:Argument ;
+    base:hasDisplayName "InputArguments" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "6022" ;
+    base:hasValueRank "1" .
+
+pumpexample:nodei6023 a opcua:DataItemType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "TechnicalDataLink" ;
+    base:hasDatatype opcua:String ;
+    base:hasDescription "Manufacturer`s specification of the item." ;
+    base:hasDisplayName "TechnicalDataLink" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "6023" ;
+    base:hasValue "www.LinkToTechnicalData.com/example" .
+
+pumpexample:nodei6024 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "MimeType" ;
+    base:hasDatatype opcua:String ;
+    base:hasDisplayName "MimeType" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "6024" .
+
+pumpexample:nodei6025 a opcua:TwoStateDiscreteType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "ClockwiseRotation" ;
+    base:hasDatatype opcua:Boolean ;
+    base:hasDescription "Direction of rotation in which the shaft is seen to be turning in a clockwise direction when viewing the drive end of the shaft. A \"True\" status means that the rotation of pump is clockwise and a \"False\" status means that the rotation of pump is anticlockwise." ;
+    base:hasDisplayName "ClockwiseRotation" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "6025" ;
+    base:hasProperty pumpexample:nodei6047,
+        pumpexample:nodei6048 ;
+    base:hasValue true .
+
+pumpexample:nodei6026 a opcua:TwoStateDiscreteType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "ExcessVibration" ;
+    base:hasDatatype opcua:Boolean ;
+    base:hasDescription "This attribute indicates unacceptable high mechanical vibration." ;
+    base:hasDisplayName "ExcessVibration" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "6026" ;
+    base:hasProperty pumpexample:nodei6027,
+        pumpexample:nodei6028 ;
+    base:hasValue false .
+
+pumpexample:nodei6027 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "FalseState" ;
+    base:hasDatatype opcua:LocalizedText ;
+    base:hasDisplayName "FalseState" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "6027" .
+
+pumpexample:nodei6028 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "TrueState" ;
+    base:hasDatatype opcua:LocalizedText ;
+    base:hasDisplayName "TrueState" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "6028" .
+
+pumpexample:nodei6029 a opcua:TwoStateDiscreteType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "RotorBlocked" ;
+    base:hasDatatype opcua:Boolean ;
+    base:hasDescription "This attribute indicates a blocked rotor." ;
+    base:hasDisplayName "RotorBlocked" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "6029" ;
+    base:hasProperty pumpexample:nodei6030,
+        pumpexample:nodei6031 ;
+    base:hasValue false .
+
+pumpexample:nodei6030 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "FalseState" ;
+    base:hasDatatype opcua:LocalizedText ;
+    base:hasDisplayName "FalseState" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "6030" .
+
+pumpexample:nodei6031 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "TrueState" ;
+    base:hasDatatype opcua:LocalizedText ;
+    base:hasDisplayName "TrueState" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "6031" .
+
+pumpexample:nodei6032 a opcua:TwoStateDiscreteType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "Unbalance" ;
+    base:hasDatatype opcua:Boolean ;
+    base:hasDescription "This attribute indicates an unbalance." ;
+    base:hasDisplayName "Unbalance" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "6032" ;
+    base:hasProperty pumpexample:nodei6033,
+        pumpexample:nodei6034 ;
+    base:hasValue false .
+
+pumpexample:nodei6033 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "FalseState" ;
+    base:hasDatatype opcua:LocalizedText ;
+    base:hasDisplayName "FalseState" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "6033" .
+
+pumpexample:nodei6034 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "TrueState" ;
+    base:hasDatatype opcua:LocalizedText ;
+    base:hasDisplayName "TrueState" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "6034" .
+
+pumpexample:nodei6035 a opcua:TwoStateDiscreteType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "Blockage" ;
+    base:hasDatatype opcua:Boolean ;
+    base:hasDescription "This attribute indicates a closed valve operation." ;
+    base:hasDisplayName "Blockage" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "6035" ;
+    base:hasProperty pumpexample:nodei6036,
+        pumpexample:nodei6037 ;
+    base:hasValue false .
+
+pumpexample:nodei6036 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "FalseState" ;
+    base:hasDatatype opcua:LocalizedText ;
+    base:hasDisplayName "FalseState" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "6036" .
+
+pumpexample:nodei6037 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "TrueState" ;
+    base:hasDatatype opcua:LocalizedText ;
+    base:hasDisplayName "TrueState" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "6037" .
+
+pumpexample:nodei6038 a opcua:TwoStateDiscreteType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "Temperature" ;
+    base:hasDatatype opcua:Boolean ;
+    base:hasDescription "This attribute indicates an abnormal temperature of the pump fluid." ;
+    base:hasDisplayName "Temperature" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "6038" ;
+    base:hasProperty pumpexample:nodei6039,
+        pumpexample:nodei6040 ;
+    base:hasValue false .
+
+pumpexample:nodei6039 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "FalseState" ;
+    base:hasDatatype opcua:LocalizedText ;
+    base:hasDisplayName "FalseState" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "6039" .
+
+pumpexample:nodei6040 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "TrueState" ;
+    base:hasDatatype opcua:LocalizedText ;
+    base:hasDisplayName "TrueState" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "6040" .
+
+pumpexample:nodei6041 a opcua:TwoStateDiscreteType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "MaximumNumberStarts" ;
+    base:hasDatatype opcua:Boolean ;
+    base:hasDescription "This attribute indicates that the maximum number of pump start cycles is exceeded." ;
+    base:hasDisplayName "MaximumNumberStarts" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "6041" ;
+    base:hasProperty pumpexample:nodei6042,
+        pumpexample:nodei6043 ;
+    base:hasValue false .
+
+pumpexample:nodei6042 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "FalseState" ;
+    base:hasDatatype opcua:LocalizedText ;
+    base:hasDisplayName "FalseState" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "6042" .
+
+pumpexample:nodei6043 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "TrueState" ;
+    base:hasDatatype opcua:LocalizedText ;
+    base:hasDisplayName "TrueState" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "6043" .
+
+pumpexample:nodei6044 a opcua:TwoStateDiscreteType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "MaximumOperationTime" ;
+    base:hasDatatype opcua:Boolean ;
+    base:hasDescription "This attribute indicates that the maximum time of pump operation is exceeded." ;
+    base:hasDisplayName "MaximumOperationTime" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "6044" ;
+    base:hasProperty pumpexample:nodei6045,
+        pumpexample:nodei6046 ;
+    base:hasValue false .
+
+pumpexample:nodei6045 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "FalseState" ;
+    base:hasDatatype opcua:LocalizedText ;
+    base:hasDisplayName "FalseState" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "6045" .
+
+pumpexample:nodei6046 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "TrueState" ;
+    base:hasDatatype opcua:LocalizedText ;
+    base:hasDisplayName "TrueState" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "6046" .
+
+pumpexample:nodei6047 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "FalseState" ;
+    base:hasDatatype opcua:LocalizedText ;
+    base:hasDisplayName "FalseState" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "6047" .
+
+pumpexample:nodei6048 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "TrueState" ;
+    base:hasDatatype opcua:LocalizedText ;
+    base:hasDisplayName "TrueState" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "6048" .
+
+pumpexample:nodei6049 a opcua:TwoStateDiscreteType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "Controllable" ;
+    base:hasDatatype opcua:Boolean ;
+    base:hasDescription "Indicates whether the product is a controllable pump or a self-controlling pump. A \"True\" status means that the pump is controllable and a \"False\" status means that the pump is not controllable." ;
+    base:hasDisplayName "Controllable" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "6049" ;
+    base:hasProperty pumpexample:nodei6050,
+        pumpexample:nodei6051 .
+
+pumpexample:nodei6050 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "FalseState" ;
+    base:hasDatatype opcua:LocalizedText ;
+    base:hasDisplayName "FalseState" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "6050" .
+
+pumpexample:nodei6051 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "TrueState" ;
+    base:hasDatatype opcua:LocalizedText ;
+    base:hasDisplayName "TrueState" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "6051" .
+
+pumpexample:nodei6052 a opcua:BaseAnalogType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "MaximumAllowableAmbientTemperature" ;
+    base:hasDatatype opcua:Double ;
+    base:hasDescription "Highest allowable ambient temperature for which the equipment (or any part to which the term refers) is suitable" ;
+    base:hasDisplayName "MaximumAllowableAmbientTemperature" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "6052" ;
+    base:hasProperty pumpexample:nodei6123 ;
+    base:hasValue 3.4315e+02 .
+
+pumpexample:nodei6053 a opcua:BaseAnalogType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "MaximumAllowableContinuousSpeed" ;
+    base:hasDatatype opcua:Double ;
+    base:hasDescription "Highest rotational speed for continuous operation recommended by the manufacturer" ;
+    base:hasDisplayName "MaximumAllowableContinuousSpeed" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "6053" ;
+    base:hasProperty pumpexample:nodei6127 ;
+    base:hasValue 5.667e+01 .
+
+pumpexample:nodei6054 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "Definition" ;
+    base:hasDatatype opcua:String ;
+    base:hasDisplayName "Definition" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "6054" .
+
+pumpexample:nodei6055 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "EURange" ;
+    base:hasDatatype opcua:Range ;
+    base:hasDisplayName "EURange" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "6055" .
+
+pumpexample:nodei6056 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "EngineeringUnits" ;
+    base:hasDatatype opcua:EUInformation ;
+    base:hasDisplayName "EngineeringUnits" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "6056" .
+
+pumpexample:nodei6057 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "KindOfQuantity" ;
+    base:hasDatatype opcua:String ;
+    base:hasDescription "Derivative with respect to time t of energy E being transferred or transformed" ;
+    base:hasDisplayName "KindOfQuantity" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "6057" ;
+    base:hasValue "power" .
+
+pumpexample:nodei6058 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "Definition" ;
+    base:hasDatatype opcua:String ;
+    base:hasDisplayName "Definition" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "6058" .
+
+pumpexample:nodei6059 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "EURange" ;
+    base:hasDatatype opcua:Range ;
+    base:hasDisplayName "EURange" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "6059" .
+
+pumpexample:nodei6060 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "EngineeringUnits" ;
+    base:hasDatatype opcua:EUInformation ;
+    base:hasDisplayName "EngineeringUnits" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "6060" .
+
+pumpexample:nodei6061 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "KindOfQuantity" ;
+    base:hasDatatype opcua:String ;
+    base:hasDescription "Ability of a system to do work" ;
+    base:hasDisplayName "KindOfQuantity" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "6061" ;
+    base:hasValue "energy" .
+
+pumpexample:nodei6062 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "Definition" ;
+    base:hasDatatype opcua:String ;
+    base:hasDisplayName "Definition" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "6062" .
+
+pumpexample:nodei6063 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "EURange" ;
+    base:hasDatatype opcua:Range ;
+    base:hasDisplayName "EURange" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "6063" .
+
+pumpexample:nodei6064 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "EngineeringUnits" ;
+    base:hasDatatype opcua:EUInformation ;
+    base:hasDisplayName "EngineeringUnits" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "6064" .
+
+pumpexample:nodei6065 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "KindOfQuantity" ;
+    base:hasDatatype opcua:String ;
+    base:hasDescription "Inverse of one cycle of a periodic event" ;
+    base:hasDisplayName "KindOfQuantity" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "6065" ;
+    base:hasValue "frequency" .
+
+pumpexample:nodei6066 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "Definition" ;
+    base:hasDatatype opcua:String ;
+    base:hasDisplayName "Definition" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "6066" .
+
+pumpexample:nodei6067 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "EURange" ;
+    base:hasDatatype opcua:Range ;
+    base:hasDisplayName "EURange" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "6067" .
+
+pumpexample:nodei6068 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "EngineeringUnits" ;
+    base:hasDatatype opcua:EUInformation ;
+    base:hasDisplayName "EngineeringUnits" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "6068" .
+
+pumpexample:nodei6069 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "KindOfQuantity" ;
+    base:hasDatatype opcua:String ;
+    base:hasDescription "Scalar quantity equal to the flux of the electric current density J through a given directed surface S" ;
+    base:hasDisplayName "KindOfQuantity" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "6069" ;
+    base:hasValue "electric current" .
+
+pumpexample:nodei6070 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "Definition" ;
+    base:hasDatatype opcua:String ;
+    base:hasDisplayName "Definition" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "6070" .
+
+pumpexample:nodei6071 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "EURange" ;
+    base:hasDatatype opcua:Range ;
+    base:hasDisplayName "EURange" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "6071" .
+
+pumpexample:nodei6072 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "EngineeringUnits" ;
+    base:hasDatatype opcua:EUInformation ;
+    base:hasDisplayName "EngineeringUnits" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "6072" .
+
+pumpexample:nodei6073 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "KindOfQuantity" ;
+    base:hasDatatype opcua:String ;
+    base:hasDescription "Quantity representing a temperature value" ;
+    base:hasDisplayName "KindOfQuantity" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "6073" ;
+    base:hasValue "temperature" .
+
+pumpexample:nodei6074 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "Definition" ;
+    base:hasDatatype opcua:String ;
+    base:hasDisplayName "Definition" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "6074" .
+
+pumpexample:nodei6075 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "EURange" ;
+    base:hasDatatype opcua:Range ;
+    base:hasDisplayName "EURange" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "6075" .
+
+pumpexample:nodei6076 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "EngineeringUnits" ;
+    base:hasDatatype opcua:EUInformation ;
+    base:hasDisplayName "EngineeringUnits" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "6076" .
+
+pumpexample:nodei6077 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "KindOfQuantity" ;
+    base:hasDatatype opcua:String ;
+    base:hasDescription "Scalar quantity equal to the line integral of the electric field strength E along a specific path linking two points a and b" ;
+    base:hasDisplayName "KindOfQuantity" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "6077" ;
+    base:hasValue "voltage" .
+
+pumpexample:nodei6078 a opcua:TwoStateDiscreteType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "Failure" ;
+    base:hasDatatype opcua:Boolean ;
+    base:hasDescription "Termination of the ability of an item to perform a required function. A \"True\" status means that the pump has a failure and a \"False\" status means that the pump has no failure." ;
+    base:hasDisplayName "Failure" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "6078" ;
+    base:hasProperty pumpexample:nodei6079,
+        pumpexample:nodei6080,
+        pumpexample:nodei6082 .
+
+pumpexample:nodei6079 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "FalseState" ;
+    base:hasDatatype opcua:LocalizedText ;
+    base:hasDisplayName "FalseState" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "6079" .
+
+pumpexample:nodei6080 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "TrueState" ;
+    base:hasDatatype opcua:LocalizedText ;
+    base:hasDisplayName "TrueState" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "6080" .
+
+pumpexample:nodei6081 a opcua:BaseAnalogType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "NumberOfFailures" ;
+    base:hasDatatype opcua:Int32 ;
+    base:hasDescription "Number of failures of an object" ;
+    base:hasDisplayName "NumberOfFailures" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "6081" ;
+    base:hasProperty pumpexample:nodei6083,
+        pumpexample:nodei6084 .
+
+pumpexample:nodei6082 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "Definition" ;
+    base:hasDatatype opcua:String ;
+    base:hasDisplayName "Definition" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "6082" .
+
+pumpexample:nodei6083 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "Definition" ;
+    base:hasDatatype opcua:String ;
+    base:hasDisplayName "Definition" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "6083" .
+
+pumpexample:nodei6084 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "EURange" ;
+    base:hasDatatype opcua:Range ;
+    base:hasDisplayName "EURange" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "6084" .
+
+pumpexample:nodei6085 a opcua:BaseAnalogType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "ActiveMaintenanceTime" ;
+    base:hasDatatype opcua:Double ;
+    base:hasDescription "Part of the maintenance time when active maintenance is carried out on an item." ;
+    base:hasDisplayName "ActiveMaintenanceTime" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "6085" ;
+    base:hasProperty pumpexample:nodei6089,
+        pumpexample:nodei6090,
+        pumpexample:nodei6091 .
+
+pumpexample:nodei6086 a opcua:BaseAnalogType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "MaximumAllowableHead" ;
+    base:hasDatatype opcua:Double ;
+    base:hasDescription "Maximum permissible head at which the pump can be continuously operated without suffering damage" ;
+    base:hasDisplayName "MaximumAllowableHead" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "6086" ;
+    base:hasProperty pumpexample:nodei6131 ;
+    base:hasValue 6.3e+00 .
+
+pumpexample:nodei6087 a opcua:BaseAnalogType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "MaximumAllowableRelativeHumidity" ;
+    base:hasDatatype opcua:Double ;
+    base:hasDescription "Highest allowable relative humidity for which the equipment (or any part to which the term refers) is suitable" ;
+    base:hasDisplayName "MaximumAllowableRelativeHumidity" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "6087" ;
+    base:hasProperty pumpexample:nodei6135 ;
+    base:hasValue 8e+01 .
+
+pumpexample:nodei6088 a opcua:BaseAnalogType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "OperatingTime" ;
+    base:hasDatatype opcua:Double ;
+    base:hasDescription "Measured time interval throughout which an item is in operating state" ;
+    base:hasDisplayName "OperatingTime" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "6088" ;
+    base:hasProperty pumpexample:nodei6098,
+        pumpexample:nodei6099,
+        pumpexample:nodei6100 .
+
+pumpexample:nodei6089 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "Definition" ;
+    base:hasDatatype opcua:String ;
+    base:hasDisplayName "Definition" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "6089" .
+
+pumpexample:nodei6090 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "EURange" ;
+    base:hasDatatype opcua:Range ;
+    base:hasDisplayName "EURange" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "6090" .
+
+pumpexample:nodei6091 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "EngineeringUnits" ;
+    base:hasDatatype opcua:EUInformation ;
+    base:hasDisplayName "EngineeringUnits" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "6091" .
+
+pumpexample:nodei6092 a opcua:BaseAnalogType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "MaximumPumpPowerInput" ;
+    base:hasDatatype opcua:Double ;
+    base:hasDescription "Highest value of the pump power input at any rate of flow at any allowable operating condition" ;
+    base:hasDisplayName "MaximumPumpPowerInput" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "6092" ;
+    base:hasProperty pumpexample:nodei6139 ;
+    base:hasValue 8.5e+01 .
+
+pumpexample:nodei6093 a opcua:BaseAnalogType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "MinimumAllowableAmbientTemperature" ;
+    base:hasDatatype opcua:Double ;
+    base:hasDescription "Lowest allowable ambient temperature for which the equipment (or any part to which the term refers) is suitable" ;
+    base:hasDisplayName "MinimumAllowableAmbientTemperature" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "6093" ;
+    base:hasProperty pumpexample:nodei6148 ;
+    base:hasValue 2.7815e+02 .
+
+pumpexample:nodei6094 a opcua:BaseAnalogType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "MinimumAllowableContinuousSpeed" ;
+    base:hasDatatype opcua:Double ;
+    base:hasDescription "Lowest speed for continuous operation recommended by the manufacturer" ;
+    base:hasDisplayName "MinimumAllowableContinuousSpeed" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "6094" ;
+    base:hasProperty pumpexample:nodei6163 ;
+    base:hasValue 2.333e+01 .
+
+pumpexample:nodei6095 a opcua:DataItemType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "OfferedControlModes" ;
+    base:hasDatatype pumps:OfferedControlModesOptionSet ;
+    base:hasDescription "Control modes supported by the manufacturer for the product." ;
+    base:hasDisplayName "OfferedControlModes" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "6095" .
+
+pumpexample:nodei6096 a opcua:DataItemType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "OfferedFieldbuses" ;
+    base:hasDatatype pumps:OfferedFieldbusesOptionSet ;
+    base:hasDescription "Fieldbuses supported by the manufacturer for the product." ;
+    base:hasDisplayName "OfferedFieldbuses" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "6096" .
+
+pumpexample:nodei6097 a opcua:DataItemType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "PumpClass" ;
+    base:hasDatatype pumps:PumpClassEnum ;
+    base:hasDescription "Pump type according to functional principle and pumped fluid" ;
+    base:hasDisplayName "PumpClass" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "6097" ;
+    base:hasValue 5 .
+
+pumpexample:nodei6098 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "Definition" ;
+    base:hasDatatype opcua:String ;
+    base:hasDisplayName "Definition" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "6098" .
+
+pumpexample:nodei6099 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "EURange" ;
+    base:hasDatatype opcua:Range ;
+    base:hasDisplayName "EURange" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "6099" .
+
+pumpexample:nodei6100 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "EngineeringUnits" ;
+    base:hasDatatype opcua:EUInformation ;
+    base:hasDisplayName "EngineeringUnits" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "6100" .
+
+pumpexample:nodei6101 a opcua:DataItemType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "InstallationDate" ;
+    base:hasDatatype opcua:DateTime ;
+    base:hasDescription "This attribute identifies the date when the device was last inspected." ;
+    base:hasDisplayName "InstallationDate" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "6101" ;
+    base:hasProperty pumpexample:nodei6106 ;
+    base:hasValue "2021-05-01T10:00:00Z" .
+
+pumpexample:nodei6102 a opcua:DataItemType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "LastInspectionDate" ;
+    base:hasDatatype opcua:DateTime ;
+    base:hasDescription "This attribute identifies the date when the device is scheduled for the next inspection." ;
+    base:hasDisplayName "LastInspectionDate" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "6102" ;
+    base:hasProperty pumpexample:nodei6107 ;
+    base:hasValue "2021-05-01T10:00:00Z" .
+
+pumpexample:nodei6103 a opcua:DataItemType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "LastServicingDate" ;
+    base:hasDatatype opcua:DateTime ;
+    base:hasDescription "This attribute identifies the date when the device is scheduled for the next servicing." ;
+    base:hasDisplayName "LastServicingDate" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "6103" ;
+    base:hasProperty pumpexample:nodei6108 ;
+    base:hasValue "2021-05-01T10:00:00Z" .
+
+pumpexample:nodei6104 a opcua:DataItemType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "NextInspectionDate" ;
+    base:hasDatatype opcua:DateTime ;
+    base:hasDescription "This attribute identifies the date when the device was last serviced." ;
+    base:hasDisplayName "NextInspectionDate" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "6104" ;
+    base:hasProperty pumpexample:nodei6109 ;
+    base:hasValue "2022-05-01T10:00:00Z" .
+
+pumpexample:nodei6105 a opcua:DataItemType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "NextServicingDate" ;
+    base:hasDatatype opcua:DateTime ;
+    base:hasDescription "Part of maintenance time when preventive maintenance is carried out on an item, including technical, logistic and internal administrative delays" ;
+    base:hasDisplayName "NextServicingDate" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "6105" ;
+    base:hasProperty pumpexample:nodei6110 ;
+    base:hasValue "2022-05-01T10:00:00Z" .
+
+pumpexample:nodei6106 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "Definition" ;
+    base:hasDatatype opcua:String ;
+    base:hasDisplayName "Definition" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "6106" .
+
+pumpexample:nodei6107 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "Definition" ;
+    base:hasDatatype opcua:String ;
+    base:hasDisplayName "Definition" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "6107" .
+
+pumpexample:nodei6108 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "Definition" ;
+    base:hasDatatype opcua:String ;
+    base:hasDisplayName "Definition" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "6108" .
+
+pumpexample:nodei6109 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "Definition" ;
+    base:hasDatatype opcua:String ;
+    base:hasDisplayName "Definition" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "6109" .
+
+pumpexample:nodei6110 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "Definition" ;
+    base:hasDatatype opcua:String ;
+    base:hasDisplayName "Definition" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "6110" .
+
+pumpexample:nodei6111 a opcua:DataItemType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "ActualControlMode" ;
+    base:hasDatatype pumps:ControlModeEnum ;
+    base:hasDescription "This property describes the actual control mode of the pump." ;
+    base:hasDisplayName "ActualControlMode" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "6111" ;
+    base:hasValue 0 .
+
+pumpexample:nodei6112 a opcua:TwoStateDiscreteType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "OnOff" ;
+    base:hasDatatype opcua:Boolean ;
+    base:hasDescription "This property enables the operation." ;
+    base:hasDisplayName "OnOff" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "6112" ;
+    base:hasProperty pumpexample:nodei6113,
+        pumpexample:nodei6114 .
+
+pumpexample:nodei6113 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "FalseState" ;
+    base:hasDatatype opcua:LocalizedText ;
+    base:hasDisplayName "FalseState" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "6113" .
+
+pumpexample:nodei6114 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "TrueState" ;
+    base:hasDatatype opcua:LocalizedText ;
+    base:hasDisplayName "TrueState" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "6114" .
+
+pumpexample:nodei6117 a opcua:BaseAnalogType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "DifferentialPressure" ;
+    base:hasDatatype opcua:Double ;
+    base:hasDescription "Determined (actual) gain in total pressure between the pump inlet and pump outlet" ;
+    base:hasDisplayName "DifferentialPressure" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "6117" ;
+    base:hasProperty pumpexample:nodei6124,
+        pumpexample:nodei6125 ;
+    base:hasValue 0e+00 .
+
+pumpexample:nodei6118 a opcua:BaseAnalogType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "FluidTemperature" ;
+    base:hasDatatype opcua:Double ;
+    base:hasDescription "Measured internal temperature of pump fluid." ;
+    base:hasDisplayName "FluidTemperature" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "6118" ;
+    base:hasProperty pumpexample:nodei6128,
+        pumpexample:nodei6129 ;
+    base:hasValue 0e+00 .
+
+pumpexample:nodei6119 a opcua:BaseAnalogType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "NumberOfStarts" ;
+    base:hasDatatype opcua:UInt32 ;
+    base:hasDescription "Total number of starts" ;
+    base:hasDisplayName "NumberOfStarts" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "6119" ;
+    base:hasProperty pumpexample:nodei6132,
+        pumpexample:nodei6133 ;
+    base:hasValue 0 .
+
+pumpexample:nodei6120 a opcua:BaseAnalogType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "PumpPowerInput" ;
+    base:hasDatatype opcua:Double ;
+    base:hasDescription "Measured power transmitted to the pump by its driver" ;
+    base:hasDisplayName "PumpPowerInput" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "6120" ;
+    base:hasProperty pumpexample:nodei6136,
+        pumpexample:nodei6137 ;
+    base:hasValue 0e+00 .
+
+pumpexample:nodei6121 a opcua:BaseAnalogType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "Speed" ;
+    base:hasDatatype opcua:Double ;
+    base:hasDescription "Measured number of rotations or movements made by the shaft, coupling or impeller in a given time" ;
+    base:hasDisplayName "Speed" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "6121" ;
+    base:hasProperty pumpexample:nodei6140,
+        pumpexample:nodei6141 ;
+    base:hasValue 0e+00 .
+
+pumpexample:nodei6123 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "EngineeringUnits" ;
+    base:hasDatatype opcua:EUInformation ;
+    base:hasDisplayName "EngineeringUnits" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "6123" .
+
+pumpexample:nodei6124 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "EngineeringUnits" ;
+    base:hasDatatype opcua:EUInformation ;
+    base:hasDisplayName "EngineeringUnits" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "6124" .
+
+pumpexample:nodei6125 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "KindOfQuantity" ;
+    base:hasDatatype opcua:String ;
+    base:hasDescription "Quotient of the component of a force normal to a surface and its area" ;
+    base:hasDisplayName "KindOfQuantity" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "6125" ;
+    base:hasValue "pressure" .
+
+pumpexample:nodei6127 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "EngineeringUnits" ;
+    base:hasDatatype opcua:EUInformation ;
+    base:hasDisplayName "EngineeringUnits" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "6127" .
+
+pumpexample:nodei6128 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "EngineeringUnits" ;
+    base:hasDatatype opcua:EUInformation ;
+    base:hasDisplayName "EngineeringUnits" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "6128" .
+
+pumpexample:nodei6129 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "KindOfQuantity" ;
+    base:hasDatatype opcua:String ;
+    base:hasDescription "Quantity representing a temperature value" ;
+    base:hasDisplayName "KindOfQuantity" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "6129" ;
+    base:hasValue "temperature" .
+
+pumpexample:nodei6131 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "EngineeringUnits" ;
+    base:hasDatatype opcua:EUInformation ;
+    base:hasDisplayName "EngineeringUnits" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "6131" .
+
+pumpexample:nodei6132 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "EngineeringUnits" ;
+    base:hasDatatype opcua:EUInformation ;
+    base:hasDisplayName "EngineeringUnits" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "6132" .
+
+pumpexample:nodei6133 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "KindOfQuantity" ;
+    base:hasDatatype opcua:String ;
+    base:hasDescription "Element of a set of mathematical entities that includes all integers and other entities, each defined as the quotient of two integers, such that the division is defined for any two entities, except zero as a divisor" ;
+    base:hasDisplayName "KindOfQuantity" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "6133" ;
+    base:hasValue "rational number" .
+
+pumpexample:nodei6135 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "EngineeringUnits" ;
+    base:hasDatatype opcua:EUInformation ;
+    base:hasDisplayName "EngineeringUnits" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "6135" .
+
+pumpexample:nodei6136 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "EngineeringUnits" ;
+    base:hasDatatype opcua:EUInformation ;
+    base:hasDisplayName "EngineeringUnits" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "6136" .
+
+pumpexample:nodei6137 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "KindOfQuantity" ;
+    base:hasDatatype opcua:String ;
+    base:hasDescription "Scalar product of force acting to a body and its velocity" ;
+    base:hasDisplayName "KindOfQuantity" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "6137" ;
+    base:hasValue "mechanical power" .
+
+pumpexample:nodei6139 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "EngineeringUnits" ;
+    base:hasDatatype opcua:EUInformation ;
+    base:hasDisplayName "EngineeringUnits" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "6139" .
+
+pumpexample:nodei6140 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "EngineeringUnits" ;
+    base:hasDatatype opcua:EUInformation ;
+    base:hasDisplayName "EngineeringUnits" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "6140" .
+
+pumpexample:nodei6141 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "KindOfQuantity" ;
+    base:hasDatatype opcua:String ;
+    base:hasDescription "Inverse of one cycle of a periodic event" ;
+    base:hasDisplayName "KindOfQuantity" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "6141" ;
+    base:hasValue "frequency" .
+
+pumpexample:nodei6142 a opcua:BaseAnalogType,
+        opcua:VariableNodeClass ;
+    opcua:GeneratesEvent opcua:nodei2955 ;
+    base:hasBrowseName "OverallVibrationAcceleration0_P" ;
+    base:hasDatatype opcua:Double ;
+    base:hasDescription "Maximum oscillation amplitude, expressed as acceleration. The oscillation range is the difference between the minimum and maximum value within the time range under consideration." ;
+    base:hasDisplayName "OverallVibrationAcceleration0_P" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "6142" ;
+    base:hasProperty pumpexample:nodei6146,
+        pumpexample:nodei6147 ;
+    base:hasValue 0e+00 .
+
+pumpexample:nodei6143 a opcua:BaseAnalogType,
+        opcua:VariableNodeClass ;
+    opcua:GeneratesEvent opcua:nodei2955 ;
+    base:hasBrowseName "OverallVibrationAccelerationP_P" ;
+    base:hasDatatype opcua:Double ;
+    base:hasDescription "Oscillation range, expressed as acceleration. The oscillation range is the difference between the minimum and maximum value within the time range under consideration." ;
+    base:hasDisplayName "OverallVibrationAccelerationP_P" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "6143" ;
+    base:hasProperty pumpexample:nodei6149,
+        pumpexample:nodei6150 ;
+    base:hasValue 0e+00 .
+
+pumpexample:nodei6144 a opcua:BaseAnalogType,
+        opcua:VariableNodeClass ;
+    opcua:GeneratesEvent opcua:nodei2955 ;
+    base:hasBrowseName "OverallVibrationAccelerationPerG0_P" ;
+    base:hasDatatype opcua:Double ;
+    base:hasDescription "Maximum oscillation amplitude, expressed as acceleration in units of the acceleration of gravity g. The oscillation range is the difference between the minimum and maximum value within the time range under consideration." ;
+    base:hasDisplayName "OverallVibrationAccelerationPerG0_P" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "6144" ;
+    base:hasProperty pumpexample:nodei6152,
+        pumpexample:nodei6153 ;
+    base:hasValue 0e+00 .
+
+pumpexample:nodei6146 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "EURange" ;
+    base:hasDatatype opcua:Range ;
+    base:hasDisplayName "EURange" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "6146" .
+
+pumpexample:nodei6147 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "EngineeringUnits" ;
+    base:hasDatatype opcua:EUInformation ;
+    base:hasDisplayName "EngineeringUnits" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "6147" .
+
+pumpexample:nodei6148 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "EngineeringUnits" ;
+    base:hasDatatype opcua:EUInformation ;
+    base:hasDisplayName "EngineeringUnits" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "6148" .
+
+pumpexample:nodei6149 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "EURange" ;
+    base:hasDatatype opcua:Range ;
+    base:hasDisplayName "EURange" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "6149" .
+
+pumpexample:nodei6150 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "EngineeringUnits" ;
+    base:hasDatatype opcua:EUInformation ;
+    base:hasDisplayName "EngineeringUnits" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "6150" .
+
+pumpexample:nodei6152 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "EURange" ;
+    base:hasDatatype opcua:Range ;
+    base:hasDisplayName "EURange" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "6152" .
+
+pumpexample:nodei6153 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "EngineeringUnits" ;
+    base:hasDatatype opcua:EUInformation ;
+    base:hasDisplayName "EngineeringUnits" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "6153" .
+
+pumpexample:nodei6154 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "ArticleNumber" ;
+    base:hasDatatype opcua:String ;
+    base:hasDescription "Alphanumeric character sequence identifying a manufactured, non-configurable product." ;
+    base:hasDisplayName "ArticleNumber" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "6154" ;
+    base:hasValue "1234567890" .
+
+pumpexample:nodei6155 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "ComponentName" ;
+    base:hasDatatype opcua:LocalizedText ;
+    base:hasDescription "To be used by end users to store a human-readable localized text for the MachineryItem. The minimum number of locales supported for this property shall be two. Servers shall support at least 40 Unicode characters for the clients writing the text part of each locale, this means clients can expect to be able to write texts with a length of 40 Unicode characters into that field." ;
+    base:hasDisplayName "ComponentName" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "6155" .
+
+pumpexample:nodei6156 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "CountryOfOrigin" ;
+    base:hasDatatype opcua:String ;
+    base:hasDescription "Country in which the product is manufactured." ;
+    base:hasDisplayName "CountryOfOrigin" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "6156" ;
+    base:hasValue "Germany" .
+
+pumpexample:nodei6157 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "DayOfConstruction" ;
+    base:hasDatatype opcua:Int32 ;
+    base:hasDescription "The optional DayOfConstrucition provides the day of the month in which the manufacturing process of the machine has been completed. It shall be a number and never change during the life-cycle of a machine." ;
+    base:hasDisplayName "DayOfConstruction" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "6157" ;
+    base:hasValue 1 .
+
+pumpexample:nodei6158 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "InitialOperationDate" ;
+    base:hasDatatype opcua:DateTime ;
+    base:hasDescription "The date, when the MachineryItem was switched on the first time after it has left the manufacturer plant." ;
+    base:hasDisplayName "InitialOperationDate" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "6158" ;
+    base:hasValue "2021-05-01T09:00:00Z" .
+
+pumpexample:nodei6159 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "Location" ;
+    base:hasDatatype opcua:String ;
+    base:hasDescription "To be used by end users to store the location of the machine in a scheme specific to the end user. Servers shall support at least 60 Unicode characters for the clients writing this value, this means clients can expect to be able to write strings with a length of 60 Unicode characters into that field." ;
+    base:hasDisplayName "Location" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "6159" ;
+    base:hasValue "ExampleLocation" .
+
+pumpexample:nodei6160 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "ManufacturerUri" ;
+    base:hasDatatype opcua:String ;
+    base:hasDescription "A globally unique identifier of the manufacturer of the MachineryItem." ;
+    base:hasDisplayName "ManufacturerUri" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "6160" ;
+    base:hasValue "www.exampleManufacturer.com" .
+
+pumpexample:nodei6161 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "MonthOfConstruction" ;
+    base:hasDatatype opcua:Byte ;
+    base:hasDescription "The month in which the manufacturing process of the MachineryItem has been completed. It shall be a number between 1 and 12, representing the month from January to December." ;
+    base:hasDisplayName "MonthOfConstruction" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "6161" ;
+    base:hasValue 1 .
+
+pumpexample:nodei6162 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "PhysicalAddress" ;
+    base:hasDatatype pumps:PhysicalAddressDataType ;
+    base:hasDescription "Physical address of the manufacturer." ;
+    base:hasDisplayName "PhysicalAddress" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "6162" .
+
+pumpexample:nodei6163 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "EngineeringUnits" ;
+    base:hasDatatype opcua:EUInformation ;
+    base:hasDisplayName "EngineeringUnits" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "6163" .
+
+pumpexample:nodei6164 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "YearOfConstruction" ;
+    base:hasDatatype opcua:UInt16 ;
+    base:hasDescription "The year (Gregorian calendar) in which the manufacturing process of the MachineryItem has been completed. It shall be a four-digit number and never change during the life-cycle of a MachineryItem." ;
+    base:hasDisplayName "YearOfConstruction" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "6164" ;
+    base:hasValue 2021 .
+
+pumpexample:nodei6168 a opcua:DataItemType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "Fieldbus" ;
+    base:hasDatatype pumps:FieldbusEnum ;
+    base:hasDescription "Selected fieldbus for the product" ;
+    base:hasDisplayName "Fieldbus" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "6168" ;
+    base:hasValue 4 .
+
+pumpexample:nodei7001 a opcua:MethodNodeClass ;
+    base:hasBrowseName "Close" ;
+    base:hasDisplayName "Close" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "7001" ;
+    base:hasProperty pumpexample:nodei6004 .
+
+pumpexample:nodei7002 a opcua:MethodNodeClass ;
+    base:hasBrowseName "GetPosition" ;
+    base:hasDisplayName "GetPosition" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "7002" ;
+    base:hasProperty pumpexample:nodei6005,
+        pumpexample:nodei6006 .
+
+pumpexample:nodei7003 a opcua:MethodNodeClass ;
+    base:hasBrowseName "Open" ;
+    base:hasDisplayName "Open" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "7003" ;
+    base:hasProperty pumpexample:nodei6007,
+        pumpexample:nodei6008 .
+
+pumpexample:nodei7004 a opcua:MethodNodeClass ;
+    base:hasBrowseName "Read" ;
+    base:hasDisplayName "Read" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "7004" ;
+    base:hasProperty pumpexample:nodei6010,
+        pumpexample:nodei6011 .
+
+pumpexample:nodei7005 a opcua:MethodNodeClass ;
+    base:hasBrowseName "SetPosition" ;
+    base:hasDisplayName "SetPosition" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "7005" ;
+    base:hasProperty pumpexample:nodei6012 .
+
+pumpexample:nodei7006 a opcua:MethodNodeClass ;
+    base:hasBrowseName "Write" ;
+    base:hasDisplayName "Write" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "7006" ;
+    base:hasProperty pumpexample:nodei6022 .
+
+pumpexample:nodei5002 a opcua:ObjectNodeClass,
+        pumps:PumpType ;
+    base:hasBrowseName "ExamplePump" ;
+    base:hasComponent pumpexample:nodei5001,
+        pumpexample:nodei5003,
+        pumpexample:nodei5005,
+        pumpexample:nodei5008,
+        pumpexample:nodei5012,
+        pumpexample:nodei5016,
+        pumpexample:nodei5020 ;
+    base:hasDisplayName "ExamplePump" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace pumpexample:PUMPEXAMPLENamespace ;
+    base:hasNodeId "5002" .
+
+pumpexample:PUMPEXAMPLENamespace a base:Namespace ;
+    base:hasPrefix "pumpexample" ;
+    base:hasUri "http://yourorganisation.org/InstanceExample/" .
+
