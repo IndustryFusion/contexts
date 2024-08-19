@@ -1,0 +1,1710 @@
+@prefix base: <https://industryfusion.github.io/contexts/ontology/v0/base/> .
+@prefix devices: <http://opcfoundation.org/UA/DI/> .
+@prefix opcua: <http://opcfoundation.org/UA/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix padim: <http://opcfoundation.org/UA/PADIM/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+padim: a owl:Ontology ;
+    owl:imports <https://industryfusion.github.io/contexts/staging/ontology/v0.1/base.ttl>,
+        <https://industryfusion.github.io/contexts/staging/opcua/v0.1/core.ttl>,
+        <https://industryfusion.github.io/contexts/staging/opcua/v0.1/devices.ttl>,
+        <https://industryfusion.github.io/contexts/staging/opcua/v0.1/dictionary_irdi.ttl> ;
+    owl:versionIRI <http://example.com/v0.1/PADIM> ;
+    owl:versionInfo 1e-01 .
+
+padim:Abort a padim:ExecutionModeEnum ;
+    base:hasFieldName "Abort" ;
+    base:hasValueNode base:_N198c2d27e51a4c0a85ecba7c6020a079 .
+
+padim:Application a padim:ResetModeEnum ;
+    base:hasFieldName "Application" ;
+    base:hasValueNode base:_Nb90d040c5722438b98f456cfa2fd4088 .
+
+padim:Communication a padim:ResetModeEnum ;
+    base:hasFieldName "Communication" ;
+    base:hasValueNode base:_N3d3e27f7f7eb4b688e09f4c318756bdf .
+
+padim:Factory a padim:ResetModeEnum ;
+    base:hasFieldName "Factory" ;
+    base:hasValueNode base:_N4ec515866ec64491a988f047fa863edb .
+
+padim:Start a padim:ExecutionModeEnum ;
+    base:hasFieldName "Start" ;
+    base:hasValueNode base:_N1e2dff1837d74f889765e8cda38cf409 .
+
+padim:nodei1008 a opcua:ObjectTypeNodeClass ;
+    base:definesType padim:SignalType ;
+    base:hasBrowseName "SignalType" ;
+    base:hasDisplayName "SignalType" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace padim:PADIMNamespace ;
+    base:hasNodeId "1008" ;
+    base:hasProperty padim:nodei1035 .
+
+padim:nodei1009 a opcua:ObjectTypeNodeClass ;
+    opcua:HasDictionaryEntry opcua:nodei17590 ;
+    base:definesType padim:PADIMType ;
+    base:hasBrowseName "PADIMType" ;
+    base:hasComponent padim:nodei1018,
+        padim:nodei1025,
+        padim:nodei1029,
+        padim:nodei1032,
+        padim:nodei1033,
+        padim:nodei1034 ;
+    base:hasDisplayName "PADIMType" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasInterface devices:nodei15051,
+        padim:nodei1050,
+        padim:nodei1052 ;
+    base:hasNamespace padim:PADIMNamespace ;
+    base:hasNodeId "1009" ;
+    base:hasProperty padim:nodei1010,
+        padim:nodei1011,
+        padim:nodei1012,
+        padim:nodei1013,
+        padim:nodei1014,
+        padim:nodei1015,
+        padim:nodei1016,
+        padim:nodei1017,
+        padim:nodei1019,
+        padim:nodei1020 .
+
+padim:nodei1021 a opcua:ObjectTypeNodeClass ;
+    base:definesType padim:SignalSetType ;
+    base:hasBrowseName "SignalSetType" ;
+    base:hasComponent padim:nodei1024 ;
+    base:hasDisplayName "SignalSetType" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace padim:PADIMNamespace ;
+    base:hasNodeId "1021" .
+
+padim:nodei1022 a opcua:ObjectTypeNodeClass ;
+    base:definesType padim:AnalogSignalType ;
+    base:hasBrowseName "AnalogSignalType" ;
+    base:hasComponent padim:nodei1027 ;
+    base:hasDisplayName "AnalogSignalType" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace padim:PADIMNamespace ;
+    base:hasNodeId "1022" .
+
+padim:nodei1023 a opcua:ObjectTypeNodeClass ;
+    base:definesType padim:ControlSignalType ;
+    base:hasBrowseName "ControlSignalType" ;
+    base:hasComponent padim:nodei1031 ;
+    base:hasDisplayName "ControlSignalType" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace padim:PADIMNamespace ;
+    base:hasNodeId "1023" .
+
+padim:nodei1028 a opcua:MethodNodeClass ;
+    base:hasBrowseName "FactoryReset" ;
+    base:hasDisplayName "Factory reset" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace padim:PADIMNamespace ;
+    base:hasNodeId "1028" ;
+    base:hasProperty padim:nodei1030 .
+
+padim:nodei1036 a opcua:ObjectTypeNodeClass ;
+    base:definesType padim:DiscreteSignalType ;
+    base:hasBrowseName "DiscreteSignalType" ;
+    base:hasComponent padim:nodei1039 ;
+    base:hasDisplayName "DiscreteSignalType" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace padim:PADIMNamespace ;
+    base:hasNodeId "1036" .
+
+padim:nodei1037 a opcua:ObjectTypeNodeClass ;
+    base:definesType padim:TwoStateDiscreteSignalType ;
+    base:hasBrowseName "TwoStateDiscreteSignalType" ;
+    base:hasComponent padim:nodei1040 ;
+    base:hasDisplayName "TwoStateDiscreteSignalType" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace padim:PADIMNamespace ;
+    base:hasNodeId "1037" .
+
+padim:nodei1038 a opcua:ObjectTypeNodeClass ;
+    base:definesType padim:MultiStateDiscreteSignalType ;
+    base:hasBrowseName "MultiStateDiscreteSignalType" ;
+    base:hasComponent padim:nodei1041 ;
+    base:hasDisplayName "MultiStateDiscreteSignalType" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace padim:PADIMNamespace ;
+    base:hasNodeId "1038" .
+
+padim:nodei1072 a opcua:MethodNodeClass ;
+    base:hasBrowseName "FactoryReset" ;
+    base:hasDisplayName "Factory reset" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace padim:PADIMNamespace ;
+    base:hasNodeId "1072" ;
+    base:hasProperty padim:nodei1080 .
+
+padim:nodei1109 a opcua:MethodNodeClass ;
+    base:hasBrowseName "ZeroPointAdjustment" ;
+    base:hasDisplayName "Zero point adjustment" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace padim:PADIMNamespace ;
+    base:hasNodeId "1109" .
+
+padim:nodei1111 a opcua:VariableTypeNodeClass ;
+    opcua:HasDictionaryEntry <http://opcfoundation.org/UA/Dictionary/IRDI/nodes0112/2///61987%23ABN634%23001> ;
+    base:definesType padim:AnalogSignalVariableType ;
+    base:hasBrowseName "AnalogSignalVariableType" ;
+    base:hasComponent padim:nodei1113,
+        padim:nodei1115,
+        padim:nodei1117 ;
+    base:hasDatatype opcua:Number ;
+    base:hasDisplayName "AnalogSignalVariableType" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace padim:PADIMNamespace ;
+    base:hasNodeId "1111" ;
+    base:hasProperty padim:nodei1118 ;
+    base:hasValueRank "-2" .
+
+padim:nodei1116 a opcua:MethodNodeClass ;
+    base:hasBrowseName "AutoAdjustPositioner" ;
+    base:hasDisplayName "Autoadjust" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace padim:PADIMNamespace ;
+    base:hasNodeId "1116" ;
+    base:hasProperty padim:nodei1119 .
+
+padim:nodei1120 a opcua:VariableTypeNodeClass ;
+    opcua:HasDictionaryEntry <http://opcfoundation.org/UA/Dictionary/IRDI/nodes0112/2///61987%23ABA927%23005> ;
+    base:definesType padim:TemperatureMeasurementVariableType ;
+    base:hasBrowseName "TemperatureMeasurementVariableType" ;
+    base:hasComponent padim:nodei1128,
+        padim:nodei1129,
+        padim:nodei1130 ;
+    base:hasDatatype opcua:Float ;
+    base:hasDisplayName "TemperatureMeasurementVariableType" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace padim:PADIMNamespace ;
+    base:hasNodeId "1120" ;
+    base:hasValueRank "-2" .
+
+padim:nodei1121 a opcua:VariableTypeNodeClass ;
+    opcua:HasDictionaryEntry <http://opcfoundation.org/UA/Dictionary/IRDI/nodes0112/2///61987%23ABN616%23001> ;
+    base:definesType padim:PressureMeasurementVariableType ;
+    base:hasBrowseName "PressureMeasurementVariableType" ;
+    base:hasDatatype opcua:Float ;
+    base:hasDisplayName "PressureMeasurementVariableType" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace padim:PADIMNamespace ;
+    base:hasNodeId "1121" ;
+    base:hasValueRank "-2" .
+
+padim:nodei1122 a opcua:VariableTypeNodeClass ;
+    base:definesType padim:FlowMeasurementVariableType ;
+    base:hasBrowseName "FlowMeasurementVariableType" ;
+    base:hasComponent padim:nodei1132 ;
+    base:hasDatatype opcua:Float ;
+    base:hasDisplayName "FlowMeasurementVariableType" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace padim:PADIMNamespace ;
+    base:hasNodeId "1122" ;
+    base:hasProperty padim:nodei1131 ;
+    base:hasValueRank "-2" .
+
+padim:nodei1123 a opcua:VariableTypeNodeClass ;
+    opcua:HasDictionaryEntry <http://opcfoundation.org/UA/Dictionary/IRDI/nodes0112/2///61987%23ABH329%23002> ;
+    base:definesType padim:LevelMeasurementVariableType ;
+    base:hasBrowseName "LevelMeasurementVariableType" ;
+    base:hasDatatype opcua:Float ;
+    base:hasDisplayName "LevelMeasurementVariableType" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace padim:PADIMNamespace ;
+    base:hasNodeId "1123" ;
+    base:hasValueRank "-2" .
+
+padim:nodei1124 a opcua:VariableTypeNodeClass ;
+    opcua:HasDictionaryEntry <http://opcfoundation.org/UA/Dictionary/IRDI/nodes0112/2///61987%23ABA946%23004> ;
+    base:definesType padim:ActualDensityVariableType ;
+    base:hasBrowseName "ActualDensityVariableType" ;
+    base:hasDatatype opcua:Float ;
+    base:hasDisplayName "ActualDensityVariableType" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace padim:PADIMNamespace ;
+    base:hasNodeId "1124" ;
+    base:hasValueRank "-2" .
+
+padim:nodei1125 a opcua:VariableTypeNodeClass ;
+    opcua:HasDictionaryEntry <http://opcfoundation.org/UA/Dictionary/IRDI/nodes0112/2///61987%23ABJ683%23001> ;
+    base:definesType padim:ControlVariableType ;
+    base:hasBrowseName "ControlVariableType" ;
+    base:hasComponent padim:nodei1136,
+        padim:nodei1137,
+        padim:nodei1138 ;
+    base:hasDatatype opcua:Float ;
+    base:hasDisplayName "ControlVariableType" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace padim:PADIMNamespace ;
+    base:hasNodeId "1125" ;
+    base:hasValueRank "-2" .
+
+padim:nodei1126 a opcua:VariableTypeNodeClass ;
+    base:definesType padim:TotalizerVariableType ;
+    base:hasBrowseName "TotalizerVariableType" ;
+    base:hasDatatype opcua:Number ;
+    base:hasDisplayName "TotalizerVariableType" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace padim:PADIMNamespace ;
+    base:hasNodeId "1126" ;
+    base:hasProperty padim:nodei1139,
+        padim:nodei1140 ;
+    base:hasValueRank "-2" .
+
+padim:nodei1127 a opcua:VariableTypeNodeClass ;
+    base:definesType padim:AnalyticalMeasurementVariableType ;
+    base:hasBrowseName "AnalyticalMeasurementVariableType" ;
+    base:hasDatatype opcua:Float ;
+    base:hasDisplayName "AnalyticalMeasurementVariableType" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace padim:PADIMNamespace ;
+    base:hasNodeId "1127" ;
+    base:hasValueRank "-2" .
+
+padim:nodei1133 a opcua:VariableTypeNodeClass ;
+    opcua:HasDictionaryEntry <http://opcfoundation.org/UA/Dictionary/IRDI/nodes0112/2///61987%23ABB290%23005> ;
+    base:definesType padim:MassFlowRateVariableType ;
+    base:hasBrowseName "MassFlowRateVariableType" ;
+    base:hasDatatype opcua:Float ;
+    base:hasDisplayName "MassFlowRateVariableType" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace padim:PADIMNamespace ;
+    base:hasNodeId "1133" ;
+    base:hasValueRank "-2" .
+
+padim:nodei1134 a opcua:VariableTypeNodeClass ;
+    opcua:HasDictionaryEntry <http://opcfoundation.org/UA/Dictionary/IRDI/nodes0112/2///61987%23ABB291%23005> ;
+    base:definesType padim:ActualVolumeFlowRateVariableType ;
+    base:hasBrowseName "ActualVolumeFlowRateVariableType" ;
+    base:hasDatatype opcua:Float ;
+    base:hasDisplayName "ActualVolumeFlowRateVariableType" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace padim:PADIMNamespace ;
+    base:hasNodeId "1134" ;
+    base:hasValueRank "-2" .
+
+padim:nodei1135 a opcua:VariableTypeNodeClass ;
+    opcua:HasDictionaryEntry <http://opcfoundation.org/UA/Dictionary/IRDI/nodes0112/2///61987%23ABB292%23005> ;
+    base:definesType padim:NormalizedVolumeFlowRateVariableType ;
+    base:hasBrowseName "NormalizedVolumeFlowRateVariableType" ;
+    base:hasDatatype opcua:Float ;
+    base:hasDisplayName "NormalizedVolumeFlowRateVariableType" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace padim:PADIMNamespace ;
+    base:hasNodeId "1135" ;
+    base:hasValueRank "-2" .
+
+padim:nodei1141 a opcua:VariableTypeNodeClass ;
+    opcua:HasDictionaryEntry <http://opcfoundation.org/UA/Dictionary/IRDI/nodes0112/2///61987%23ABN635%23001> ;
+    base:definesType padim:TwoStateDiscreteSignalVariableType ;
+    base:hasBrowseName "TwoStateDiscreteSignalVariableType" ;
+    base:hasComponent padim:nodei1144,
+        padim:nodei1145,
+        padim:nodei1147 ;
+    base:hasDatatype opcua:Boolean ;
+    base:hasDisplayName "TwoStateDiscreteSignalVariableType" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace padim:PADIMNamespace ;
+    base:hasNodeId "1141" ;
+    base:hasValueRank "-2" .
+
+padim:nodei1142 a opcua:VariableTypeNodeClass ;
+    opcua:HasDictionaryEntry <http://opcfoundation.org/UA/Dictionary/IRDI/nodes0112/2///61987%23ABN636%23001> ;
+    base:definesType padim:MultiStateDiscreteSignalVariableType ;
+    base:hasBrowseName "MultiStateDiscreteSignalVariableType" ;
+    base:hasComponent padim:nodei1148,
+        padim:nodei1149,
+        padim:nodei1151 ;
+    base:hasDatatype opcua:UInt32 ;
+    base:hasDisplayName "MultiStateDiscreteSignalVariableType" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace padim:PADIMNamespace ;
+    base:hasNodeId "1142" .
+
+padim:nodei1143 a opcua:VariableTypeNodeClass ;
+    base:definesType padim:DiscreteSignalVariableType ;
+    base:hasBrowseName "DiscreteSignalVariableType" ;
+    base:hasComponent padim:nodei1152,
+        padim:nodei1153,
+        padim:nodei1155 ;
+    base:hasDisplayName "DiscreteSignalVariableType" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace padim:PADIMNamespace ;
+    base:hasNodeId "1143" ;
+    base:hasValueRank "-2" .
+
+padim:nodei1156 a opcua:DataTypeNodeClass ;
+    base:definesType padim:ResetModeEnum ;
+    base:hasBrowseName "ResetModeEnum" ;
+    base:hasDisplayName "ResetModeEnum" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace padim:PADIMNamespace ;
+    base:hasNodeId "1156" ;
+    base:hasProperty padim:nodei1157 .
+
+padim:nodei1158 a opcua:DataTypeNodeClass ;
+    base:definesType padim:ExecutionModeEnum ;
+    base:hasBrowseName "ExecutionModeEnum" ;
+    base:hasDisplayName "ExecutionModeEnum" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace padim:PADIMNamespace ;
+    base:hasNodeId "1158" ;
+    base:hasProperty padim:nodei1159 .
+
+opcua:nodei11715 base:hasComponent padim:nodei1000 .
+
+padim:ActualDensityVariableType a owl:Class ;
+    rdfs:subClassOf padim:AnalogSignalVariableType .
+
+padim:ActualVolumeFlowRateVariableType a owl:Class ;
+    rdfs:subClassOf padim:FlowMeasurementVariableType .
+
+padim:AnalogSignalType a owl:Class ;
+    rdfs:subClassOf padim:SignalType .
+
+padim:AnalyticalMeasurementVariableType a owl:Class ;
+    rdfs:subClassOf padim:AnalogSignalVariableType .
+
+padim:ControlSignalType a owl:Class ;
+    rdfs:subClassOf padim:SignalType .
+
+padim:DiscreteSignalType a owl:Class ;
+    rdfs:subClassOf padim:SignalType .
+
+padim:IAdministrationType a owl:Class ;
+    rdfs:subClassOf opcua:BaseInterfaceType ;
+    base:isAbstract "true" .
+
+padim:ISignalSetType a owl:Class ;
+    rdfs:subClassOf opcua:BaseInterfaceType ;
+    base:isAbstract "true" .
+
+padim:LevelMeasurementVariableType a owl:Class ;
+    rdfs:subClassOf padim:AnalogSignalVariableType .
+
+padim:MassFlowRateVariableType a owl:Class ;
+    rdfs:subClassOf padim:FlowMeasurementVariableType .
+
+padim:MultiStateDiscreteSignalType a owl:Class ;
+    rdfs:subClassOf padim:SignalType .
+
+padim:NormalizedVolumeFlowRateVariableType a owl:Class ;
+    rdfs:subClassOf padim:FlowMeasurementVariableType .
+
+padim:PADIMType a owl:Class ;
+    rdfs:subClassOf devices:ComponentType .
+
+padim:PressureMeasurementVariableType a owl:Class ;
+    rdfs:subClassOf padim:AnalogSignalVariableType .
+
+padim:TemperatureMeasurementVariableType a owl:Class ;
+    rdfs:subClassOf padim:AnalogSignalVariableType .
+
+padim:TotalizerVariableType a owl:Class ;
+    rdfs:subClassOf padim:AnalogSignalVariableType .
+
+padim:TwoStateDiscreteSignalType a owl:Class ;
+    rdfs:subClassOf padim:SignalType .
+
+padim:nodei1000 a opcua:NamespaceMetadataType,
+        opcua:ObjectNodeClass ;
+    base:hasBrowseName "http://opcfoundation.org/UA/PADIM/" ;
+    base:hasDisplayName "http://opcfoundation.org/UA/PADIM/" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace padim:PADIMNamespace ;
+    base:hasNodeId "1000" ;
+    base:hasProperty padim:nodei1001,
+        padim:nodei1002,
+        padim:nodei1003,
+        padim:nodei1004,
+        padim:nodei1005,
+        padim:nodei1006,
+        padim:nodei1007 ;
+    base:hasSymbolicName "http___opcfoundation_org_UA_PADIM_" .
+
+padim:nodei1001 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "IsNamespaceSubset" ;
+    base:hasDatatype opcua:Boolean ;
+    base:hasDescription "If TRUE then the server only supports a subset of the namespace." ;
+    base:hasDisplayName "IsNamespaceSubset" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace padim:PADIMNamespace ;
+    base:hasNodeId "1001" ;
+    base:hasValue false .
+
+padim:nodei1002 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "NamespacePublicationDate" ;
+    base:hasDatatype opcua:DateTime ;
+    base:hasDescription "The publication date for the namespace." ;
+    base:hasDisplayName "NamespacePublicationDate" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace padim:PADIMNamespace ;
+    base:hasNodeId "1002" ;
+    base:hasValue "2022-06-27T00:00:00Z" .
+
+padim:nodei1003 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "NamespaceUri" ;
+    base:hasDatatype opcua:String ;
+    base:hasDescription "The URI of the namespace." ;
+    base:hasDisplayName "NamespaceUri" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace padim:PADIMNamespace ;
+    base:hasNodeId "1003" ;
+    base:hasValue "http://opcfoundation.org/UA/PADIM/" .
+
+padim:nodei1004 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "NamespaceVersion" ;
+    base:hasDatatype opcua:String ;
+    base:hasDescription "The human readable string representing version of the namespace." ;
+    base:hasDisplayName "NamespaceVersion" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace padim:PADIMNamespace ;
+    base:hasNodeId "1004" ;
+    base:hasValue "1.0.3" .
+
+padim:nodei1005 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "StaticNodeIdTypes" ;
+    base:hasDatatype opcua:IdType ;
+    base:hasDescription "A list of IdTypes for nodes which are the same in every server that exposes them." ;
+    base:hasDisplayName "StaticNodeIdTypes" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace padim:PADIMNamespace ;
+    base:hasNodeId "1005" ;
+    base:hasValue "[0]" ;
+    base:hasValueRank "1" .
+
+padim:nodei1006 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "StaticNumericNodeIdRange" ;
+    base:hasDatatype opcua:NumericRange ;
+    base:hasDescription "A list of ranges for numeric node ids which are the same in every server that exposes them." ;
+    base:hasDisplayName "StaticNumericNodeIdRange" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace padim:PADIMNamespace ;
+    base:hasNodeId "1006" ;
+    base:hasValueRank "1" .
+
+padim:nodei1007 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "StaticStringNodeIdPattern" ;
+    base:hasDatatype opcua:String ;
+    base:hasDescription "A regular expression which matches string node ids are the same in every server that exposes them." ;
+    base:hasDisplayName "StaticStringNodeIdPattern" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace padim:PADIMNamespace ;
+    base:hasNodeId "1007" .
+
+padim:nodei1010 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    opcua:HasDictionaryEntry <http://opcfoundation.org/UA/Dictionary/IRDI/nodes0112/2///61987%23ABA565%23007> ;
+    base:hasBrowseName "Manufacturer" ;
+    base:hasDatatype opcua:LocalizedText ;
+    base:hasDisplayName "Manufacturer" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasModellingRule opcua:nodei78 ;
+    base:hasNamespace padim:PADIMNamespace ;
+    base:hasNodeId "1010" .
+
+padim:nodei1011 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    opcua:HasDictionaryEntry <http://opcfoundation.org/UA/Dictionary/IRDI/nodes0112/2///61987%23ABN591%23001> ;
+    base:hasBrowseName "ManufacturerUri" ;
+    base:hasDatatype opcua:String ;
+    base:hasDisplayName "URI of Manufacturer" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasModellingRule opcua:nodei78 ;
+    base:hasNamespace padim:PADIMNamespace ;
+    base:hasNodeId "1011" .
+
+padim:nodei1012 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    opcua:HasDictionaryEntry <http://opcfoundation.org/UA/Dictionary/IRDI/nodes0112/2///61987%23ABA567%23007> ;
+    base:hasBrowseName "Model" ;
+    base:hasDatatype opcua:LocalizedText ;
+    base:hasDisplayName "Model" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasModellingRule opcua:nodei78 ;
+    base:hasNamespace padim:PADIMNamespace ;
+    base:hasNodeId "1012" .
+
+padim:nodei1013 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    opcua:HasDictionaryEntry <http://opcfoundation.org/UA/Dictionary/IRDI/nodes0112/2///61987%23ABA951%23007> ;
+    base:hasBrowseName "SerialNumber" ;
+    base:hasDatatype opcua:String ;
+    base:hasDisplayName "Serial number" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasModellingRule opcua:nodei78 ;
+    base:hasNamespace padim:PADIMNamespace ;
+    base:hasNodeId "1013" .
+
+padim:nodei1014 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    opcua:HasDictionaryEntry <http://opcfoundation.org/UA/Dictionary/IRDI/nodes0112/2///61987%23ABA601%23006> ;
+    base:hasBrowseName "SoftwareRevision" ;
+    base:hasDatatype opcua:String ;
+    base:hasDisplayName "Software revision" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasModellingRule opcua:nodei78 ;
+    base:hasNamespace padim:PADIMNamespace ;
+    base:hasNodeId "1014" .
+
+padim:nodei1015 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    opcua:HasDictionaryEntry <http://opcfoundation.org/UA/Dictionary/IRDI/nodes0112/2///61987%23ABA926%23006> ;
+    base:hasBrowseName "HardwareRevision" ;
+    base:hasDatatype opcua:String ;
+    base:hasDisplayName "Hardware revision" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasModellingRule opcua:nodei78 ;
+    base:hasNamespace padim:PADIMNamespace ;
+    base:hasNodeId "1015" .
+
+padim:nodei1016 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    opcua:HasDictionaryEntry <http://opcfoundation.org/UA/Dictionary/IRDI/nodes0112/2///61987%23ABA300%23006> ;
+    base:hasBrowseName "ProductCode" ;
+    base:hasDatatype opcua:String ;
+    base:hasDisplayName "Product code" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasModellingRule opcua:nodei78 ;
+    base:hasNamespace padim:PADIMNamespace ;
+    base:hasNodeId "1016" .
+
+padim:nodei1017 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    opcua:HasDictionaryEntry <http://opcfoundation.org/UA/Dictionary/IRDI/nodes0112/2///61987%23ABN603%23001> ;
+    base:hasBrowseName "RevisionCounter" ;
+    base:hasDatatype opcua:Int32 ;
+    base:hasDisplayName "Revision counter" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasModellingRule opcua:nodei78 ;
+    base:hasNamespace padim:PADIMNamespace ;
+    base:hasNodeId "1017" .
+
+padim:nodei1018 a opcua:FolderType,
+        opcua:ObjectNodeClass ;
+    base:hasBrowseName "DeviceHealthAlarms" ;
+    base:hasDisplayName "DeviceHealthAlarms" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasModellingRule opcua:nodei80 ;
+    base:hasNamespace padim:PADIMNamespace ;
+    base:hasNodeId "1018" .
+
+padim:nodei1019 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    opcua:HasDictionaryEntry <http://opcfoundation.org/UA/Dictionary/IRDI/nodes0112/2///61987%23ABA038%23003> ;
+    base:hasBrowseName "AssetId" ;
+    base:hasDatatype opcua:String ;
+    base:hasDisplayName "Asset ID" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasModellingRule opcua:nodei78 ;
+    base:hasNamespace padim:PADIMNamespace ;
+    base:hasNodeId "1019" .
+
+padim:nodei1020 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    opcua:HasDictionaryEntry <http://opcfoundation.org/UA/Dictionary/IRDI/nodes0112/2///61987%23ABN590%23001> ;
+    base:hasBrowseName "ProductInstanceUri" ;
+    base:hasDatatype opcua:String ;
+    base:hasDisplayName "URI of Product instance" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasModellingRule opcua:nodei78 ;
+    base:hasNamespace padim:PADIMNamespace ;
+    base:hasNodeId "1020" .
+
+padim:nodei1024 a opcua:ObjectNodeClass,
+        padim:SignalType ;
+    base:hasBrowseName "<SignalIdentifier>" ;
+    base:hasDisplayName "<SignalIdentifier>" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasModellingRule opcua:nodei11508 ;
+    base:hasNamespace padim:PADIMNamespace ;
+    base:hasNodeId "1024" ;
+    base:hasProperty padim:nodei1160 ;
+    base:hasSymbolicName "S_SignalIdentifier_" .
+
+padim:nodei1025 a devices:ConfigurableObjectType,
+        opcua:ObjectNodeClass ;
+    base:hasBrowseName "SubDevices" ;
+    base:hasComponent padim:nodei1026 ;
+    base:hasDisplayName "SubDevices" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasModellingRule opcua:nodei80 ;
+    base:hasNamespace padim:PADIMNamespace ;
+    base:hasNodeId "1025" .
+
+padim:nodei1026 a opcua:FolderType,
+        opcua:ObjectNodeClass ;
+    base:hasBrowseName "SupportedTypes" ;
+    base:hasDisplayName "SupportedTypes" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasModellingRule opcua:nodei78 ;
+    base:hasNamespace padim:PADIMNamespace ;
+    base:hasNodeId "1026" .
+
+padim:nodei1027 a padim:AnalogSignalVariableType,
+        opcua:VariableNodeClass ;
+    opcua:HasDictionaryEntry <http://opcfoundation.org/UA/Dictionary/IRDI/nodes0112/2///61987%23ABN634%23001> ;
+    base:hasBrowseName "AnalogSignal" ;
+    base:hasDatatype opcua:Number ;
+    base:hasDisplayName "AnalogSignal" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasModellingRule opcua:nodei78 ;
+    base:hasNamespace padim:PADIMNamespace ;
+    base:hasNodeId "1027" ;
+    base:hasProperty padim:nodei1190,
+        padim:nodei1191 ;
+    base:hasValueRank "-2" .
+
+padim:nodei1029 a opcua:BaseDataVariableType,
+        opcua:VariableNodeClass ;
+    opcua:HasDictionaryEntry <http://opcfoundation.org/UA/Dictionary/IRDI/nodes0112/2///61987%23ABN972%23001> ;
+    base:hasBrowseName "DeviceHealth" ;
+    base:hasDatatype devices:DeviceHealthEnumeration ;
+    base:hasDisplayName "Device diagnostic status" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasModellingRule opcua:nodei78 ;
+    base:hasNamespace padim:PADIMNamespace ;
+    base:hasNodeId "1029" .
+
+padim:nodei1030 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "InputArguments" ;
+    base:hasDatatype opcua:Argument ;
+    base:hasDisplayName "InputArguments" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasModellingRule opcua:nodei78 ;
+    base:hasNamespace padim:PADIMNamespace ;
+    base:hasNodeId "1030" ;
+    base:hasValueRank "1" .
+
+padim:nodei1031 a padim:ControlVariableType,
+        opcua:VariableNodeClass ;
+    opcua:HasDictionaryEntry <http://opcfoundation.org/UA/Dictionary/IRDI/nodes0112/2///61987%23ABJ683%23001> ;
+    base:hasBrowseName "ControlSignal" ;
+    base:hasComponent padim:nodei1192,
+        padim:nodei1195,
+        padim:nodei1196 ;
+    base:hasDatatype opcua:Float ;
+    base:hasDisplayName "ControlSignal" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasModellingRule opcua:nodei78 ;
+    base:hasNamespace padim:PADIMNamespace ;
+    base:hasNodeId "1031" ;
+    base:hasProperty padim:nodei1193,
+        padim:nodei1194 ;
+    base:hasValueRank "-2" .
+
+padim:nodei1032 a opcua:BaseDataVariableType,
+        opcua:VariableNodeClass ;
+    opcua:HasDictionaryEntry <http://opcfoundation.org/UA/Dictionary/IRDI/nodes0112/2///61987%23ABN604%23001> ;
+    base:hasBrowseName "DateOfLastChange" ;
+    base:hasDatatype opcua:DateTime ;
+    base:hasDisplayName "Date of last change" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasModellingRule opcua:nodei80 ;
+    base:hasNamespace padim:PADIMNamespace ;
+    base:hasNodeId "1032" .
+
+padim:nodei1033 a opcua:BaseDataVariableType,
+        opcua:VariableNodeClass ;
+    opcua:HasDictionaryEntry <http://opcfoundation.org/UA/Dictionary/IRDI/nodes0112/2///61987%23ABN597%23001> ;
+    base:hasBrowseName "DisplayLanguage" ;
+    base:hasDatatype opcua:LocaleId ;
+    base:hasDisplayName "Display language" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasModellingRule opcua:nodei80 ;
+    base:hasNamespace padim:PADIMNamespace ;
+    base:hasNodeId "1033" .
+
+padim:nodei1034 a opcua:ObjectNodeClass,
+        padim:SignalSetType ;
+    base:hasBrowseName "SignalSet" ;
+    base:hasDisplayName "SignalSet" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasModellingRule opcua:nodei80 ;
+    base:hasNamespace padim:PADIMNamespace ;
+    base:hasNodeId "1034" ;
+    base:hasSymbolicName "SignalSet_no_" .
+
+padim:nodei1035 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    opcua:HasDictionaryEntry <http://opcfoundation.org/UA/Dictionary/IRDI/nodes0112/2///61987%23ABB271%23007> ;
+    base:hasBrowseName "SignalTag" ;
+    base:hasDatatype opcua:String ;
+    base:hasDisplayName "Tag" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasModellingRule opcua:nodei78 ;
+    base:hasNamespace padim:PADIMNamespace ;
+    base:hasNodeId "1035" .
+
+padim:nodei1039 a padim:DiscreteSignalVariableType,
+        opcua:VariableNodeClass ;
+    opcua:HasDictionaryEntry <http://opcfoundation.org/UA/Dictionary/IRDI/nodes0112/2///61987%23ABN634%23001> ;
+    base:hasBrowseName "DiscreteSignal" ;
+    base:hasDisplayName "DiscreteSignal" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasModellingRule opcua:nodei78 ;
+    base:hasNamespace padim:PADIMNamespace ;
+    base:hasNodeId "1039" ;
+    base:hasValueRank "-2" .
+
+padim:nodei1040 a padim:TwoStateDiscreteSignalVariableType,
+        opcua:VariableNodeClass ;
+    opcua:HasDictionaryEntry <http://opcfoundation.org/UA/Dictionary/IRDI/nodes0112/2///61987%23ABN635%23001> ;
+    base:hasBrowseName "TwoStateDiscreteSignal" ;
+    base:hasDatatype opcua:Boolean ;
+    base:hasDisplayName "TwoStateDiscreteSignal" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasModellingRule opcua:nodei78 ;
+    base:hasNamespace padim:PADIMNamespace ;
+    base:hasNodeId "1040" ;
+    base:hasProperty padim:nodei1185,
+        padim:nodei1186 ;
+    base:hasValueRank "-2" .
+
+padim:nodei1041 a padim:MultiStateDiscreteSignalVariableType,
+        opcua:VariableNodeClass ;
+    opcua:HasDictionaryEntry <http://opcfoundation.org/UA/Dictionary/IRDI/nodes0112/2///61987%23ABN636%23001> ;
+    base:hasBrowseName "MultiStateDiscreteSignal" ;
+    base:hasDatatype opcua:UInt32 ;
+    base:hasDisplayName "MultiStateDiscreteSignal" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasModellingRule opcua:nodei78 ;
+    base:hasNamespace padim:PADIMNamespace ;
+    base:hasNodeId "1041" ;
+    base:hasProperty padim:nodei1187,
+        padim:nodei1188,
+        padim:nodei1189 .
+
+padim:nodei1050 a opcua:ObjectTypeNodeClass ;
+    base:definesType padim:IAdministrationType ;
+    base:hasBrowseName "IAdministrationType" ;
+    base:hasComponent padim:nodei1068,
+        padim:nodei1070 ;
+    base:hasDisplayName "IAdministrationType" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace padim:PADIMNamespace ;
+    base:hasNodeId "1050" .
+
+padim:nodei1052 a opcua:ObjectTypeNodeClass ;
+    base:definesType padim:ISignalSetType ;
+    base:hasBrowseName "ISignalSetType" ;
+    base:hasComponent padim:nodei1074 ;
+    base:hasDisplayName "ISignalSetType" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace padim:PADIMNamespace ;
+    base:hasNodeId "1052" .
+
+padim:nodei1068 a opcua:BaseDataVariableType,
+        opcua:VariableNodeClass ;
+    opcua:HasDictionaryEntry <http://opcfoundation.org/UA/Dictionary/IRDI/nodes0112/2///61987%23ABN597%23001> ;
+    base:hasBrowseName "DisplayLanguage" ;
+    base:hasDatatype opcua:LocaleId ;
+    base:hasDisplayName "Display language" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasModellingRule opcua:nodei80 ;
+    base:hasNamespace padim:PADIMNamespace ;
+    base:hasNodeId "1068" .
+
+padim:nodei1070 a opcua:BaseDataVariableType,
+        opcua:VariableNodeClass ;
+    opcua:HasDictionaryEntry <http://opcfoundation.org/UA/Dictionary/IRDI/nodes0112/2///61987%23ABN604%23001> ;
+    base:hasBrowseName "DateOfLastChange" ;
+    base:hasDatatype opcua:DateTime ;
+    base:hasDisplayName "Date of last change" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasModellingRule opcua:nodei80 ;
+    base:hasNamespace padim:PADIMNamespace ;
+    base:hasNodeId "1070" .
+
+padim:nodei1074 a opcua:ObjectNodeClass,
+        padim:SignalSetType ;
+    base:hasBrowseName "SignalSet" ;
+    base:hasDisplayName "SignalSet" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasModellingRule opcua:nodei80 ;
+    base:hasNamespace padim:PADIMNamespace ;
+    base:hasNodeId "1074" .
+
+padim:nodei1080 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "InputArguments" ;
+    base:hasDatatype opcua:Argument ;
+    base:hasDisplayName "InputArguments" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasModellingRule opcua:nodei78 ;
+    base:hasNamespace padim:PADIMNamespace ;
+    base:hasNodeId "1080" ;
+    base:hasValueRank "1" .
+
+padim:nodei1113 a opcua:BaseDataVariableType,
+        opcua:VariableNodeClass ;
+    opcua:HasDictionaryEntry <http://opcfoundation.org/UA/Dictionary/IRDI/nodes0112/2///61987%23ABN611%23001> ;
+    base:hasBrowseName "SimulationState" ;
+    base:hasDatatype opcua:Boolean ;
+    base:hasDisplayName "Simulation state" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasModellingRule opcua:nodei80 ;
+    base:hasNamespace padim:PADIMNamespace ;
+    base:hasNodeId "1113" .
+
+padim:nodei1115 a opcua:BaseDataVariableType,
+        opcua:VariableNodeClass ;
+    opcua:HasDictionaryEntry <http://opcfoundation.org/UA/Dictionary/IRDI/nodes0112/2///61987%23ABN644%23001> ;
+    base:hasBrowseName "ActualValue" ;
+    base:hasDatatype opcua:Number ;
+    base:hasDisplayName "Actual value" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasModellingRule opcua:nodei80 ;
+    base:hasNamespace padim:PADIMNamespace ;
+    base:hasNodeId "1115" ;
+    base:hasValueRank "-2" .
+
+padim:nodei1117 a opcua:BaseDataVariableType,
+        opcua:VariableNodeClass ;
+    opcua:HasDictionaryEntry <http://opcfoundation.org/UA/Dictionary/IRDI/nodes0112/2///61987%23ABN613%23001> ;
+    base:hasBrowseName "SimulationValue" ;
+    base:hasDatatype opcua:Number ;
+    base:hasDisplayName "Simulation value" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasModellingRule opcua:nodei80 ;
+    base:hasNamespace padim:PADIMNamespace ;
+    base:hasNodeId "1117" ;
+    base:hasValueRank "-2" .
+
+padim:nodei1118 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    opcua:HasDictionaryEntry <http://opcfoundation.org/UA/Dictionary/IRDI/nodes0112/2///61987%23ABH526%23002> ;
+    base:hasBrowseName "Damping" ;
+    base:hasDatatype opcua:Float ;
+    base:hasDisplayName "Damping" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasModellingRule opcua:nodei80 ;
+    base:hasNamespace padim:PADIMNamespace ;
+    base:hasNodeId "1118" .
+
+padim:nodei1119 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "InputArguments" ;
+    base:hasDatatype opcua:Argument ;
+    base:hasDisplayName "InputArguments" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasModellingRule opcua:nodei78 ;
+    base:hasNamespace padim:PADIMNamespace ;
+    base:hasNodeId "1119" ;
+    base:hasValueRank "1" .
+
+padim:nodei1128 a opcua:MultiStateDictionaryEntryDiscreteType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "SensorType" ;
+    base:hasDatatype opcua:UInt32 ;
+    base:hasDisplayName "Sensor type" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasModellingRule opcua:nodei78 ;
+    base:hasNamespace padim:PADIMNamespace ;
+    base:hasNodeId "1128" ;
+    base:hasProperty padim:nodei1161,
+        padim:nodei1162,
+        padim:nodei1163,
+        padim:nodei1164 ;
+    base:hasValueRank "-2" .
+
+padim:nodei1129 a opcua:MultiStateDictionaryEntryDiscreteType,
+        opcua:VariableNodeClass ;
+    opcua:HasDictionaryEntry <http://opcfoundation.org/UA/Dictionary/IRDI/nodes0112/2///61987%23ABB091%23002> ;
+    base:hasBrowseName "SensorConnection" ;
+    base:hasDatatype opcua:UInt32 ;
+    base:hasDisplayName "RTD-Sensor connection" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasModellingRule opcua:nodei80 ;
+    base:hasNamespace padim:PADIMNamespace ;
+    base:hasNodeId "1129" ;
+    base:hasProperty padim:nodei1165,
+        padim:nodei1166,
+        padim:nodei1167,
+        padim:nodei1168 ;
+    base:hasValueRank "-2" .
+
+padim:nodei1130 a opcua:MultiStateDictionaryEntryDiscreteType,
+        opcua:VariableNodeClass ;
+    opcua:HasDictionaryEntry <http://opcfoundation.org/UA/Dictionary/IRDI/nodes0112/2///61987%23ABB093%23002> ;
+    base:hasBrowseName "SensorReference" ;
+    base:hasDatatype opcua:UInt32 ;
+    base:hasDisplayName "TC-Sensor reference" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasModellingRule opcua:nodei80 ;
+    base:hasNamespace padim:PADIMNamespace ;
+    base:hasNodeId "1130" ;
+    base:hasProperty padim:nodei1169,
+        padim:nodei1170,
+        padim:nodei1171,
+        padim:nodei1172 ;
+    base:hasValueRank "-2" .
+
+padim:nodei1131 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    opcua:HasDictionaryEntry <http://opcfoundation.org/UA/Dictionary/IRDI/nodes0112/2///61987%23ABJ724%23002> ;
+    base:hasBrowseName "LowFlowCutOff" ;
+    base:hasDatatype opcua:Float ;
+    base:hasDisplayName "Low flow cut off" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasModellingRule opcua:nodei78 ;
+    base:hasNamespace padim:PADIMNamespace ;
+    base:hasNodeId "1131" ;
+    base:hasValueRank "-2" .
+
+padim:nodei1132 a opcua:MultiStateDictionaryEntryDiscreteType,
+        opcua:VariableNodeClass ;
+    opcua:HasDictionaryEntry <http://opcfoundation.org/UA/Dictionary/IRDI/nodes0112/2///61987%23ABN594%23002> ;
+    base:hasBrowseName "FlowDirection" ;
+    base:hasDatatype opcua:UInt32 ;
+    base:hasDisplayName "Flow direction" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasModellingRule opcua:nodei80 ;
+    base:hasNamespace padim:PADIMNamespace ;
+    base:hasNodeId "1132" ;
+    base:hasProperty padim:nodei1173,
+        padim:nodei1174,
+        padim:nodei1175,
+        padim:nodei1176 ;
+    base:hasValueRank "-2" .
+
+padim:nodei1136 a opcua:BaseAnalogType,
+        opcua:VariableNodeClass ;
+    opcua:HasDictionaryEntry <http://opcfoundation.org/UA/Dictionary/IRDI/nodes0112/2///61987%23ABN607%23001> ;
+    base:hasBrowseName "Setpoint" ;
+    base:hasDatatype opcua:Float ;
+    base:hasDisplayName "Setpoint" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasModellingRule opcua:nodei78 ;
+    base:hasNamespace padim:PADIMNamespace ;
+    base:hasNodeId "1136" ;
+    base:hasValueRank "-2" .
+
+padim:nodei1137 a opcua:MultiStateDictionaryEntryDiscreteType,
+        opcua:VariableNodeClass ;
+    opcua:HasDictionaryEntry <http://opcfoundation.org/UA/Dictionary/IRDI/nodes0112/2///61987%23ABD740%23002> ;
+    base:hasBrowseName "OperatingDirection" ;
+    base:hasDatatype opcua:UInt32 ;
+    base:hasDisplayName "Operating direction" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasModellingRule opcua:nodei78 ;
+    base:hasNamespace padim:PADIMNamespace ;
+    base:hasNodeId "1137" ;
+    base:hasProperty padim:nodei1177,
+        padim:nodei1178,
+        padim:nodei1179,
+        padim:nodei1180 .
+
+padim:nodei1138 a opcua:MultiStateDictionaryEntryDiscreteType,
+        opcua:VariableNodeClass ;
+    opcua:HasDictionaryEntry <http://opcfoundation.org/UA/Dictionary/IRDI/nodes0112/2///61987%23ABD742%23002> ;
+    base:hasBrowseName "ActuatorType" ;
+    base:hasDatatype opcua:UInt32 ;
+    base:hasDisplayName "Actuator type" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasModellingRule opcua:nodei78 ;
+    base:hasNamespace padim:PADIMNamespace ;
+    base:hasNodeId "1138" ;
+    base:hasProperty padim:nodei1181,
+        padim:nodei1182,
+        padim:nodei1183,
+        padim:nodei1184 .
+
+padim:nodei1139 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "PulseValue" ;
+    base:hasDatatype opcua:Number ;
+    base:hasDisplayName "Pulse value" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasModellingRule opcua:nodei78 ;
+    base:hasNamespace padim:PADIMNamespace ;
+    base:hasNodeId "1139" .
+
+padim:nodei1140 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    opcua:HasDictionaryEntry <http://opcfoundation.org/UA/Dictionary/IRDI/nodes0112/2///61987%23ABA635%23002> ;
+    base:hasBrowseName "PulseWidth" ;
+    base:hasDatatype opcua:Float ;
+    base:hasDisplayName "Pulse width" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasModellingRule opcua:nodei78 ;
+    base:hasNamespace padim:PADIMNamespace ;
+    base:hasNodeId "1140" .
+
+padim:nodei1144 a opcua:BaseDataVariableType,
+        opcua:VariableNodeClass ;
+    opcua:HasDictionaryEntry <http://opcfoundation.org/UA/Dictionary/IRDI/nodes0112/2///61987%23ABN645%23001> ;
+    base:hasBrowseName "ActualValue" ;
+    base:hasDatatype opcua:Boolean ;
+    base:hasDisplayName "ActualValue" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasModellingRule opcua:nodei80 ;
+    base:hasNamespace padim:PADIMNamespace ;
+    base:hasNodeId "1144" ;
+    base:hasValueRank "-2" .
+
+padim:nodei1145 a opcua:BaseDataVariableType,
+        opcua:VariableNodeClass ;
+    opcua:HasDictionaryEntry <http://opcfoundation.org/UA/Dictionary/IRDI/nodes0112/2///61987%23ABN632%23001> ;
+    base:hasBrowseName "SimulationValue" ;
+    base:hasDatatype opcua:Boolean ;
+    base:hasDisplayName "SimulationValue" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasModellingRule opcua:nodei80 ;
+    base:hasNamespace padim:PADIMNamespace ;
+    base:hasNodeId "1145" ;
+    base:hasValueRank "-2" .
+
+padim:nodei1147 a opcua:BaseDataVariableType,
+        opcua:VariableNodeClass ;
+    opcua:HasDictionaryEntry <http://opcfoundation.org/UA/Dictionary/IRDI/nodes0112/2///61987%23ABN611%23001> ;
+    base:hasBrowseName "SimulationState" ;
+    base:hasDatatype opcua:Boolean ;
+    base:hasDisplayName "Simulation state" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasModellingRule opcua:nodei80 ;
+    base:hasNamespace padim:PADIMNamespace ;
+    base:hasNodeId "1147" .
+
+padim:nodei1148 a opcua:BaseDataVariableType,
+        opcua:VariableNodeClass ;
+    opcua:HasDictionaryEntry <http://opcfoundation.org/UA/Dictionary/IRDI/nodes0112/2///61987%23ABN646%23001> ;
+    base:hasBrowseName "ActualValue" ;
+    base:hasDatatype opcua:UInt32 ;
+    base:hasDisplayName "ActualValue" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasModellingRule opcua:nodei80 ;
+    base:hasNamespace padim:PADIMNamespace ;
+    base:hasNodeId "1148" .
+
+padim:nodei1149 a opcua:BaseDataVariableType,
+        opcua:VariableNodeClass ;
+    opcua:HasDictionaryEntry <http://opcfoundation.org/UA/Dictionary/IRDI/nodes0112/2///61987%23ABN637%23001> ;
+    base:hasBrowseName "SimulationValue" ;
+    base:hasDatatype opcua:UInt32 ;
+    base:hasDisplayName "SimulationValue" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasModellingRule opcua:nodei80 ;
+    base:hasNamespace padim:PADIMNamespace ;
+    base:hasNodeId "1149" .
+
+padim:nodei1151 a opcua:BaseDataVariableType,
+        opcua:VariableNodeClass ;
+    opcua:HasDictionaryEntry <http://opcfoundation.org/UA/Dictionary/IRDI/nodes0112/2///61987%23ABN611%23001> ;
+    base:hasBrowseName "SimulationState" ;
+    base:hasDatatype opcua:Boolean ;
+    base:hasDisplayName "Simulation state" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasModellingRule opcua:nodei80 ;
+    base:hasNamespace padim:PADIMNamespace ;
+    base:hasNodeId "1151" .
+
+padim:nodei1152 a opcua:BaseDataVariableType,
+        opcua:VariableNodeClass ;
+    opcua:HasDictionaryEntry <http://opcfoundation.org/UA/Dictionary/IRDI/nodes0112/2///61987%23ABN644%23001> ;
+    base:hasBrowseName "ActualValue" ;
+    base:hasDisplayName "Actual value" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasModellingRule opcua:nodei80 ;
+    base:hasNamespace padim:PADIMNamespace ;
+    base:hasNodeId "1152" ;
+    base:hasValueRank "-2" .
+
+padim:nodei1153 a opcua:BaseDataVariableType,
+        opcua:VariableNodeClass ;
+    opcua:HasDictionaryEntry <http://opcfoundation.org/UA/Dictionary/IRDI/nodes0112/2///61987%23ABN613%23001> ;
+    base:hasBrowseName "SimulationValue" ;
+    base:hasDisplayName "Simulation value" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasModellingRule opcua:nodei80 ;
+    base:hasNamespace padim:PADIMNamespace ;
+    base:hasNodeId "1153" ;
+    base:hasValueRank "-2" .
+
+padim:nodei1155 a opcua:BaseDataVariableType,
+        opcua:VariableNodeClass ;
+    opcua:HasDictionaryEntry <http://opcfoundation.org/UA/Dictionary/IRDI/nodes0112/2///61987%23ABN611%23001> ;
+    base:hasBrowseName "SimulationState" ;
+    base:hasDatatype opcua:Boolean ;
+    base:hasDisplayName "Simulation state" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasModellingRule opcua:nodei80 ;
+    base:hasNamespace padim:PADIMNamespace ;
+    base:hasNodeId "1155" .
+
+padim:nodei1157 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "EnumValues" ;
+    base:hasDatatype opcua:EnumValueType ;
+    base:hasDisplayName "EnumValues" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace padim:PADIMNamespace ;
+    base:hasNodeId "1157" ;
+    base:hasValueRank "1" .
+
+padim:nodei1159 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "EnumValues" ;
+    base:hasDatatype opcua:EnumValueType ;
+    base:hasDisplayName "EnumValues" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasNamespace padim:PADIMNamespace ;
+    base:hasNodeId "1159" ;
+    base:hasValueRank "1" .
+
+padim:nodei1160 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    opcua:HasDictionaryEntry <http://opcfoundation.org/UA/Dictionary/IRDI/nodes0112/2///61987%23ABB271%23007> ;
+    base:hasBrowseName "SignalTag" ;
+    base:hasDatatype opcua:String ;
+    base:hasDisplayName "Tag" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasModellingRule opcua:nodei78 ;
+    base:hasNamespace padim:PADIMNamespace ;
+    base:hasNodeId "1160" .
+
+padim:nodei1161 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "EnumDictionaryEntries" ;
+    base:hasDatatype opcua:NodeId ;
+    base:hasDisplayName "EnumDictionaryEntries" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasModellingRule opcua:nodei78 ;
+    base:hasNamespace padim:PADIMNamespace ;
+    base:hasNodeId "1161" ;
+    base:hasValueRank "2" .
+
+padim:nodei1162 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "EnumValues" ;
+    base:hasDatatype opcua:EnumValueType ;
+    base:hasDisplayName "EnumValues" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasModellingRule opcua:nodei78 ;
+    base:hasNamespace padim:PADIMNamespace ;
+    base:hasNodeId "1162" ;
+    base:hasValueRank "1" .
+
+padim:nodei1163 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "ValueAsDictionaryEntries" ;
+    base:hasDatatype opcua:NodeId ;
+    base:hasDisplayName "ValueAsDictionaryEntries" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasModellingRule opcua:nodei78 ;
+    base:hasNamespace padim:PADIMNamespace ;
+    base:hasNodeId "1163" ;
+    base:hasValueRank "1" .
+
+padim:nodei1164 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "ValueAsText" ;
+    base:hasDatatype opcua:LocalizedText ;
+    base:hasDisplayName "ValueAsText" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasModellingRule opcua:nodei78 ;
+    base:hasNamespace padim:PADIMNamespace ;
+    base:hasNodeId "1164" .
+
+padim:nodei1165 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "EnumDictionaryEntries" ;
+    base:hasDatatype opcua:NodeId ;
+    base:hasDisplayName "EnumDictionaryEntries" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasModellingRule opcua:nodei78 ;
+    base:hasNamespace padim:PADIMNamespace ;
+    base:hasNodeId "1165" ;
+    base:hasValueRank "2" .
+
+padim:nodei1166 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "EnumValues" ;
+    base:hasDatatype opcua:EnumValueType ;
+    base:hasDisplayName "EnumValues" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasModellingRule opcua:nodei78 ;
+    base:hasNamespace padim:PADIMNamespace ;
+    base:hasNodeId "1166" ;
+    base:hasValueRank "1" .
+
+padim:nodei1167 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "ValueAsDictionaryEntries" ;
+    base:hasDatatype opcua:NodeId ;
+    base:hasDisplayName "ValueAsDictionaryEntries" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasModellingRule opcua:nodei78 ;
+    base:hasNamespace padim:PADIMNamespace ;
+    base:hasNodeId "1167" ;
+    base:hasValueRank "1" .
+
+padim:nodei1168 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "ValueAsText" ;
+    base:hasDatatype opcua:LocalizedText ;
+    base:hasDisplayName "ValueAsText" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasModellingRule opcua:nodei78 ;
+    base:hasNamespace padim:PADIMNamespace ;
+    base:hasNodeId "1168" .
+
+padim:nodei1169 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "EnumDictionaryEntries" ;
+    base:hasDatatype opcua:NodeId ;
+    base:hasDisplayName "EnumDictionaryEntries" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasModellingRule opcua:nodei78 ;
+    base:hasNamespace padim:PADIMNamespace ;
+    base:hasNodeId "1169" ;
+    base:hasValueRank "2" .
+
+padim:nodei1170 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "EnumValues" ;
+    base:hasDatatype opcua:EnumValueType ;
+    base:hasDisplayName "EnumValues" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasModellingRule opcua:nodei78 ;
+    base:hasNamespace padim:PADIMNamespace ;
+    base:hasNodeId "1170" ;
+    base:hasValueRank "1" .
+
+padim:nodei1171 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "ValueAsDictionaryEntries" ;
+    base:hasDatatype opcua:NodeId ;
+    base:hasDisplayName "ValueAsDictionaryEntries" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasModellingRule opcua:nodei78 ;
+    base:hasNamespace padim:PADIMNamespace ;
+    base:hasNodeId "1171" ;
+    base:hasValueRank "1" .
+
+padim:nodei1172 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "ValueAsText" ;
+    base:hasDatatype opcua:LocalizedText ;
+    base:hasDisplayName "ValueAsText" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasModellingRule opcua:nodei78 ;
+    base:hasNamespace padim:PADIMNamespace ;
+    base:hasNodeId "1172" .
+
+padim:nodei1173 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "EnumDictionaryEntries" ;
+    base:hasDatatype opcua:NodeId ;
+    base:hasDisplayName "EnumDictionaryEntries" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasModellingRule opcua:nodei78 ;
+    base:hasNamespace padim:PADIMNamespace ;
+    base:hasNodeId "1173" ;
+    base:hasValueRank "2" .
+
+padim:nodei1174 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "EnumValues" ;
+    base:hasDatatype opcua:EnumValueType ;
+    base:hasDisplayName "EnumValues" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasModellingRule opcua:nodei78 ;
+    base:hasNamespace padim:PADIMNamespace ;
+    base:hasNodeId "1174" ;
+    base:hasValueRank "1" .
+
+padim:nodei1175 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "ValueAsDictionaryEntries" ;
+    base:hasDatatype opcua:NodeId ;
+    base:hasDisplayName "ValueAsDictionaryEntries" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasModellingRule opcua:nodei78 ;
+    base:hasNamespace padim:PADIMNamespace ;
+    base:hasNodeId "1175" ;
+    base:hasValueRank "1" .
+
+padim:nodei1176 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "ValueAsText" ;
+    base:hasDatatype opcua:LocalizedText ;
+    base:hasDisplayName "ValueAsText" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasModellingRule opcua:nodei78 ;
+    base:hasNamespace padim:PADIMNamespace ;
+    base:hasNodeId "1176" .
+
+padim:nodei1177 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "EnumDictionaryEntries" ;
+    base:hasDatatype opcua:NodeId ;
+    base:hasDisplayName "EnumDictionaryEntries" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasModellingRule opcua:nodei78 ;
+    base:hasNamespace padim:PADIMNamespace ;
+    base:hasNodeId "1177" ;
+    base:hasValueRank "2" .
+
+padim:nodei1178 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "EnumValues" ;
+    base:hasDatatype opcua:EnumValueType ;
+    base:hasDisplayName "EnumValues" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasModellingRule opcua:nodei78 ;
+    base:hasNamespace padim:PADIMNamespace ;
+    base:hasNodeId "1178" ;
+    base:hasValueRank "1" .
+
+padim:nodei1179 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "ValueAsDictionaryEntries" ;
+    base:hasDatatype opcua:NodeId ;
+    base:hasDisplayName "ValueAsDictionaryEntries" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasModellingRule opcua:nodei78 ;
+    base:hasNamespace padim:PADIMNamespace ;
+    base:hasNodeId "1179" ;
+    base:hasValueRank "1" .
+
+padim:nodei1180 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "ValueAsText" ;
+    base:hasDatatype opcua:LocalizedText ;
+    base:hasDisplayName "ValueAsText" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasModellingRule opcua:nodei78 ;
+    base:hasNamespace padim:PADIMNamespace ;
+    base:hasNodeId "1180" .
+
+padim:nodei1181 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "EnumDictionaryEntries" ;
+    base:hasDatatype opcua:NodeId ;
+    base:hasDisplayName "EnumDictionaryEntries" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasModellingRule opcua:nodei78 ;
+    base:hasNamespace padim:PADIMNamespace ;
+    base:hasNodeId "1181" ;
+    base:hasValueRank "2" .
+
+padim:nodei1182 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "EnumValues" ;
+    base:hasDatatype opcua:EnumValueType ;
+    base:hasDisplayName "EnumValues" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasModellingRule opcua:nodei78 ;
+    base:hasNamespace padim:PADIMNamespace ;
+    base:hasNodeId "1182" ;
+    base:hasValueRank "1" .
+
+padim:nodei1183 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "ValueAsDictionaryEntries" ;
+    base:hasDatatype opcua:NodeId ;
+    base:hasDisplayName "ValueAsDictionaryEntries" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasModellingRule opcua:nodei78 ;
+    base:hasNamespace padim:PADIMNamespace ;
+    base:hasNodeId "1183" ;
+    base:hasValueRank "1" .
+
+padim:nodei1184 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "ValueAsText" ;
+    base:hasDatatype opcua:LocalizedText ;
+    base:hasDisplayName "ValueAsText" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasModellingRule opcua:nodei78 ;
+    base:hasNamespace padim:PADIMNamespace ;
+    base:hasNodeId "1184" .
+
+padim:nodei1185 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "FalseState" ;
+    base:hasDatatype opcua:LocalizedText ;
+    base:hasDisplayName "FalseState" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasModellingRule opcua:nodei78 ;
+    base:hasNamespace padim:PADIMNamespace ;
+    base:hasNodeId "1185" .
+
+padim:nodei1186 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "TrueState" ;
+    base:hasDatatype opcua:LocalizedText ;
+    base:hasDisplayName "TrueState" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasModellingRule opcua:nodei78 ;
+    base:hasNamespace padim:PADIMNamespace ;
+    base:hasNodeId "1186" .
+
+padim:nodei1187 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "EnumDictionaryEntries" ;
+    base:hasDatatype opcua:NodeId ;
+    base:hasDisplayName "EnumDictionaryEntries" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasModellingRule opcua:nodei78 ;
+    base:hasNamespace padim:PADIMNamespace ;
+    base:hasNodeId "1187" ;
+    base:hasValueRank "2" .
+
+padim:nodei1188 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "EnumValues" ;
+    base:hasDatatype opcua:EnumValueType ;
+    base:hasDisplayName "EnumValues" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasModellingRule opcua:nodei78 ;
+    base:hasNamespace padim:PADIMNamespace ;
+    base:hasNodeId "1188" ;
+    base:hasValueRank "1" .
+
+padim:nodei1189 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "ValueAsText" ;
+    base:hasDatatype opcua:LocalizedText ;
+    base:hasDisplayName "ValueAsText" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasModellingRule opcua:nodei78 ;
+    base:hasNamespace padim:PADIMNamespace ;
+    base:hasNodeId "1189" .
+
+padim:nodei1190 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "EngineeringUnits" ;
+    base:hasDatatype opcua:EUInformation ;
+    base:hasDisplayName "EngineeringUnits" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasModellingRule opcua:nodei78 ;
+    base:hasNamespace padim:PADIMNamespace ;
+    base:hasNodeId "1190" .
+
+padim:nodei1191 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "EURange" ;
+    base:hasDatatype opcua:Range ;
+    base:hasDisplayName "EURange" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasModellingRule opcua:nodei78 ;
+    base:hasNamespace padim:PADIMNamespace ;
+    base:hasNodeId "1191" .
+
+padim:nodei1192 a opcua:MultiStateDictionaryEntryDiscreteType,
+        opcua:VariableNodeClass ;
+    opcua:HasDictionaryEntry <http://opcfoundation.org/UA/Dictionary/IRDI/nodes0112/2///61987%23ABD742%23002> ;
+    base:hasBrowseName "ActuatorType" ;
+    base:hasDatatype opcua:UInt32 ;
+    base:hasDisplayName "Actuator type" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasModellingRule opcua:nodei78 ;
+    base:hasNamespace padim:PADIMNamespace ;
+    base:hasNodeId "1192" ;
+    base:hasProperty padim:nodei1197,
+        padim:nodei1198,
+        padim:nodei1199,
+        padim:nodei1200 .
+
+padim:nodei1193 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "EngineeringUnits" ;
+    base:hasDatatype opcua:EUInformation ;
+    base:hasDisplayName "EngineeringUnits" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasModellingRule opcua:nodei78 ;
+    base:hasNamespace padim:PADIMNamespace ;
+    base:hasNodeId "1193" .
+
+padim:nodei1194 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "EURange" ;
+    base:hasDatatype opcua:Range ;
+    base:hasDisplayName "EURange" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasModellingRule opcua:nodei78 ;
+    base:hasNamespace padim:PADIMNamespace ;
+    base:hasNodeId "1194" .
+
+padim:nodei1195 a opcua:MultiStateDictionaryEntryDiscreteType,
+        opcua:VariableNodeClass ;
+    opcua:HasDictionaryEntry <http://opcfoundation.org/UA/Dictionary/IRDI/nodes0112/2///61987%23ABD740%23002> ;
+    base:hasBrowseName "OperatingDirection" ;
+    base:hasDatatype opcua:UInt32 ;
+    base:hasDisplayName "Operating direction" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasModellingRule opcua:nodei78 ;
+    base:hasNamespace padim:PADIMNamespace ;
+    base:hasNodeId "1195" ;
+    base:hasProperty padim:nodei1201,
+        padim:nodei1202,
+        padim:nodei1203,
+        padim:nodei1204 .
+
+padim:nodei1196 a opcua:BaseAnalogType,
+        opcua:VariableNodeClass ;
+    opcua:HasDictionaryEntry <http://opcfoundation.org/UA/Dictionary/IRDI/nodes0112/2///61987%23ABN607%23001> ;
+    base:hasBrowseName "Setpoint" ;
+    base:hasDatatype opcua:Float ;
+    base:hasDisplayName "Setpoint" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasModellingRule opcua:nodei78 ;
+    base:hasNamespace padim:PADIMNamespace ;
+    base:hasNodeId "1196" ;
+    base:hasValueRank "-2" .
+
+padim:nodei1197 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "EnumDictionaryEntries" ;
+    base:hasDatatype opcua:NodeId ;
+    base:hasDisplayName "EnumDictionaryEntries" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasModellingRule opcua:nodei78 ;
+    base:hasNamespace padim:PADIMNamespace ;
+    base:hasNodeId "1197" ;
+    base:hasValueRank "2" .
+
+padim:nodei1198 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "EnumValues" ;
+    base:hasDatatype opcua:EnumValueType ;
+    base:hasDisplayName "EnumValues" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasModellingRule opcua:nodei78 ;
+    base:hasNamespace padim:PADIMNamespace ;
+    base:hasNodeId "1198" ;
+    base:hasValueRank "1" .
+
+padim:nodei1199 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "ValueAsDictionaryEntries" ;
+    base:hasDatatype opcua:NodeId ;
+    base:hasDisplayName "ValueAsDictionaryEntries" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasModellingRule opcua:nodei78 ;
+    base:hasNamespace padim:PADIMNamespace ;
+    base:hasNodeId "1199" ;
+    base:hasValueRank "1" .
+
+padim:nodei1200 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "ValueAsText" ;
+    base:hasDatatype opcua:LocalizedText ;
+    base:hasDisplayName "ValueAsText" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasModellingRule opcua:nodei78 ;
+    base:hasNamespace padim:PADIMNamespace ;
+    base:hasNodeId "1200" .
+
+padim:nodei1201 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "EnumDictionaryEntries" ;
+    base:hasDatatype opcua:NodeId ;
+    base:hasDisplayName "EnumDictionaryEntries" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasModellingRule opcua:nodei78 ;
+    base:hasNamespace padim:PADIMNamespace ;
+    base:hasNodeId "1201" ;
+    base:hasValueRank "2" .
+
+padim:nodei1202 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "EnumValues" ;
+    base:hasDatatype opcua:EnumValueType ;
+    base:hasDisplayName "EnumValues" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasModellingRule opcua:nodei78 ;
+    base:hasNamespace padim:PADIMNamespace ;
+    base:hasNodeId "1202" ;
+    base:hasValueRank "1" .
+
+padim:nodei1203 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "ValueAsDictionaryEntries" ;
+    base:hasDatatype opcua:NodeId ;
+    base:hasDisplayName "ValueAsDictionaryEntries" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasModellingRule opcua:nodei78 ;
+    base:hasNamespace padim:PADIMNamespace ;
+    base:hasNodeId "1203" ;
+    base:hasValueRank "1" .
+
+padim:nodei1204 a opcua:PropertyType,
+        opcua:VariableNodeClass ;
+    base:hasBrowseName "ValueAsText" ;
+    base:hasDatatype opcua:LocalizedText ;
+    base:hasDisplayName "ValueAsText" ;
+    base:hasIdentifierType base:numericID ;
+    base:hasModellingRule opcua:nodei78 ;
+    base:hasNamespace padim:PADIMNamespace ;
+    base:hasNodeId "1204" .
+
+base:_N198c2d27e51a4c0a85ecba7c6020a079 a base:ValueNode ;
+    base:hasEnumValue 255 ;
+    base:hasValueClass padim:ExecutionModeEnum .
+
+base:_N1e2dff1837d74f889765e8cda38cf409 a base:ValueNode ;
+    base:hasEnumValue 2 ;
+    base:hasValueClass padim:ExecutionModeEnum .
+
+base:_N3d3e27f7f7eb4b688e09f4c318756bdf a base:ValueNode ;
+    base:hasEnumValue 2712 ;
+    base:hasValueClass padim:ResetModeEnum .
+
+base:_N4ec515866ec64491a988f047fa863edb a base:ValueNode ;
+    base:hasEnumValue 2713 ;
+    base:hasValueClass padim:ResetModeEnum .
+
+base:_Nb90d040c5722438b98f456cfa2fd4088 a base:ValueNode ;
+    base:hasEnumValue 1 ;
+    base:hasValueClass padim:ResetModeEnum .
+
+padim:ControlVariableType a owl:Class ;
+    rdfs:subClassOf padim:AnalogSignalVariableType .
+
+padim:DiscreteSignalVariableType a owl:Class ;
+    rdfs:subClassOf opcua:DiscreteItemType .
+
+padim:MultiStateDiscreteSignalVariableType a owl:Class ;
+    rdfs:subClassOf opcua:MultiStateDictionaryEntryDiscreteBaseType .
+
+padim:TwoStateDiscreteSignalVariableType a owl:Class ;
+    rdfs:subClassOf opcua:TwoStateDiscreteType .
+
+padim:SignalSetType a owl:Class ;
+    rdfs:subClassOf opcua:BaseObjectType .
+
+padim:FlowMeasurementVariableType a owl:Class ;
+    rdfs:subClassOf padim:AnalogSignalVariableType .
+
+padim:ExecutionModeEnum a owl:Class ;
+    rdfs:subClassOf opcua:Enumeration .
+
+padim:ResetModeEnum a owl:Class ;
+    rdfs:subClassOf opcua:Enumeration .
+
+padim:SignalType a owl:Class ;
+    rdfs:subClassOf opcua:BaseObjectType .
+
+padim:AnalogSignalVariableType a owl:Class ;
+    rdfs:subClassOf opcua:AnalogUnitRangeType .
+
+padim:PADIMNamespace a base:Namespace ;
+    base:hasPrefix "padim" ;
+    base:hasUri "http://opcfoundation.org/UA/PADIM/" .
+
