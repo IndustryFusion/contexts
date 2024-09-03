@@ -49,6 +49,18 @@ xsd:string rdf:type rdfs:Datatype .
 #    Object Properties
 #################################################################
 
+###  https://industryfusion.github.io/contexts/ontology/v0/base/bindsAttribute
+:bindsAttribute rdf:type owl:ObjectProperty ;
+                rdfs:domain :Binding ;
+                rdfs:range owl:Thing .
+
+
+###  https://industryfusion.github.io/contexts/ontology/v0/base/bindsAttributeType
+:bindsAttributeType rdf:type owl:ObjectProperty ;
+                    rdfs:domain :Binding ;
+                    rdfs:range owl:Thing .
+
+
 ###  https://industryfusion.github.io/contexts/ontology/v0/base/bindsConnector
 :bindsConnector rdf:type owl:ObjectProperty ;
                 rdfs:domain :BoundMap ;
