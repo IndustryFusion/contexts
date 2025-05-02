@@ -1,0 +1,260 @@
+@prefix : <https://industryfusion.github.io/contexts/example/v0/base_knowledge/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ngsild: <https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld/> .
+@base <https://industryfusion.github.io/contexts/example/v0/base_knowledge/> .
+
+<https://industryfusion.github.io/contexts/example/v0/base_knowledge/> rdf:type owl:Ontology ;
+                                                                        owl:versionIRI <https://industryfusion.github.io/contexts/staging/example/v0.1/base_knowledge.ttl> ;
+                                                                        owl:versionInfo "0.1"^^xsd:string .
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://www.w3.org/2001/XMLSchema#boolean
+xsd:boolean rdf:type rdfs:Datatype .
+
+
+###  http://www.w3.org/2001/XMLSchema#decimal
+xsd:decimal rdf:type rdfs:Datatype .
+
+
+###  http://www.w3.org/2001/XMLSchema#integer
+xsd:integer rdf:type rdfs:Datatype .
+
+
+###  http://www.w3.org/2001/XMLSchema#string
+xsd:string rdf:type rdfs:Datatype .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  https://industryfusion.github.io/contexts/example/v0/base_knowledge/bindsConnector
+:bindsConnector rdf:type owl:ObjectProperty ;
+                rdfs:domain :BoundMap ;
+                rdfs:range :BoundConnector .
+
+
+###  https://industryfusion.github.io/contexts/example/v0/base_knowledge/bindsEntityType
+:bindsEntityType rdf:type owl:ObjectProperty ;
+                 rdfs:domain :Binding .
+
+
+###  https://industryfusion.github.io/contexts/example/v0/base_knowledge/bindsMap
+:bindsMap rdf:type owl:ObjectProperty ;
+          rdfs:domain :Binding ;
+          rdfs:range :BoundMap .
+
+
+###  https://industryfusion.github.io/contexts/example/v0/base_knowledge/bindsMapDataType
+:bindsMapDataType rdf:type owl:ObjectProperty ;
+                  rdfs:domain :BoundMap ;
+                  rdfs:range rdfs:Datatype .
+
+
+###  https://industryfusion.github.io/contexts/example/v0/base_knowledge/boundBy
+:boundBy rdf:type owl:ObjectProperty ;
+         rdfs:domain <https://uri.etsi.org/ngsi-ld/Property> ,
+                     <https://uri.etsi.org/ngsi-ld/Relationship> ;
+         rdfs:range :Binding .
+
+
+###  https://industryfusion.github.io/contexts/example/v0/base_knowledge/isValidFor
+:isValidFor rdf:type owl:ObjectProperty ;
+            rdfs:domain :MachineState .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  https://industryfusion.github.io/contexts/example/v0/base_knowledge/bindingVersion
+:bindingVersion rdf:type owl:DatatypeProperty ;
+                rdfs:range xsd:string .
+
+
+###  https://industryfusion.github.io/contexts/example/v0/base_knowledge/bindsConnectorAttribute
+:bindsConnectorAttribute rdf:type owl:DatatypeProperty .
+
+
+###  https://industryfusion.github.io/contexts/example/v0/base_knowledge/bindsContext
+:bindsContext rdf:type owl:DatatypeProperty ;
+              rdfs:range xsd:string .
+
+
+###  https://industryfusion.github.io/contexts/example/v0/base_knowledge/bindsFirmware
+:bindsFirmware rdf:type owl:DatatypeProperty ;
+               rdfs:domain :Binding ;
+               rdfs:range xsd:string .
+
+
+###  https://industryfusion.github.io/contexts/example/v0/base_knowledge/bindsLogic
+:bindsLogic rdf:type owl:DatatypeProperty ;
+            rdfs:domain :BoundMap ;
+            rdfs:range xsd:string .
+
+
+###  https://industryfusion.github.io/contexts/example/v0/base_knowledge/bindsLogicVar
+:bindsLogicVar rdf:type owl:DatatypeProperty ;
+               rdfs:domain :BoundMap ;
+               rdfs:range xsd:string .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.w3.org/2000/01/rdf-schema#Datatype
+rdfs:Datatype rdf:type owl:Class .
+
+
+###  https://industryfusion.github.io/contexts/example/v0/base_knowledge/Binding
+:Binding rdf:type owl:Class .
+
+
+###  https://industryfusion.github.io/contexts/example/v0/base_knowledge/BoundConnector
+:BoundConnector rdf:type owl:Class .
+
+
+###  https://industryfusion.github.io/contexts/example/v0/base_knowledge/BoundMap
+:BoundMap rdf:type owl:Class .
+
+
+###  https://industryfusion.github.io/contexts/example/v0/base_knowledge/FieldType
+:FieldType rdf:type owl:Class .
+
+
+###  https://industryfusion.github.io/contexts/example/v0/base_knowledge/MachineState
+:MachineState rdf:type owl:Class .
+
+
+###  https://industryfusion.github.io/contexts/example/v0/base_knowledge/OPCUAConnector
+:OPCUAConnector rdf:type owl:Class ;
+                rdfs:subClassOf :BoundConnector .
+
+
+###  https://industryfusion.github.io/contexts/example/v0/base_knowledge/SeverityClass
+:SeverityClass rdf:type owl:Class .
+
+
+###  https://industryfusion.github.io/contexts/example/v0/base_knowledge/TestConnector
+:TestConnector rdf:type owl:Class ;
+               rdfs:subClassOf :BoundConnector .
+
+
+###  https://uri.etsi.org/ngsi-ld/Property
+<https://uri.etsi.org/ngsi-ld/Property> rdf:type owl:Class .
+
+
+###  https://uri.etsi.org/ngsi-ld/Relationship
+<https://uri.etsi.org/ngsi-ld/Relationship> rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.w3.org/2001/XMLSchema#boolean
+xsd:boolean rdf:type owl:NamedIndividual .
+
+
+###  http://www.w3.org/2001/XMLSchema#decimal
+xsd:decimal rdf:type owl:NamedIndividual .
+
+
+###  http://www.w3.org/2001/XMLSchema#integer
+xsd:integer rdf:type owl:NamedIndividual .
+
+
+###  http://www.w3.org/2001/XMLSchema#string
+xsd:string rdf:type owl:NamedIndividual .
+
+
+###  https://industryfusion.github.io/contexts/example/v0/base_entities/Cutter
+<https://industryfusion.github.io/contexts/example/v0/base_entities/Cutter> rdf:type owl:NamedIndividual .
+
+
+###  https://industryfusion.github.io/contexts/example/v0/base_entities/Filter
+<https://industryfusion.github.io/contexts/example/v0/base_entities/Filter> rdf:type owl:NamedIndividual .
+
+
+###  https://industryfusion.github.io/contexts/example/v0/base_entities/Machine
+<https://industryfusion.github.io/contexts/example/v0/base_entities/Machine> rdf:type owl:NamedIndividual .
+
+
+###  https://industryfusion.github.io/contexts/example/v0/base_knowledge/OPCUAConnector
+:OPCUAConnector rdf:type owl:NamedIndividual .
+
+
+###  https://industryfusion.github.io/contexts/example/v0/base_knowledge/TestConnector
+:TestConnector rdf:type owl:NamedIndividual .
+
+
+###  https://industryfusion.github.io/contexts/example/v0/base_knowledge/severityCritical
+:severityCritical rdf:type owl:NamedIndividual ,
+                           :SeverityClass ;
+                  rdfs:label "critical" .
+
+
+###  https://industryfusion.github.io/contexts/example/v0/base_knowledge/severityWarning
+:severityWarning rdf:type owl:NamedIndividual ,
+                          :SeverityClass ;
+                 rdfs:label "warning" .
+
+
+###  https://industryfusion.github.io/contexts/example/v0/base_knowledge/state_CLEANING
+:state_CLEANING rdf:type owl:NamedIndividual ,
+                         :MachineState ;
+                :isValidFor <https://industryfusion.github.io/contexts/example/v0/base_entities/Filter> ;
+                rdfs:label "CLEANING" .
+
+
+###  https://industryfusion.github.io/contexts/example/v0/base_knowledge/state_CLEARING
+:state_CLEARING rdf:type owl:NamedIndividual ,
+                         :MachineState ;
+                :isValidFor <https://industryfusion.github.io/contexts/example/v0/base_entities/Cutter> ;
+                rdfs:label "CLEARING" .
+
+
+###  https://industryfusion.github.io/contexts/example/v0/base_knowledge/state_ERROR
+:state_ERROR rdf:type owl:NamedIndividual ,
+                      :MachineState ;
+             :isValidFor <https://industryfusion.github.io/contexts/example/v0/base_entities/Machine> ;
+             rdfs:label "ERROR" .
+
+
+###  https://industryfusion.github.io/contexts/example/v0/base_knowledge/state_OFF
+:state_OFF rdf:type owl:NamedIndividual ,
+                    :MachineState ;
+           :isValidFor <https://industryfusion.github.io/contexts/example/v0/base_entities/Machine> ;
+           rdfs:label "OFF" .
+
+
+###  https://industryfusion.github.io/contexts/example/v0/base_knowledge/state_ON
+:state_ON rdf:type owl:NamedIndividual ,
+                   :MachineState ;
+          :isValidFor <https://industryfusion.github.io/contexts/example/v0/base_entities/Machine> ;
+          rdfs:label "ON" .
+
+
+###  https://industryfusion.github.io/contexts/example/v0/base_knowledge/state_PREPARING
+:state_PREPARING rdf:type owl:NamedIndividual ,
+                          :MachineState ;
+                 :isValidFor <https://industryfusion.github.io/contexts/example/v0/base_entities/Cutter> ;
+                 rdfs:label "PREPARING" .
+
+
+###  https://industryfusion.github.io/contexts/example/v0/base_knowledge/state_PROCESSING
+:state_PROCESSING rdf:type owl:NamedIndividual ,
+                           :MachineState ;
+                  :isValidFor <https://industryfusion.github.io/contexts/example/v0/base_entities/Cutter> ;
+                  rdfs:label "PROCESSING" .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
