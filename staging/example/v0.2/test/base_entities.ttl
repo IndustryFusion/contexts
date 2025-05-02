@@ -1,0 +1,106 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX entities: <https://industryfusion.github.io/contexts/example/v0/base_entities/>
+PREFIX ngsi-ld: <https://uri.etsi.org/ngsi-ld/>
+PREFIX :  <https://industryfusion.github.io/contexts/example/v0/tests/>
+PREFIX sh: <http://www.w3.org/ns/shacl#>
+
+
+# Every Class must be an Individual as well
+:EntityShape
+    a sh:NodeShape;
+    sh:targetClass owl:Class;
+    sh:property [
+        sh:path rdf:type;
+        sh:hasValue owl:NamedIndividual;
+        sh:minCount 1 ;
+    ]
+.
+
+# Every Class must be subclass of Entity
+:EntityShape
+    a sh:NodeShape;
+    sh:targetClass owl:Class;
+    sh:sparql [
+        a sh:SPARQLConstraints ;
+        sh:message "We did not find a single Property. Check namespaces and tested ontology!" ;
+        sh:select """
+        PREFIX owl: <http://www.w3.org/2002/07/owl#>
+        PREFIX entities: <https://industryfusion.github.io/contexts/example/v0/base_entities/>
+        SELECT $this WHERE {
+            FILTER NOT EXISTS {
+                $this rdfs:subClassOf* entities:Entity .
+            }
+        }
+        """;
+    ] .
+
+
+# Every Property must be an Individual as well
+:PropertyShape
+    a sh:NodeShape;
+    sh:closed true;
+    sh:targetClass owl:ObjectProperty;
+    sh:property [
+        sh:path rdf:type;
+        sh:hasValue owl:NamedIndividual;
+        sh:minCount 1 ;
+    ]
+.
+
+# Every Property must have range ngsi-ld:Property or ngsi-ld:Realationship
+ :PropertyShape
+     a sh:NodeShape;
+     sh:closed true;
+     sh:targetClass owl:ObjectProperty;
+     sh:property [
+         sh:path rdfs:range;
+         sh:minCount 1 ;
+         sh:or (
+             [
+                 sh:hasValue ngsi-ld:Property;
+             ]
+             [
+                 sh:hasValue ngsi-ld:Relationship;
+             ]
+         )
+     ]
+ .
+
+# Every Property must have a domain of type owl:Class
+ :PropertyShape
+     a sh:NodeShape;
+     sh:closed true;
+     sh:targetClass owl:ObjectProperty;
+     sh:property [
+         sh:path rdfs:domain;
+         sh:minCount 1 ;
+         sh:class owl:Class;
+     ]
+ .
+
+
+# Check if we have at least one Property in the entitiies
+# (or did we test over an empty set?)
+# At least one Property in the current namespace must be found
+:existingShape
+    a sh:NodeShape;
+    sh:targetClass owl:Ontology;
+    sh:sparql [
+        a sh:SPARQLConstraints ;
+        sh:message "We did not find a single Property. Check namespaces and tested ontology!" ;
+        sh:select """
+        PREFIX owl: <http://www.w3.org/2002/07/owl#>
+        PREFIX entities: <https://industryfusion.github.io/contexts/example/v0/base_entities/>
+        SELECT $this WHERE {
+            FILTER NOT EXISTS {
+                ?something a owl:ObjectProperty .
+                FILTER( STRSTARTS(str(?something), str(entities:)))
+            }
+        }
+        """;
+    ] .
+
+
