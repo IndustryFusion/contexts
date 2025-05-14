@@ -120,31 +120,10 @@ base:hasAccessLevelEx rdf:type owl:ObjectProperty ;
                       rdfs:range opcua:AccessLevelExType .
 
 
-###  https://industryfusion.github.io/contexts/ontology/v0/base/hasAddIn
-base:hasAddIn rdf:type owl:ObjectProperty ;
-              rdfs:domain opcua:ObjectNodeClass ,
-                          opcua:ObjectTypeNodeClass ;
-              rdfs:range opcua:ObjectNodeClass .
-
-
 ###  https://industryfusion.github.io/contexts/ontology/v0/base/hasArrayDimensions
 base:hasArrayDimensions rdf:type owl:ObjectProperty ;
                         rdfs:domain opcua:VariableTypeNodeClass ;
                         rdfs:range rdf:List .
-
-
-###  https://industryfusion.github.io/contexts/ontology/v0/base/hasComponent
-base:hasComponent rdf:type owl:ObjectProperty ;
-                  rdfs:domain opcua:ObjectNodeClass ,
-                              opcua:ObjectTypeNodeClass ,
-                              opcua:VariableNodeClass ,
-                              opcua:VariableTypeNodeClass ;
-                  rdfs:range opcua:MethodNodeClass ,
-                             opcua:ObjectNodeClass ,
-                             opcua:ObjectTypeNodeClass ,
-                             opcua:ReferenceTypeNodeClass ,
-                             opcua:VariableNodeClass ,
-                             opcua:VariableTypeNodeClass .
 
 
 ###  https://industryfusion.github.io/contexts/ontology/v0/base/hasDatatype
@@ -164,31 +143,10 @@ base:hasIdentifierType rdf:type owl:ObjectProperty ;
                        rdfs:range base:IdentifierType .
 
 
-###  https://industryfusion.github.io/contexts/ontology/v0/base/hasInterface
-base:hasInterface rdf:type owl:ObjectProperty ;
-                  rdfs:domain opcua:ObjectNodeClass ,
-                              opcua:ObjectTypeNodeClass ;
-                  rdfs:range opcua:ModellingRuleType .
-
-
-###  https://industryfusion.github.io/contexts/ontology/v0/base/hasModellingRule
-base:hasModellingRule rdf:type owl:ObjectProperty ;
-                      rdfs:domain opcua:MethodNodeClass ,
-                                  opcua:ObjectNodeClass ,
-                                  opcua:VariableNodeClass ;
-                      rdfs:range opcua:ModellingRuleType .
-
-
 ###  https://industryfusion.github.io/contexts/ontology/v0/base/hasNamespace
 base:hasNamespace rdf:type owl:ObjectProperty ;
                   rdfs:domain opcua:BaseNodeClass ;
                   rdfs:range base:Namespace .
-
-
-###  https://industryfusion.github.io/contexts/ontology/v0/base/hasProperty
-base:hasProperty rdf:type owl:ObjectProperty ;
-                 rdfs:domain opcua:BaseNodeClass ;
-                 rdfs:range opcua:VariableNodeClass .
 
 
 ###  https://industryfusion.github.io/contexts/ontology/v0/base/hasUserAccessLevel
@@ -205,12 +163,6 @@ base:hasValueClass rdf:type owl:ObjectProperty ;
 ###  https://industryfusion.github.io/contexts/ontology/v0/base/hasValueNode
 base:hasValueNode rdf:type owl:ObjectProperty ;
                   rdfs:domain opcua:BaseObjectType .
-
-
-###  https://industryfusion.github.io/contexts/ontology/v0/base/organizes
-base:organizes rdf:type owl:ObjectProperty ;
-               rdfs:domain opcua:ObjectNodeClass ;
-               rdfs:range opcua:BaseNodeClass .
 
 
 #################################################################
