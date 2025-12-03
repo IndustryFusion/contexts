@@ -13,7 +13,7 @@
                                                                owl:versionIRI <https://industryfusion.github.io/contexts/staging/ontology/v0.2/base/> ;
                                                                owl:imports rdf: ,
                                                                            rdfs: ,
-                                                                           <https://industryfusion.github.io/contexts/staging/ontology/v0.1/ngsild.ttl> ;
+                                                                           <https://industryfusion.github.io/contexts/staging/ontology/v0/ngsild.ttl> ;
                                                                owl:versionInfo 0.1 .
 
 #################################################################
