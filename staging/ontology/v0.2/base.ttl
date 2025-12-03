@@ -57,6 +57,11 @@ opcua:References rdf:type owl:ObjectProperty ;
                  rdfs:subPropertyOf owl:topObjectProperty .
 
 
+###  https://industryfusion.github.io/contexts/ontology/v0/base/SemanticBridgeReferenceType
+base:SemanticBridgeReferenceType rdf:type owl:ObjectProperty ;
+                                 rdfs:subPropertyOf opcua:References .
+
+
 ###  https://industryfusion.github.io/contexts/ontology/v0/base/bindsAttribute
 base:bindsAttribute rdf:type owl:ObjectProperty ;
                     rdfs:domain base:Binding ;
