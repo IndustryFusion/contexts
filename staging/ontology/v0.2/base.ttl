@@ -10,7 +10,7 @@
 @base <https://industryfusion.github.io/contexts/ontology/v0/base/> .
 
 <https://industryfusion.github.io/contexts/ontology/v0/base/> rdf:type owl:Ontology ;
-                                                               owl:versionIRI <https://industryfusion.github.io/contexts/staging/ontology/v0.1/base/> ;
+                                                               owl:versionIRI <https://industryfusion.github.io/contexts/staging/ontology/v0.2/base/> ;
                                                                owl:imports rdf: ,
                                                                            rdfs: ,
                                                                            <https://industryfusion.github.io/contexts/staging/ontology/v0.1/ngsild.ttl> ;
