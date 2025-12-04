@@ -169,6 +169,13 @@ base:hasValueClass rdf:type owl:ObjectProperty ;
                    rdfs:range opcua:BaseObjectType .
 
 
+###  https://industryfusion.github.io/contexts/ontology/v0/base/hasValueList
+base:hasValueList rdf:type owl:ObjectProperty ;
+                  rdfs:domain opcua:VariableNodeClass ,
+                              opcua:VariableTypeNodeClass ;
+                  rdfs:range rdf:List .
+
+
 ###  https://industryfusion.github.io/contexts/ontology/v0/base/hasValueNode
 base:hasValueNode rdf:type owl:ObjectProperty ;
                   rdfs:domain opcua:BaseObjectType .
@@ -267,7 +274,13 @@ base:hasUri rdf:type owl:DatatypeProperty ;
 
 ###  https://industryfusion.github.io/contexts/ontology/v0/base/hasValue
 base:hasValue rdf:type owl:DatatypeProperty ;
-              rdfs:range xsd:string .
+              rdfs:domain opcua:VariableNodeClass ,
+                          opcua:VariableTypeNodeClass ;
+              rdfs:range rdf:JSON ,
+                         xsd:boolean ,
+                         xsd:double ,
+                         xsd:integer ,
+                         xsd:string .
 
 
 ###  https://industryfusion.github.io/contexts/ontology/v0/base/hasValueRank
