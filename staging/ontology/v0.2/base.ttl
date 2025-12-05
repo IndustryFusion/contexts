@@ -135,6 +135,12 @@ base:hasArrayDimensions rdf:type owl:ObjectProperty ;
                         rdfs:range rdf:List .
 
 
+###  https://industryfusion.github.io/contexts/ontology/v0/base/hasBrowseNameNamespace
+base:hasBrowseNameNamespace rdf:type owl:ObjectProperty ;
+                            rdfs:domain opcua:BaseNodeClass ;
+                            rdfs:range base:Namespace .
+
+
 ###  https://industryfusion.github.io/contexts/ontology/v0/base/hasDatatype
 base:hasDatatype rdf:type owl:ObjectProperty ;
                  rdfs:domain opcua:BaseNodeClass ;
