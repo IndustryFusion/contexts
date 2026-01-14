@@ -164,6 +164,12 @@ base:hasNamespace rdf:type owl:ObjectProperty ;
                   rdfs:range base:Namespace .
 
 
+###  https://industryfusion.github.io/contexts/ontology/v0/base/hasNodeRef
+base:hasNodeRef rdf:type owl:ObjectProperty ;
+                rdfs:domain opcua:BaseObjectType ;
+                rdfs:range opcua:ObjectNodeClass .
+
+
 ###  https://industryfusion.github.io/contexts/ontology/v0/base/hasUserAccessLevel
 base:hasUserAccessLevel rdf:type owl:ObjectProperty ;
                         rdfs:domain opcua:VariableNodeClass ;
