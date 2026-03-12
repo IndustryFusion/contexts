@@ -193,6 +193,12 @@ base:hasValueNode rdf:type owl:ObjectProperty ;
                   rdfs:domain opcua:BaseObjectType .
 
 
+###  https://industryfusion.github.io/contexts/ontology/v0/base/instanceOf
+base:instanceOf rdf:type owl:ObjectProperty ;
+                rdfs:domain opcua:ObjectNodeClass ;
+                rdfs:range opcua:ObjectTypeNodeClass .
+
+
 #################################################################
 #    Data properties
 #################################################################
